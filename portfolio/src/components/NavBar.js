@@ -5,30 +5,33 @@ import styled from "styled-components";
 const NavBarMain=styled.div`
     display: flex; 
     justify-content: space-between;
-    align-content: center;
     margin-bottom: 50px;
     font-family: Lato, sans-serif;
     font-weight: 600;
     border-bottom: 1px solid black;
-    padding: 15px 0;
 `;
 
 const NavBarLeft=styled.div`
     font-size: 1rem;
     letter-spacing: 0.15rem;
-    padding-left: 25px; 
+    padding: 15px 0;
 `;
 
 const NavBarRight=styled.div`
     display: flex; 
     justify-content: space-between;
-    padding-right: 25px;
+    padding: 15px 0;
+    margin-bottom: 1px;
 `;
 
 const NavBarLinks=styled(Link)`
-    margin-left: 50px;
     text-decoration: none;
     color: black;
+    padding: 15px 25px;
+
+    :hover {
+        background-color: lightgray;
+    }
 `;
 
 
@@ -38,8 +41,11 @@ export default class NavBar extends Component {
         return (
             <NavBarMain>
                 <NavBarLeft>
-                    C. MICHAEL BOEGNER
+                    <div>
+                        <NavBarLinks to="/">C. MICHAEL BOEGNER</NavBarLinks>
+                    </div>
                 </NavBarLeft>
+
                 <NavBarRight>
                     <div>
                         <NavBarLinks to="/projects">PROJECTS</NavBarLinks>
