@@ -3,12 +3,16 @@ import { Route } from 'react-router-dom';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
 import NavBar from './components/NavBar';
-import './App.css';
+import styled from "styled-components";
+
+const AppMain=styled.div`
+
+`;
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <AppMain>
         <div className="app-navbar">
               <NavBar/>
         </div>
@@ -33,7 +37,7 @@ class App extends Component {
           )}
         />
         
-      </div>
+      </AppMain>
     );
   }
 }
