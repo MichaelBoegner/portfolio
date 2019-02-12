@@ -12,35 +12,33 @@ const NavBarMain=styled.div`
 `;
 
 const NavBarLeft=styled.div`
-    padding: 15px 0;
+
 `;
 
 const NavBarRight=styled.div`
     display: flex; 
     justify-content: space-between;
-    padding: 15px 0;
-    margin-bottom: 1px;
-    height: 100%;
+    min-height: 100%;
 `;
 
 const NavBarLinks=styled(Link)`
     text-decoration: none;
     color: black;
-    font-size: 1rem;
+    font-size: .8rem;
     letter-spacing: 0.25rem;
-    padding: 15px 25px;
-
-    :hover {
-        background-color: lightgray;
-    }
+    padding: 0 25px;
 `;
 
 const NavBarTitle=styled(Link)`
     text-decoration: none;
     color: black;
-    font-size: 1rem;
-    letter-spacing: 0.35rem;
-    padding: 15px 25px;
+    font-size: 1.15rem;
+    letter-spacing: 0.20rem;
+    padding: 0 25px;
+`;
+
+const NavHighlight=styled.div`
+    padding: 15px 0;
 
     :hover {
         background-color: lightgray;
@@ -54,21 +52,21 @@ export default class NavBar extends Component {
         return (
             <NavBarMain>
                 <NavBarLeft>
-                    <div>
+                    <NavHighlight>
                         <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
-                    </div>
+                    </NavHighlight>
                 </NavBarLeft>
 
                 <NavBarRight>
-                    <div>
+                    <NavHighlight>
                         <NavBarLinks to="/projects">PROJECTS</NavBarLinks>
-                    </div>
-                    <div>
+                    </NavHighlight>
+                    <NavHighlight>
                         <NavBarLinks to="/writing">WRITING</NavBarLinks>
-                    </div>
-                    <div>
+                    </NavHighlight>
+                    <NavHighlight>
                         <NavBarLinks to="/contact">CONTACT</NavBarLinks>
-                    </div>
+                    </NavHighlight>
                 </NavBarRight>
             </NavBarMain>
         )
