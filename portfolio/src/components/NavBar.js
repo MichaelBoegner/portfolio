@@ -32,9 +32,20 @@ const NavBarLinks=styled(Link)`
     letter-spacing: 0.25rem;
     padding: 20px 25px;
 
+
     :hover {
         background-color: lightgray;
         cursor: pointer;
+
+        animation-name: rainbowHover;
+        animation-duration: 2s; 
+        animation-iteration-count:infinite;
+        animation-direction: alternate-reverse;
+
+        @keyframes rainbowHover {
+            0% {color: orange;}
+            100% {color: blueviolet;}
+        }
     }
 `;
 
@@ -48,6 +59,16 @@ const NavBarTitle=styled(Link)`
     :hover {
         background-color: lightgray;
         cursor: pointer;
+
+        animation-name: rainbowHover;
+        animation-duration: 2s; 
+        animation-iteration-count:infinite;
+        animation-direction: alternate-reverse;
+
+        @keyframes rainbowHover {
+            0% {color: orange;}
+            100% {color: blueviolet;}
+        }
     }
 `;
 
