@@ -43,7 +43,8 @@ const NavBarLinks=styled(Link)`
         animation-direction: alternate-reverse;
 
         @keyframes rainbowHover {
-            0% {color: orange;}
+            0% {color: blueviolet;}
+            50% {color: orange;}
             100% {color: blueviolet;}
         }
     }
@@ -66,7 +67,8 @@ const NavBarTitle=styled(Link)`
         animation-direction: alternate-reverse;
 
         @keyframes rainbowHover {
-            0% {color: orange;}
+            0% {color: blueviolet;}
+            50% {color: orange;}
             100% {color: blueviolet;}
         }
     }
