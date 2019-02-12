@@ -142,7 +142,7 @@ export default class Landing extends Component {
                             Lambda School is a 30-week Computer Science and Software Engineering Academy that provides an immersive (full-time, 50 hrs/wk) 
                             hands-on curriculum, with a focus on computer science, software engineering and web development. In addition to being excited about
                             web-development and the prospects of an ISA driven world, Michael has just started down the path of machine learning through the likes of 
-                            <a href="https://wwww.fast.ai" target="_blank"> fast.ai</a>. 
+                            <a href="https://www.fast.ai" target="_blank"> fast.ai</a>. 
                         </p>
                     </LandingBottomContentLeft>
                     <LandingBottomContentRight>
