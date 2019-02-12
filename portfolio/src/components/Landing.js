@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import profilebw from '../images/profilebw.JPG'
 
 const LandingMain=styled.div`
+
 `;
 
 const LandingTop=styled.div`
@@ -13,6 +14,7 @@ const LandingTop=styled.div`
     flex-direction: column;
     align-items: center;
     padding: 50px 550px 50px 550px;
+    
 `;
 
 const LandingTopContent=styled.div`
@@ -28,6 +30,13 @@ const LandingTopContent=styled.div`
         font-weight: 950;
         color: #353B3E;
         letter-spacing: 0.1rem;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+
+        @keyframes fadeIn {
+            from {color: white;}
+            to {color: #353B3E;}
+        }
     }
 
     h2 {
@@ -37,6 +46,13 @@ const LandingTopContent=styled.div`
         font-weight: 100;
         color: #AAA2A2;
         justify-content: center;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+
+        @keyframes fadeIn {
+            from {color: white;}
+            to {color: #353B3E;}
+        }
     }
 `;
 
@@ -47,12 +63,21 @@ const ProfileImg=styled.img`
     border-radius: 50%;
     background-color: white;
     padding: 8px;
+    animation-name: imgFadeIn;
+        animation-duration: 3s;
+
+        @keyframes imgFadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
 `;
 
 const LandingBottom=styled.div`
     margin-top: 50px;
     display: flex;
     padding: 15px 650px 15px 650px;
+    animation-name: fadeIn;
+    animation-duration: 3s;
 
     h3 {
         font-size: 1.50rem;
@@ -61,13 +86,24 @@ const LandingBottom=styled.div`
         font-weight: 600;
         color: #353B3E;
         justify-content: center;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+
+        @keyframes fadeIn {
+            from {color: white;}
+            to {color: #353B3E;}
+        }
+    }
+
+    @keyframes fadeIn {
+        from {color: white;}
+        to {color: #353B3E;}
     }
 `;
 
 const LandingBottomContentLeft=styled.div`
     width: 75%;
     padding-right: 25px; 
-    
 
     p {
         font-size: .95rem;
@@ -79,6 +115,13 @@ const LandingBottomContentLeft=styled.div`
 
     a {
         text-decoration: none;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+
+        @keyframes fadeIn {
+            from {color: white;}
+            to {color: #353B3E;}
+        }
     }
 `;
 
@@ -94,6 +137,13 @@ const LandingBottomContentRight=styled.div`
 const Icon=styled.div`
     display: flex; 
     text-decoration: none;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+
+    @keyframes fadeIn {
+        from {color: white;}
+        to {color: #353B3E;}
+    }
 
     :hover {
             color: #19698F;

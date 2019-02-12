@@ -7,41 +7,47 @@ const NavBarMain=styled.div`
     justify-content: space-between;
     font-family: Lato, sans-serif;
     font-weight: 600;
-    border-bottom: 1px solid lightgrey;
-    color: #5A452A;
+    border-bottom: 2px solid lightgrey;
+    border-top: 2px solid lightgrey;
+    background-color: #353B3E; 
+    align-items: center;
 `;
 
 const NavBarLeft=styled.div`
 
+    min-height: 100%;
 `;
 
 const NavBarRight=styled.div`
     display: flex; 
     justify-content: space-between;
-    min-height: 100%;
+    align-content: center;
+
 `;
 
 const NavBarLinks=styled(Link)`
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: .8rem;
     letter-spacing: 0.25rem;
-    padding: 0 25px;
+    padding: 20px 25px;
+
+    :hover {
+        background-color: lightgray;
+        cursor: pointer;
+    }
 `;
 
 const NavBarTitle=styled(Link)`
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.15rem;
     letter-spacing: 0.20rem;
-    padding: 0 25px;
-`;
-
-const NavHighlight=styled.div`
-    padding: 15px 0;
+    padding: 15px 25px;
 
     :hover {
         background-color: lightgray;
+        cursor: pointer;
     }
 `;
 
@@ -52,21 +58,21 @@ export default class NavBar extends Component {
         return (
             <NavBarMain>
                 <NavBarLeft>
-                    <NavHighlight>
-                        <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
-                    </NavHighlight>
+                    <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
                 </NavBarLeft>
 
                 <NavBarRight>
-                    <NavHighlight>
-                        <NavBarLinks to="/projects">PROJECTS</NavBarLinks>
-                    </NavHighlight>
-                    <NavHighlight>
-                        <NavBarLinks to="/writing">WRITING</NavBarLinks>
-                    </NavHighlight>
-                    <NavHighlight>
-                        <NavBarLinks to="/contact">CONTACT</NavBarLinks>
-                    </NavHighlight>
+                    <NavBarLinks to="/projects">
+                        PROJECTS
+                    </NavBarLinks>
+                    
+                    <NavBarLinks to="/writing">
+                        WRITING
+                    </NavBarLinks>
+                    
+                    <NavBarLinks to="/contact">
+                        CONTACT
+                    </NavBarLinks>
                 </NavBarRight>
             </NavBarMain>
         )
