@@ -10,11 +10,6 @@ const ProjectCardsMain=styled.div`
     height: 50%;
     box-shadow: 2px 2px 5px;
     border: 1px solid lightslategray;
-
-    :hover {
-        cursor: pointer;
-        opacity: .75;
-    }
 `;
 
 const ProjectCardsImg=styled.img`

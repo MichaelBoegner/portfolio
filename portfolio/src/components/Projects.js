@@ -55,7 +55,7 @@ const ProjectCardBio=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px; 
+    padding: 0 25px; 
     width: 70%;
     margin: 0 5%;
     font-family: Lato, sans-serif;
