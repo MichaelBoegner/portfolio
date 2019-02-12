@@ -2,8 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ProjectCardsMain=styled.div`
-    height: 450px;
-    width: 450px; 
+    border: 3px solid orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 33%; 
+    margin: 0 25px;
+`;
+
+const ProjectCardsImg=styled.img`
+    height: 80%;
+    width: 80%; 
+
 `;
 
 const ProjectCardsTitle=styled.div`
@@ -14,12 +26,12 @@ const ProjectCardsBody=styled.div`
 
 `;
 
-export default function ProjectCards () {
+export default function ProjectCards (props) {
     return (
         <ProjectCardsMain>
-            <img src={this.props.img} alt="image of a project"/>
-            <ProjectCardsTitle>{this.props.title}</ProjectCardsTitle>
-            <ProjectCardsBody>{this.props.body}</ProjectCardsBody>
+            <ProjectCardsImg src={props.img} alt="image of a project"/>
+            <ProjectCardsTitle>{props.title}</ProjectCardsTitle>
+            <ProjectCardsBody>{props.body}</ProjectCardsBody>
         </ProjectCardsMain>
     )
 }

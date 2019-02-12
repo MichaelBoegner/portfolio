@@ -53,7 +53,7 @@ const LandingTopContent=styled.div`
 
         @keyframes fadeIn {
             from {color: white;}
-            to {color: #353B3E;}
+            to {color: #AAA2A2;}
         }
     }
 `;
