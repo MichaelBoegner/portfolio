@@ -130,7 +130,7 @@ export default class Landing extends Component {
                     </LandingTopContent>
                     <LandingTopContent>
                         <h1>C. Michael Boegner</h1>
-                        <h2>Software Engineer</h2>
+                        <h2>Software Engineer and Problem Solver</h2>
                     </LandingTopContent>
                 </LandingTop>
                 <LandingBottom>
@@ -153,13 +153,13 @@ export default class Landing extends Component {
                                 <i class="fas fa-envelope-square"></i><p>Email</p>
                             </Icon>
                         </Link>
-                        <a href="https://www.linkedin.com/in/c-michael-boegner-855a9741/" target="_blank">
+                        <a href="https://www.linkedin.com/in/c-michael-boegner-855a9741/" target="_blank" rel="noopener noreferrer">
                             <Icon>
                                 <i class="fab fa-linkedin"></i><p>LinkedIn</p>
                             </Icon>
                         </a> 
 
-                        <a href="https://github.com/MichaelBoegner" target="_blank">
+                        <a href="https://github.com/MichaelBoegner" target="_blank" rel="noopener noreferrer">
                             <Icon>
                                 <i class="fab fa-github-square"></i><p>GitHub</p>
                             </Icon>
