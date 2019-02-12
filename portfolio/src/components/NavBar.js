@@ -30,7 +30,7 @@ const NavBarLinks=styled(Link)`
     color: white;
     font-size: .8rem;
     letter-spacing: 0.25rem;
-    padding: 20px 25px;
+    padding: 15px 25px;
 
 
     :hover {
@@ -55,7 +55,7 @@ const NavBarTitle=styled(Link)`
     color: white;
     font-size: 1.15rem;
     letter-spacing: 0.20rem;
-    padding: 15px 25px;
+    padding: 10px 25px;
 
     :hover {
         background-color: lightgray;

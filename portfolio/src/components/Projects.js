@@ -11,12 +11,11 @@ const ProjectsMain=styled.div`
 `;
 
 const ProjectsBottom=styled.div`
-    height: 450px;
-    border: 3px solid purple;
-    margin-top: 50px;
+    height: 50%;
+    margin-top: 25px;
     display: flex;
-    justify-content: space-between;
-    padding: 15px 250px;
+    justify-content: space-around;
+    padding: 15px 0;
     animation-name: fadeIn;
     animation-duration: 3s;
 
