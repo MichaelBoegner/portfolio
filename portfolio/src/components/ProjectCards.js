@@ -6,37 +6,36 @@ const ProjectCardsMain=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 33%; 
-    margin: 0 25px;
-    box-shadow: 5px 5px 5px;
+    width: 80%;
+    height: 50%;
+    box-shadow: 2px 2px 5px;
     border: 1px solid lightslategray;
+
     :hover {
         cursor: pointer;
-        opacity: .25;
+        opacity: .75;
     }
 `;
 
 const ProjectCardsImg=styled.img`
+    width: 100%;
     height: 100%;
-    width: 100%; 
-    z-index: -1;
+`;
+
+const ProjectCardsGit=styled.div`
 
 `;
 
-const ProjectCardsTitle=styled.div`
-    position: fixed;
-`;
+const ProjectCardsSite=styled.div`
 
-const ProjectCardsBody=styled.div`
-    position: fixed;
 `;
 
 export default function ProjectCards (props) {
     return (
         <ProjectCardsMain>
-            <ProjectCardsImg src={props.img} alt="image of a project"/>
-            <ProjectCardsTitle>{props.title}</ProjectCardsTitle>
-            <ProjectCardsBody>{props.body}</ProjectCardsBody>
+            <ProjectCardsImg src={props.img} alt="image of a project"></ProjectCardsImg>
+            <ProjectCardsGit><a href={props.git}/></ProjectCardsGit>
+            <ProjectCardsSite><a href={props.site}/></ProjectCardsSite>
         </ProjectCardsMain>
     )
 }

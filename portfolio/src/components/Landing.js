@@ -13,7 +13,7 @@ const LandingBottom=styled.div`
     display: flex;
     padding: 15px 650px 15px 650px;
     animation-name: fadeIn;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 
     h3 {
         font-size: 1.50rem;
@@ -23,7 +23,7 @@ const LandingBottom=styled.div`
         color: #353B3E;
         justify-content: center;
         animation-name: fadeIn;
-        animation-duration: 3s;
+        animation-duration: 1.5s;
 
         @keyframes fadeIn {
             from {color: white;}
@@ -52,7 +52,7 @@ const LandingBottomContentLeft=styled.div`
     a {
         text-decoration: none;
         animation-name: fadeIn;
-        animation-duration: 3s;
+        animation-duration: 1.5s;
 
         @keyframes fadeIn {
             from {color: white;}
@@ -74,7 +74,7 @@ const Icon=styled.div`
     display: flex; 
     text-decoration: none;
     animation-name: fadeIn;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 
     @keyframes fadeIn {
         from {color: white;}

@@ -38,14 +38,13 @@ const NavBarLinks=styled(Link)`
         cursor: pointer;
 
         animation-name: rainbowHover;
-        animation-duration: 2s; 
+        animation-duration: 1s; 
         animation-iteration-count:infinite;
         animation-direction: alternate-reverse;
 
         @keyframes rainbowHover {
-            0% {color: blueviolet;}
-            50% {color: orange;}
-            100% {color: blueviolet;}
+            0% {color: #353B3E;}
+            100% {color: #AAA2A2;}
         }
     }
 `;
@@ -62,14 +61,13 @@ const NavBarTitle=styled(Link)`
         cursor: pointer;
 
         animation-name: rainbowHover;
-        animation-duration: 2s; 
+        animation-duration: 1s; 
         animation-iteration-count:infinite;
         animation-direction: alternate-reverse;
 
         @keyframes rainbowHover {
-            0% {color: blueviolet;}
-            50% {color: orange;}
-            100% {color: blueviolet;}
+            0% {color: #353B3E;}
+            100% {color: #AAA2A2;}
         }
     }
 `;

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import profilebw from '../images/profilebw.JPG'
+import profile from '../images/profile.JPG'
 
 const LandingMain=styled.div`
 
@@ -31,11 +30,11 @@ const LandingTopContent=styled.div`
         color: #353B3E;
         letter-spacing: 0.1rem;
         
-        animation-name: fadeIn;
-        animation-duration: 3s;
+        animation-name: h1fadeIn;
+        animation-duration: 1.5s;
 
-        @keyframes fadeIn {
-            from {color: white;}
+        @keyframes h1fadeIn {
+            from {color: #F4F7F9;}
             to {color: #353B3E;}
         }
 
@@ -48,11 +47,12 @@ const LandingTopContent=styled.div`
         font-weight: 100;
         color: #AAA2A2;
         justify-content: center;
-        animation-name: fadeIn;
-        animation-duration: 3s;
+        animation-name: h2fadeIn;
+        animation-duration: 1.5s;
 
-        @keyframes fadeIn {
-            from {color: white;}
+
+        @keyframes h2fadeIn {
+            from {color: #F4F7F9;}
             to {color: #AAA2A2;}
         }
     }
@@ -66,7 +66,7 @@ const ProfileImg=styled.img`
     background-color: white;
     padding: 8px;
     animation-name: imgFadeIn;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
 
         @keyframes imgFadeIn {
             from {opacity: 0;}
@@ -82,11 +82,11 @@ export default class Landing extends Component {
             <LandingMain>
                 <LandingTop>
                     <LandingTopContent>
-                        <ProfileImg src={profilebw} alt="portfolio pic of Michael Boegner" />
+                        <ProfileImg src={profile} alt="portfolio pic of Michael Boegner" />
                     </LandingTopContent>
                     <LandingTopContent>
                         <h1>C. Michael Boegner</h1>
-                        <h2>Software Engineer and Problem Solver</h2>
+                        <h2>Software Engineer & Problem Solver</h2>
                     </LandingTopContent>
                 </LandingTop>
             </LandingMain>
