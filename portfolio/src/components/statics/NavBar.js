@@ -59,7 +59,7 @@ const NavBarLinks=styled(Link)`
 
     @media (max-width: 768px) {
         border-bottom: 2px solid lightgrey;
-        padding: 10% 0;
+        padding: 5% 0;
         margin: 0 0 0 0;
         display: flex;
         flex-direction: column;
