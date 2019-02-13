@@ -42,8 +42,8 @@ const NavBarLinks=styled(Link)`
         animation-direction: alternate-reverse;
 
         @keyframes rainbowHover {
-            0% {color: #353B3E;}
-            100% {color: #AAA2A2;}
+            0% {color: lightgrey;}
+            100% {color: #353B3E;}
         }
     }
 `;
@@ -65,8 +65,8 @@ const NavBarTitle=styled(Link)`
         animation-direction: alternate-reverse;
 
         @keyframes rainbowHover {
-            0% {color: #353B3E;}
-            100% {color: #AAA2A2;}
+            0% {color: lightgrey;}
+            100% {color: #353B3E;}
         }
     }
 `;

@@ -31,8 +31,17 @@ const Icon=styled.div`
     text-decoration: none;
 
     :hover {
-        color: #19698F;
         cursor: pointer;
+
+        animation-name: footerRainbowHover;
+        animation-duration: 1s; 
+        animation-iteration-count:infinite;
+        animation-direction: alternate-reverse;
+
+        @keyframes footerRainbowHover {
+            0% {color: #353B3E;}
+            100% {color: white;}
+        }
     }
 
     .fas {
