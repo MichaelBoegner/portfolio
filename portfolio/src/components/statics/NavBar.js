@@ -90,8 +90,8 @@ export default class NavBar extends Component {
                         WRITING
                     </NavBarLinks>
                     
-                    <NavBarLinks to="/resume">
-                        RESUME
+                    <NavBarLinks to="/contact">
+                        CONTACT
                     </NavBarLinks>
                 </NavBarRight>
             </NavBarMain>

@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Header from './components/statics/Header';
 import Landing from './components/routes/Landing';
-import Projects from './components/projects/Projects';
+import Projects from './components/routes/projects/Projects';
 import Writing from './components/routes/Writing';
 import NavBar from './components/statics/NavBar';
-import Resume from './components/routes/Resume';
+import Contact from './components/routes/Contact';
 import styled from 'styled-components';
 
 const AppMain=styled.div`
@@ -62,10 +62,10 @@ componentDidMount() {
         />
 
         <Route 
-          exact path="/resume"
+          exact path="/contact"
           render={props => (
             
-            <Resume
+            <Contact
               {...props}
             />
           )}

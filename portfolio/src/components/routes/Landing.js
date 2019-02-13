@@ -4,13 +4,11 @@ import styled from 'styled-components';
 
 
 const LandingMain=styled.div`
-
+    margin: 2% 35%;
 `;
 
 const LandingBottom=styled.div`
-    margin-top: 50px;
     display: flex;
-    padding: 2% 35%;
     animation-name: fadeIn;
     animation-duration: 1.5s;
 

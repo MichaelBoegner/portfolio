@@ -35,7 +35,7 @@ const ResumeCardsCard=styled(ProjectCards)`
 `;
 
 
-export default class Projects extends Component { 
+export default class Resume extends Component { 
     constructor(){
         super();
     }

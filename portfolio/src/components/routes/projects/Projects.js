@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import ProjectCards from './ProjectCards';
-import Footer from '../statics/Footer';
+import Footer from '../../statics/Footer';
 import styled from 'styled-components';
-import FamilyTabs from '../../images/FamilyTabs.JPG'
-import GameLife from '../../images/GameLife.JPG';
-import Seinfeld from '../../images/Seinfeld.JPG';
-import Portfolio from '../../images/Portfolio.JPG';
+import FamilyTabs from '../../../images/FamilyTabs.JPG'
+import GameLife from '../../../images/GameLife.JPG';
+import Seinfeld from '../../../images/Seinfeld.JPG';
+import Portfolio from '../../../images/Portfolio.JPG';
 
 const ProjectsMain=styled.div`
 `;

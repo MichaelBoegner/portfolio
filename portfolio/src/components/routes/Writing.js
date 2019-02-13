@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProjectCards from '../projects/ProjectCards';
+import ProjectCards from './projects/ProjectCards';
 import Footer from '../statics/Footer';
 import styled from 'styled-components';
 import FamilyTabs from '../../images/FamilyTabs.JPG';
@@ -89,7 +89,7 @@ const WritingCardBio=styled.div`
 
 
 
-export default class Projects extends Component { 
+export default class Writing extends Component { 
     constructor(){
         super();
     }
