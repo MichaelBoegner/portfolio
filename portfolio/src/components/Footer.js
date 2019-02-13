@@ -12,6 +12,14 @@ const FooterMain=styled.div`
     border-top: 2px solid lightgrey;
     background-color: #353B3E;
     align-items: center;
+
+    animation-name: footerFadeIn;
+    animation-duration: 1.5s;
+
+    @keyframes footerFadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+    }
 `;
 
 const Icon=styled.div`
@@ -53,18 +61,18 @@ export default class NavBar extends Component {
             <FooterMain>
                 <Link to="/contact">
                     <Icon>
-                        <i class="fas fa-envelope-square"></i><p>Email</p>
+                        <i class="fas fa-envelope-square"></i>
                     </Icon>
                 </Link>
                 <a href="https://www.linkedin.com/in/c-michael-boegner-855a9741/" target="_blank" rel="noopener noreferrer">
                     <Icon>
-                        <i class="fab fa-linkedin"></i><p>LinkedIn</p>
+                        <i class="fab fa-linkedin"></i>
                     </Icon>
                 </a> 
 
                 <a href="https://github.com/MichaelBoegner" target="_blank" rel="noopener noreferrer">
                     <Icon>
-                        <i class="fab fa-github-square"></i><p>GitHub</p>
+                        <i class="fab fa-github-square"></i>
                     </Icon>
                 </a>
             </FooterMain>

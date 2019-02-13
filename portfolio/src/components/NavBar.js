@@ -14,7 +14,6 @@ const NavBarMain=styled.div`
 `;
 
 const NavBarLeft=styled.div`
-
     min-height: 100%;
 `;
 
@@ -91,8 +90,8 @@ export default class NavBar extends Component {
                         WRITING
                     </NavBarLinks>
                     
-                    <NavBarLinks to="/contact">
-                        CONTACT
+                    <NavBarLinks to="/resume">
+                        RESUME
                     </NavBarLinks>
                 </NavBarRight>
             </NavBarMain>

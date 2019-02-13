@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import profile from '../images/profile.JPG'
 
@@ -21,6 +22,10 @@ const HeaderTopContent=styled.div`
     align-items: center;
     padding: 5px;
     justify-content: center;
+    
+    :hover {
+        cursor: pointer;
+    }
 
     h1 {
         font-size: 2.8rem;
@@ -29,13 +34,13 @@ const HeaderTopContent=styled.div`
         color: #353B3E;
         letter-spacing: 0.1rem;
         
-        animation-name: h1fadeIn;
+        /* animation-name: h1fadeIn;
         animation-duration: 1.5s;
 
         @keyframes h1fadeIn {
             from {color: #F4F7F9;}
             to {color: #353B3E;}
-        }
+        } */
 
     }
 
@@ -46,14 +51,15 @@ const HeaderTopContent=styled.div`
         font-weight: 100;
         color: #AAA2A2;
         justify-content: center;
-        animation-name: h2fadeIn;
+        
+        /* animation-name: h2fadeIn;
         animation-duration: 1.5s;
 
 
         @keyframes h2fadeIn {
             from {color: #F4F7F9;}
             to {color: #AAA2A2;}
-        }
+        } */
     }
 `;
 
@@ -64,15 +70,19 @@ const ProfileImg=styled.img`
     border-radius: 50%;
     background-color: white;
     padding: 8px;
-    animation-name: imgFadeIn;
+    
+    /* animation-name: imgFadeIn;
     animation-duration: 1.5s;
 
-        @keyframes imgFadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
+    @keyframes imgFadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    } */
 `;
 
+const NavBarLinks=styled(Link)`
+    text-decoration: none;
+`;
 
 
 export default class Header extends Component { 
@@ -80,13 +90,15 @@ export default class Header extends Component {
         return (
             <HeaderMain>
                 <HeaderTop>
-                    <HeaderTopContent>
-                        <ProfileImg src={profile} alt="portfolio pic of Michael Boegner" />
-                    </HeaderTopContent>
-                    <HeaderTopContent>
-                        <h1>C. Michael Boegner</h1>
-                        <h2>Software Engineer & Problem Solver</h2>
-                    </HeaderTopContent>
+                    <NavBarLinks to="/">
+                        <HeaderTopContent>
+                            <ProfileImg src={profile} alt="portfolio pic of Michael Boegner" />
+                        </HeaderTopContent>
+                        <HeaderTopContent>
+                            <h1>C. Michael Boegner</h1>
+                            <h2>Software Engineer & Problem Solver</h2>
+                        </HeaderTopContent>
+                    </NavBarLinks>
                 </HeaderTop>
             </HeaderMain>
         )

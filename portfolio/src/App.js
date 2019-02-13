@@ -4,7 +4,7 @@ import Landing from './components/Landing';
 import Projects from './components/Projects';
 import Writing from './components/Writing';
 import NavBar from './components/NavBar';
-import Contact from './components/Contact';
+import Resume from './components/Resume';
 import styled from 'styled-components';
 
 const AppMain=styled.div`
@@ -49,10 +49,10 @@ class App extends Component {
         />
 
         <Route 
-          exact path="/contact"
+          exact path="/resume"
           render={props => (
             
-            <Contact
+            <Resume
               {...props}
             />
           )}

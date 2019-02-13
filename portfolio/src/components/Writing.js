@@ -14,10 +14,11 @@ const WritingBottom=styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    animation-name: fadeIn;
-    animation-duration: 2s;
 
-    @keyframes fadeIn {
+    animation-name: writingFadeIn;
+    animation-duration: 1.5s;
+
+    @keyframes writingFadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
     }
@@ -29,20 +30,6 @@ const WritingCardsMain1=styled.div`
     align-items: top;
     padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
-`;
-
-const WritingCardsMain2=styled.div`
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: top;
-    padding: 3% 20%;
-    border-bottom: 1px solid lightgrey;
-`;
-
-const WritingCardsMain3=styled.div`
-    display: flex;
-    align-items: top;
-    padding: 3% 20%;
 `;
 
 const WritingCardsCard=styled(ProjectCards)`
@@ -122,23 +109,10 @@ export default class Projects extends Component {
                         />
 
                         <WritingCardBio> 
-                            <h3>Family Tabs</h3>
+                            <h3>Medium Article</h3>
                             <p>
-                                Family Tabs offers any parent a quick and 
-                                easy way to organize and keep track of 
-                                their family’s events. Using the site allows them
-                                to manage everyone's schedules, get a day's agenda at a glance,
-                                approve and manage any conflicts, as well as get notified of new
-                                and/or upccoming events.
+                                This is filler. A happy-time Medium article to follow soon!
                             </p>
-                            
-                            <a href="https://family-tabs.netlify.com" target="_blank" rel="noopener noreferrer">
-                                <h2>WEBSITE</h2>
-                            </a>
-
-                            <a href="https://github.com/Lambda-School-Labs/labs9-family-tabs" target="_blank" rel="noopener noreferrer">
-                                <h2>GITHUB</h2>
-                            </a>
                         </WritingCardBio>
                     </WritingCardsMain1>
 

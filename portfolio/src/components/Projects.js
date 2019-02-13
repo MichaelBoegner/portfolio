@@ -16,10 +16,11 @@ const ProjectsBottom=styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    animation-name: fadeIn;
-    animation-duration: 2s;
 
-    @keyframes fadeIn {
+    animation-name: projectsFadeIn;
+    animation-duration: 1.5s;
+
+    @keyframes projectsFadeIn {
             from {opacity: 0;}
             to {opacity: 1;}
     }
