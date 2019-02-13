@@ -3,7 +3,7 @@ import Header from './Header';
 import ProjectCards from './ProjectCards';
 import Footer from './Footer';
 import styled from 'styled-components';
-import Resume from '../images/Resume.PNG';
+import Resume from '../images/Resume.JPG';
 
 
 const ResumeMain=styled.div`

@@ -178,11 +178,11 @@ export default class Projects extends Component {
                         <ProjectCardBio> 
                             <h3>Seinfeld Your Enthusiasm</h3>
                             <p>
-                                What could possibly be better than strapping into an all nighter
+                                What could possibly be better than strapping into an all-nighter
                                 with an old styled MUD!? Doing it with the cast of Seinfeld and Curb
-                                Your Enthusiasm by your side! Beginning your quest by mysteriously 
-                                waking up on Jerry's couch, you soon realize that being master of your 
-                                own domain isn't all it's cracked up to be as you battle your way to La
+                                Your Enthusiasm by your side! Beginning your quest on Jerry's couch, 
+                                you soon realize that being master of your 
+                                own domain isn't all it's cracked up to be, as you battle your way to La
                                 La Land and back . . . all for the best bowl of soup on the face of the Earth! 
                             </p>
 
