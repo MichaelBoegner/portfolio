@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from './Header';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -106,12 +105,12 @@ const Icon=styled.div`
 
 
 export default class Landing extends Component { 
+
+
     render() {
+        console.log("THIS.STATE", this.state)
         return (
             <LandingMain>
-
-                <Header/>
-                
                 <LandingBottom>
                     <LandingBottomContentLeft>
                         <h3>About me</h3>

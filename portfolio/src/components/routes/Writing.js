@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import ProjectCards from './ProjectCards';
-import Footer from './Footer';
+import ProjectCards from '../projects/ProjectCards';
+import Footer from '../statics/Footer';
 import styled from 'styled-components';
-import FamilyTabs from '../images/FamilyTabs.JPG';
+import FamilyTabs from '../../images/FamilyTabs.JPG';
 
 
 const WritingMain=styled.div`
@@ -98,9 +97,6 @@ export default class Projects extends Component {
     render() {
         return (
             <WritingMain>
-
-                <Header/>
-
                 <WritingBottom>
 
                     <WritingCardsMain1>

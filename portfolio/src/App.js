@@ -1,21 +1,34 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
-import Landing from './components/Landing';
-import Projects from './components/Projects';
-import Writing from './components/Writing';
-import NavBar from './components/NavBar';
-import Resume from './components/Resume';
+import Header from './components/statics/Header';
+import Landing from './components/routes/Landing';
+import Projects from './components/projects/Projects';
+import Writing from './components/routes/Writing';
+import NavBar from './components/statics/NavBar';
+import Resume from './components/routes/Resume';
 import styled from 'styled-components';
 
 const AppMain=styled.div`
 `;
 
 class App extends Component {
+  constructor() {
+    super(); 
+    this.state = {
+        opacityCheck: null, 
+    }
+  }
+
+componentDidMount() {
+    this.setState({opacityCheck: "opacity"});
+}
+
   render() {
     return (
       <AppMain>
         <div className="app-navbar">
               <NavBar/>
+              <Header opacity={this.state.opacityCheck}/>
         </div>
         
         <Route 

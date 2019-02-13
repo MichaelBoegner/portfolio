@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import ProjectCards from './ProjectCards';
-import Footer from './Footer';
+import ProjectCards from '../projects/ProjectCards';
+import Footer from '../statics/Footer';
 import styled from 'styled-components';
-import Resume from '../images/Resume.JPG';
+import Resume from '../../images/Resume.JPG';
 
 
 const ResumeMain=styled.div`
@@ -44,9 +43,6 @@ export default class Projects extends Component {
     render() {
         return (
             <ResumeMain>
-
-                <Header/>
-
                 <ResumeBottom>
 
                     <ResumeCardsMain1>

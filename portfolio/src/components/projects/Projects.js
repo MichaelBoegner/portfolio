@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-import Header from './Header';
 import ProjectCards from './ProjectCards';
-import Footer from './Footer';
+import Footer from '../statics/Footer';
 import styled from 'styled-components';
-import FamilyTabs from '../images/FamilyTabs.JPG';
-import GameLife from '../images/GameLife.JPG';
-import Seinfeld from '../images/Seinfeld.JPG';
-import Portfolio from '../images/Portfolio.JPG';
+import FamilyTabs from '../../images/FamilyTabs.JPG'
+import GameLife from '../../images/GameLife.JPG';
+import Seinfeld from '../../images/Seinfeld.JPG';
+import Portfolio from '../../images/Portfolio.JPG';
 
 const ProjectsMain=styled.div`
 `;
 
 const ProjectsBottom=styled.div`
     height: 50%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,6 +84,7 @@ const ProjectCardBio=styled.div`
         font-weight: 400;
         color: #AAA2A2;
         justify-content: center;
+
         :hover {
             animation-name: fadeIn;
             animation-duration: .5s;
@@ -122,9 +121,6 @@ export default class Projects extends Component {
     render() {
         return (
             <ProjectsMain>
-
-                <Header/>
-
                 <ProjectsBottom>
 
                     <ProjectCardsMain1>
