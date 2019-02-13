@@ -83,7 +83,7 @@ export default class Contact extends Component {
                     <ContactForm
                         action="https://formspree.io/cmikeb@gmail.com" 
                         method="POST"
-                        target="_blank">
+                        >
                         
                         <ContactInput>
                             <h2>Your Name:</h2>
