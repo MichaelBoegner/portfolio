@@ -27,7 +27,7 @@ const WritingCardsMain1=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: top;
-    padding: 3% 20%;
+    padding: 4% 25% 10% 25%;
     border-bottom: 1px solid lightgrey;
 `;
 
