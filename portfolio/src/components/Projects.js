@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import ProjectCards from './ProjectCards';
+import Footer from './Footer';
 import styled from 'styled-components';
 import FamilyTabs from '../images/FamilyTabs.JPG';
 import GameLife from '../images/GameLife.JPG';
@@ -44,7 +45,6 @@ const ProjectCardsMain3=styled.div`
     display: flex;
     align-items: top;
     padding: 3% 20%;
-    border-bottom: 1px solid lightgrey;
 `;
 
 const ProjectCardsCard=styled(ProjectCards)`
@@ -195,6 +195,8 @@ export default class Projects extends Component {
                         </ProjectCardBio>
                     </ProjectCardsMain3>
                 </ProjectsBottom>
+                
+                <Footer/>
             </ProjectsMain>
             
         )

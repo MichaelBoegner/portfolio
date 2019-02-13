@@ -3,11 +3,9 @@ import { Route } from 'react-router-dom';
 import Landing from './components/Landing';
 import Projects from './components/Projects';
 import NavBar from './components/NavBar';
-import Header from './components/Header';
 import styled from 'styled-components';
 
 const AppMain=styled.div`
-
 `;
 
 class App extends Component {
@@ -37,7 +35,7 @@ class App extends Component {
             />
           )}
         />
-        
+
       </AppMain>
     );
   }
