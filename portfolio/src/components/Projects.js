@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import FamilyTabs from '../images/FamilyTabs.JPG';
 import GameLife from '../images/GameLife.JPG';
 import Seinfeld from '../images/Seinfeld.JPG';
+import Portfolio from '../images/Portfolio.JPG';
 
 const ProjectsMain=styled.div`
 `;
@@ -28,7 +29,6 @@ const ProjectsBottom=styled.div`
 
 const ProjectCardsMain1=styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: top;
     padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
@@ -44,6 +44,14 @@ const ProjectCardsMain2=styled.div`
 
 const ProjectCardsMain3=styled.div`
     display: flex;
+    align-items: top;
+    padding: 3% 20%;
+    border-bottom: 1px solid lightgrey;
+`;
+
+const ProjectCardsMain4=styled.div`
+    display: flex;
+    flex-direction: row-reverse;
     align-items: top;
     padding: 3% 20%;
 `;
@@ -195,6 +203,28 @@ export default class Projects extends Component {
                             </a>
                         </ProjectCardBio>
                     </ProjectCardsMain3>
+
+                    <ProjectCardsMain4>
+                        <ProjectCardsCard
+                            img={Portfolio}
+                        />
+
+                        <ProjectCardBio> 
+                            <h3>C. Michael Boegner</h3>
+                            <p>
+                                This portfolio was built from the ground up, using React. It was deployed to
+                                the custom domain using Netlify. 
+                            </p>
+
+                            <a href="https://www.cmboegner.com/" target="_blank" rel="noopener noreferrer">
+                                <h2>WEBSITE</h2>
+                            </a>
+
+                            <a href="https://github.com/MichaelBoegner/portfolio" target="_blank" rel="noopener noreferrer">
+                                <h2>GITHUB</h2>
+                            </a>
+                        </ProjectCardBio>
+                    </ProjectCardsMain4>
                 </ProjectsBottom>
                 
                 <Footer/>
