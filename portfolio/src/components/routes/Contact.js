@@ -30,6 +30,10 @@ const ContactBottom=styled.div`
         from {color: white;}
         to {color: #353B3E;}
     }
+
+    @media (max-width: 768px) {
+       width: 100vw;
+    }
 `;
 
 const ContactForm=styled.form`

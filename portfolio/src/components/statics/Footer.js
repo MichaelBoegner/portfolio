@@ -20,6 +20,16 @@ const FooterMain=styled.div`
             from {opacity: 0;}
             to {opacity: 1;}
     }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      padding: 0;
+    }
+
+    @media (max-width: 768px) {
+       padding: 0;
+       flex-direction: column;
+       width: 100vw;
+    }
 `;
 
 const Icon=styled.div`
@@ -58,6 +68,12 @@ const Icon=styled.div`
         font-size: .95rem;
         display: flex;
         align-items: center;
+    }
+
+    @media (max-width: 768px) {
+        border-bottom: 1px solid lightgrey;
+        padding: 0 0 40% 0;
+        margin: 25% 0;
     }
 `;
 

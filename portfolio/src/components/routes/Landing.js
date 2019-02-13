@@ -4,7 +4,13 @@ import styled from 'styled-components';
 
 
 const LandingMain=styled.div`
-    margin: 2% 35%;
+    padding: 2% 35%;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        padding: 10% 2%;
+    }
 `;
 
 const LandingBottom=styled.div`
@@ -28,9 +34,9 @@ const LandingBottom=styled.div`
         }
     }
 
-    @keyframes fadeIn {
-        from {color: white;}
-        to {color: #353B3E;}
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
     }
 `;
 
@@ -56,6 +62,14 @@ const LandingBottomContentLeft=styled.div`
             to {color: #353B3E;}
         }
     }
+
+    @media (max-width: 768px) {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const LandingBottomContentRight=styled.div`
@@ -64,6 +78,14 @@ const LandingBottomContentRight=styled.div`
     a {
         text-decoration: none;
         color: black;
+    }
+
+    @media (max-width: 768px) {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 `;
 

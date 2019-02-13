@@ -21,6 +21,10 @@ const HeaderTop=styled.div`
         from {opacity: ${props => props.opacity ? "0" : "1"};}
         to {opacity: 1;} 
     }
+
+    @media (max-width: 768px) {
+       width: 100vw;
+    }
 `;
 
 const HeaderTopContent=styled.div`
@@ -29,7 +33,7 @@ const HeaderTopContent=styled.div`
     align-items: center;
     padding: 5px;
     justify-content: center;
-    
+
     :hover {
         cursor: pointer;
     }
@@ -49,6 +53,16 @@ const HeaderTopContent=styled.div`
         font-weight: 100;
         color: #AAA2A2;
         justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+        }
     }
 `;
 

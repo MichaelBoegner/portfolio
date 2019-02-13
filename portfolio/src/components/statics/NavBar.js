@@ -11,6 +11,12 @@ const NavBarMain=styled.div`
     border-top: 2px solid lightgrey;
     background-color: #353B3E; 
     align-items: center;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
 `;
 
 const NavBarLeft=styled.div`
@@ -22,6 +28,10 @@ const NavBarRight=styled.div`
     justify-content: space-between;
     align-content: center;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 const NavBarLinks=styled(Link)`
@@ -46,6 +56,16 @@ const NavBarLinks=styled(Link)`
             100% {color: #353B3E;}
         }
     }
+
+    @media (max-width: 768px) {
+        border-bottom: 2px solid lightgrey;
+        padding: 10% 0;
+        margin: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
 `;
 
 const NavBarTitle=styled(Link)`
@@ -68,6 +88,10 @@ const NavBarTitle=styled(Link)`
             0% {color: lightgrey;}
             100% {color: #353B3E;}
         }
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `;
 
