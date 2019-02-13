@@ -37,7 +37,7 @@ const NavBarLinks=styled(Link)`
         cursor: pointer;
 
         animation-name: rainbowHover;
-        animation-duration: 1s; 
+        animation-duration: 1.25s; 
         animation-iteration-count:infinite;
         animation-direction: alternate-reverse;
 
@@ -60,7 +60,7 @@ const NavBarTitle=styled(Link)`
         cursor: pointer;
 
         animation-name: rainbowHover;
-        animation-duration: 1s; 
+        animation-duration: 1.25s; 
         animation-iteration-count:infinite;
         animation-direction: alternate-reverse;
 
