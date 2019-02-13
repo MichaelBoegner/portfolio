@@ -11,7 +11,7 @@ const LandingMain=styled.div`
 const LandingBottom=styled.div`
     margin-top: 50px;
     display: flex;
-    padding: 15px 650px 15px 650px;
+    padding: 2% 35%;
     animation-name: fadeIn;
     animation-duration: 1.5s;
 

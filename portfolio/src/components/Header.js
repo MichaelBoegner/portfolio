@@ -2,21 +2,20 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import profile from '../images/profile.JPG'
 
-const LandingMain=styled.div`
+const HeaderMain=styled.div`
 
 `;
 
-const LandingTop=styled.div`
+const HeaderTop=styled.div`
     border-bottom: 1px solid lightgrey;
     background-color: #F4F7F9;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 550px 50px 550px;
-    
+    padding: 2% 0;
 `;
 
-const LandingTopContent=styled.div`
+const HeaderTopContent=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,20 +75,20 @@ const ProfileImg=styled.img`
 
 
 
-export default class Landing extends Component { 
+export default class Header extends Component { 
     render() {
         return (
-            <LandingMain>
-                <LandingTop>
-                    <LandingTopContent>
+            <HeaderMain>
+                <HeaderTop>
+                    <HeaderTopContent>
                         <ProfileImg src={profile} alt="portfolio pic of Michael Boegner" />
-                    </LandingTopContent>
-                    <LandingTopContent>
+                    </HeaderTopContent>
+                    <HeaderTopContent>
                         <h1>C. Michael Boegner</h1>
                         <h2>Software Engineer & Problem Solver</h2>
-                    </LandingTopContent>
-                </LandingTop>
-            </LandingMain>
+                    </HeaderTopContent>
+                </HeaderTop>
+            </HeaderMain>
         )
     }
 

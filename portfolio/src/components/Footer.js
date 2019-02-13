@@ -10,24 +10,21 @@ const FooterMain=styled.div`
     padding: 0 25%;
     border-bottom: 2px solid lightgrey;
     border-top: 2px solid lightgrey;
-    background-color: #353B3E; ; 
+    background-color: #353B3E;
     align-items: center;
 `;
-
-
 
 const Icon=styled.div`
     display: flex; 
     justify-content: space-around;
     padding: 2% 25%;
     margin: 25%;
-    text-decoration: none;
     color: white;
+    text-decoration: none;
 
     :hover {
         color: #19698F;
         cursor: pointer;
-        text-decoration: none;
     }
 
     .fas {
@@ -41,7 +38,6 @@ const Icon=styled.div`
     }
 
     p {
-        text-decoration: none;
         font-size: .95rem;
         display: flex;
         align-items: center;
