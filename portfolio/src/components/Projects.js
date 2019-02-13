@@ -28,7 +28,7 @@ const ProjectCardsMain1=styled.div`
     display: flex;
     justify-content: space-between;
     align-items: top;
-    padding: 5% 20%;
+    padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
 `;
 
@@ -36,14 +36,14 @@ const ProjectCardsMain2=styled.div`
     display: flex;
     flex-direction: row-reverse;
     align-items: top;
-    padding: 5% 20%;
+    padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
 `;
 
 const ProjectCardsMain3=styled.div`
     display: flex;
     align-items: top;
-    padding: 5% 20%;
+    padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
 `;
 
