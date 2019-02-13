@@ -34,7 +34,7 @@ const Icon=styled.div`
         cursor: pointer;
 
         animation-name: footerRainbowHover;
-        animation-duration: 1.25s; 
+        animation-duration: .75s; 
         animation-iteration-count:infinite;
         animation-direction: alternate-reverse;
 
