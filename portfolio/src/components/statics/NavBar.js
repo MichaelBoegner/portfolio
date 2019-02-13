@@ -65,6 +65,11 @@ const NavBarLinks=styled(Link)`
         flex-direction: column;
         align-items: center;
         width: 100vw;
+
+        :hover {
+            animation-name: none;
+            color: #353B3E;
+        }
     }
 `;
 

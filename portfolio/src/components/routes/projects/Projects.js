@@ -11,7 +11,6 @@ const ProjectsMain=styled.div`
 `;
 
 const ProjectsBottom=styled.div`
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,6 +29,12 @@ const ProjectCardsMain1=styled.div`
     align-items: top;
     padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
 `;
 
 const ProjectCardsMain2=styled.div`
@@ -38,6 +43,12 @@ const ProjectCardsMain2=styled.div`
     align-items: top;
     padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
 `;
 
 const ProjectCardsMain3=styled.div`
@@ -45,6 +56,12 @@ const ProjectCardsMain3=styled.div`
     align-items: top;
     padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
 `;
 
 const ProjectCardsMain4=styled.div`
@@ -52,6 +69,12 @@ const ProjectCardsMain4=styled.div`
     flex-direction: row-reverse;
     align-items: top;
     padding: 3% 20%;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
 `;
 
 const ProjectCardsCard=styled(ProjectCards)`
@@ -108,6 +131,30 @@ const ProjectCardBio=styled.div`
 
     a {
         text-decoration: none;
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+
+        h3 {
+            font-size: 1.25rem;
+            padding: 15% 0 0 0;
+        }
+
+        h2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 0 5% 0;
+        }
     }
 `;
 

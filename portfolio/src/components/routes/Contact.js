@@ -63,6 +63,12 @@ const ContactTextArea=styled.div`
         width: 100%;
         margin-left: 15px;
     }
+
+    @media (max-width: 768px) {
+       textarea {
+           width: 90%;
+       }
+    }
 `;
 
 const ContactSend=styled.div`

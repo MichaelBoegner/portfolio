@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const LandingMain=styled.div`
     padding: 2% 35%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         display: flex;
         flex-direction: column;
         padding: 10% 2%;
@@ -34,15 +34,20 @@ const LandingBottom=styled.div`
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         display: flex;
         flex-direction: column;
+
+        h3 {
+            display: flex;
+            align-items: center;
+        }
     }
 `;
 
 const LandingBottomContentLeft=styled.div`
     width: 75%;
-    padding-right: 25px; 
+    margin-right: 5%; 
 
     p {
         font-size: .95rem;
@@ -63,8 +68,8 @@ const LandingBottomContentLeft=styled.div`
         }
     }
 
-    @media (max-width: 768px) {
-        padding: 0;
+    @media (max-width: 1024px) {
+        padding: 0 5%;;
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -80,12 +85,27 @@ const LandingBottomContentRight=styled.div`
         color: black;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         padding: 0;
         width: 100%;
+        margin: 5% 0 0 0;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+`;
+
+const LandingBottomContentRightTop=styled.div`
+
+`;
+
+const LandingBottomContentRightBottom=styled.div`
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
@@ -120,13 +140,35 @@ const Icon=styled.div`
         display: flex;
         align-items: center;
     }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+
+        p {
+            display: none;
+        }
+
+        .fas {
+            margin: 10px;
+            font-size: 400%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .fab {
+            margin: 10px;
+            font-size: 400%;
+            display: flex;
+            flex-direction: row;
+        }
+    }
 `;
 
 
 
+
 export default class Landing extends Component { 
-
-
     render() {
         console.log("THIS.STATE", this.state)
         return (
@@ -143,25 +185,32 @@ export default class Landing extends Component {
                             <a href="https://www.fast.ai" target="_blank"> fast.ai</a>. 
                         </p>
                     </LandingBottomContentLeft>
-                    <LandingBottomContentRight>
-                        <h3>Contact</h3>
                         
-                        <Link to="/contact">
-                            <Icon>
-                                <i class="fas fa-envelope-square"></i><p>Email</p>
-                            </Icon>
-                        </Link>
-                        <a href="https://www.linkedin.com/in/c-michael-boegner-855a9741/" target="_blank" rel="noopener noreferrer">
-                            <Icon>
-                                <i class="fab fa-linkedin"></i><p>LinkedIn</p>
-                            </Icon>
-                        </a> 
 
-                        <a href="https://github.com/MichaelBoegner" target="_blank" rel="noopener noreferrer">
-                            <Icon>
-                                <i class="fab fa-github-square"></i><p>GitHub</p>
-                            </Icon>
-                        </a>
+                    <LandingBottomContentRight>
+                        
+                        <LandingBottomContentRightTop>
+                            <h3>Contact</h3>
+                        </LandingBottomContentRightTop>
+                            
+                        <LandingBottomContentRightBottom>
+                            <Link to="/contact">
+                                <Icon>
+                                    <i class="fas fa-envelope-square"></i><p>Email</p>
+                                </Icon>
+                            </Link>
+                            <a href="https://www.linkedin.com/in/c-michael-boegner-855a9741/" target="_blank" rel="noopener noreferrer">
+                                <Icon>
+                                    <i class="fab fa-linkedin"></i><p>LinkedIn</p>
+                                </Icon>
+                            </a> 
+
+                            <a href="https://github.com/MichaelBoegner" target="_blank" rel="noopener noreferrer">
+                                <Icon>
+                                    <i class="fab fa-github-square"></i><p>GitHub</p>
+                                </Icon>
+                            </a>
+                        </LandingBottomContentRightBottom>
                     </LandingBottomContentRight>
                 </LandingBottom>
             </LandingMain>
