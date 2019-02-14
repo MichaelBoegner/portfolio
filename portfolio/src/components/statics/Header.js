@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import ProfileBW from '../../images/ProfileBW.jpg';
+import ProfileBW from '../../images/ProfileBW.JPG';
 
 const HeaderMain=styled.div`
 `;
