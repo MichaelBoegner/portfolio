@@ -183,7 +183,7 @@ export default class Projects extends Component {
                                 their family’s events. Using the site allows them
                                 to manage everyone's schedules, get a day's agenda at a glance,
                                 approve and manage any conflicts, as well as get notified of new
-                                and/or upccoming events.
+                                and/or upcoming events.
                             </p>
                             
                             <a href="https://family-tabs.netlify.com" target="_blank" rel="noopener noreferrer">
@@ -208,7 +208,8 @@ export default class Projects extends Component {
                             "Conway's Game of Life" provides a platform for studying and better understanding 
                             the cellular atomaton model. The system has been widely studied throughout the years, and 
                             patterns continue to be discovered. Most notably, in 2010, Andrew J. Wade built a 
-                            self-replicating structure, named Gemini, that replicates a child, which then consumes the parent.
+                            self-replicating structure, named Gemini, that replicates a child, which then consumes the parent, creating 
+                            a perpetual set of life-cycles. 
                             </p>
 
                             <a href="https://michaelboegner.github.io/Conways-Life/" target="_blank" rel="noopener noreferrer">
@@ -229,12 +230,10 @@ export default class Projects extends Component {
                         <ProjectCardBio> 
                             <h3>Seinfeld Your Enthusiasm</h3>
                             <p>
-                                What could possibly be better than strapping into an all-nighter
-                                with an old styled MUD!? Doing it with the cast of Seinfeld and Curb
-                                Your Enthusiasm by your side! Beginning your quest on Jerry's couch, 
-                                you soon realize that being master of your 
-                                own domain isn't all it's cracked up to be, as you battle your way to La
-                                La Land and back . . . all for the best bowl of soup on the face of the Earth! 
+                            What could possibly be better than settling into all-nighter with a good 'ole MUD!? Doing it with the cast 
+                            of Seinfeld and Curb Your Enthusiasm by your side! After waking up and somehow finding yourself on Jerry's couch, 
+                            you soon realize that being master of your own domain isn't all it's cracked up to be. Will you be one of the few 
+                            to make your way to La La Land, battle the great Larry David, and return alive. . . all for the best bowl of soup on the face of planet Earth!?
                             </p>
 
                             <a href="https://seinfeld-your-enthusiasm.herokuapp.com/" target="_blank" rel="noopener noreferrer">
@@ -255,8 +254,7 @@ export default class Projects extends Component {
                         <ProjectCardBio> 
                             <h3>C. Michael Boegner</h3>
                             <p>
-                                This portfolio was built from the ground up, using React. It was deployed to
-                                the custom domain using Netlify. 
+                                This portfolio was built from the ground up, using React and some tough love. It was deployed using Netlify. 
                             </p>
 
                             <a href="https://www.cmboegner.com/" target="_blank" rel="noopener noreferrer">
