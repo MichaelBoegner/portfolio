@@ -177,7 +177,7 @@ export default class Landing extends Component {
                     <LandingBottomContentLeft>
                         <h3>About me</h3>
                         
-                        <p> Michael loves solving algorithms, comedy, guitar, and walking until all of his problems are solved (aka hiking). 
+                        <p> Michael loves algorithms, comedy, guitar, and walking until all of his problems are solved (aka hiking). 
                             As a recent graduate of Lambda School's Full-Stack Web Development program, he strives to make fun, useful things. Check out some previous projects
                               
                             <Link to="/projects" > here</Link>. 
