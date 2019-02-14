@@ -178,7 +178,7 @@ export default class Landing extends Component {
                         <h3>About me</h3>
                         
                         <p> Michael loves solving algorithms, writing, guitar, and walking until all of his problems are solved (aka hiking). 
-                            As a recent graduate of Lambda School's Full-Stack Web-Development program, he strives to make fun, useful things. Check out some previous projects
+                            As a recent graduate of Lambda School's Full-Stack Web Development program, he strives to make fun, useful things. Check out some previous projects
                               
                             <Link to="/projects" > here</Link>. 
                         </p>
