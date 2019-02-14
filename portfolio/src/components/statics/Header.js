@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Profile from '../../images/profile.jpg';
+import ProfileBW from '../../images/ProfileBW.jpg';
 
 const HeaderMain=styled.div`
 `;
@@ -85,7 +85,7 @@ export default class Header extends Component {
                 <HeaderTop opacity={this.props.opacity}>
                     <NavBarLinks to="/">
                         <HeaderTopContent>
-                            <ProfileImg src={Profile} alt="portfolio pic of Michael Boegner" />
+                            <ProfileImg src={ProfileBW} alt="portfolio pic of Michael Boegner" />
                         </HeaderTopContent>
                         <HeaderTopContent>
                             <h1>C. Michael Boegner</h1>
