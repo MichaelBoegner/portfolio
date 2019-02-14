@@ -15,7 +15,7 @@ const NavBarMain=styled.div`
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;
-        width: 100vw;
+        width: 100vw; 
     }
 `;
 

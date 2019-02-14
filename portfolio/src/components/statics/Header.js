@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import profile from '../../images/profile.JPG'
+import profile from '../../images/profile.jpg';
 
 const HeaderMain=styled.div`
 `;
@@ -68,12 +68,9 @@ const HeaderTopContent=styled.div`
 `;
 
 const ProfileImg=styled.img`
-    border: 1px solid lightgrey;
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    background-color: white;
-    padding: 8px;
+    border: 5px solid lightgrey;
+    width: 150px;
+    border-radius: 100%;
 `;
 
 const NavBarLinks=styled(Link)`
