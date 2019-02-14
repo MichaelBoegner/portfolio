@@ -25,10 +25,15 @@ const WritingBottom=styled.div`
 
 const WritingCardsMain1=styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: top;
-    padding: 4% 25% 10% 25%;
+    padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
 `;
 
 const WritingCardsCard=styled(ProjectCards)`
@@ -61,6 +66,7 @@ const WritingCardBio=styled.div`
         font-weight: 400;
         color: #AAA2A2;
         justify-content: center;
+
         :hover {
             animation-name: fadeIn;
             animation-duration: .5s;
@@ -84,6 +90,30 @@ const WritingCardBio=styled.div`
 
     a {
         text-decoration: none;
+    }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+
+        h3 {
+            font-size: 1.25rem;
+            padding: 15% 0 0 0;
+        }
+
+        h2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        p {
+            margin: 0;
+            padding: 0 0 5% 0;
+        }
     }
 `;
 
