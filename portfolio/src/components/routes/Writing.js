@@ -6,6 +6,10 @@ import AbsoluteBeginners from '../../images/AbsoluteBeginners.JPG';
 
 
 const WritingMain=styled.div`
+    a {
+        text-decoration: none;
+        color: black;
+    }
 `;
 
 const WritingBottom=styled.div`
@@ -34,10 +38,7 @@ const WritingCardsMain1=styled.div`
         padding: 10% 0;
     }
 
-    a {
-        text-decoration: none;
-        color: black;
-    }
+
 `;
 
 const WritingCardsCard=styled(ProjectCards)`
@@ -131,6 +132,7 @@ export default class Writing extends Component {
     render() {
         return (
             <WritingMain>
+            <a href="https://medium.com/@michaelboegner/debugging-for-absolute-beginners-87bc0fbb0151" target="_blank" rel="noopener noreferrer">
                 <WritingBottom>
 
                     <WritingCardsMain1>
@@ -160,6 +162,8 @@ export default class Writing extends Component {
                         </WritingCardBio>
                     </WritingCardsMain1>
                 </WritingBottom>
+                
+                </a>
 
                 <Footer/>
             </WritingMain>
