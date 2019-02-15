@@ -172,6 +172,27 @@ export default class Projects extends Component {
 
                     <ProjectCardsMain1>
                         <ProjectCardsCard
+                            img={Portfolio}
+                        />
+
+                        <ProjectCardBio> 
+                            <h3>C. Michael Boegner</h3>
+                            <p>
+                                This portfolio was built from the ground up, using React and some tough love. It was deployed using Netlify. 
+                            </p>
+
+                            <a href="https://www.cmboegner.com/" target="_blank" rel="noopener noreferrer">
+                                <h2>WEBSITE</h2>
+                            </a>
+
+                            <a href="https://github.com/MichaelBoegner/portfolio" target="_blank" rel="noopener noreferrer">
+                                <h2>GITHUB</h2>
+                            </a>
+                        </ProjectCardBio>
+                    </ProjectCardsMain1>
+
+                    <ProjectCardsMain2>
+                        <ProjectCardsCard
                             img={FamilyTabs}
                         />
 
@@ -194,9 +215,9 @@ export default class Projects extends Component {
                                 <h2>GITHUB</h2>
                             </a>
                         </ProjectCardBio>
-                    </ProjectCardsMain1>
-
-                    <ProjectCardsMain2>
+                    </ProjectCardsMain2>
+                    
+                    <ProjectCardsMain3>
                         <ProjectCardsCard
                             img={GameLife}
                         />
@@ -220,9 +241,9 @@ export default class Projects extends Component {
                                 <h2>GITHUB</h2>
                             </a>
                         </ProjectCardBio>
-                    </ProjectCardsMain2>
-                    
-                    <ProjectCardsMain3>
+                    </ProjectCardsMain3>
+
+                    <ProjectCardsMain4>
                         <ProjectCardsCard
                             img={Seinfeld}
                         />
@@ -244,30 +265,9 @@ export default class Projects extends Component {
                                 <h2>GITHUB</h2>
                             </a>
                         </ProjectCardBio>
-                    </ProjectCardsMain3>
-
-                    <ProjectCardsMain4>
-                        <ProjectCardsCard
-                            img={Portfolio}
-                        />
-
-                        <ProjectCardBio> 
-                            <h3>C. Michael Boegner</h3>
-                            <p>
-                                This portfolio was built from the ground up, using React and some tough love. It was deployed using Netlify. 
-                            </p>
-
-                            <a href="https://www.cmboegner.com/" target="_blank" rel="noopener noreferrer">
-                                <h2>WEBSITE</h2>
-                            </a>
-
-                            <a href="https://github.com/MichaelBoegner/portfolio" target="_blank" rel="noopener noreferrer">
-                                <h2>GITHUB</h2>
-                            </a>
-                        </ProjectCardBio>
                     </ProjectCardsMain4>
                 </ProjectsBottom>
-                
+
                 <Footer/>
             </ProjectsMain>
             
