@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import ProjectCards from './projects/ProjectCards';
 import Footer from '../statics/Footer';
 import styled from 'styled-components';
-import FamilyTabs from '../../images/FamilyTabs.JPG';
+import AbsoluteBeginners from '../../images/AbsoluteBeginners.JPG';
 
 
 const WritingMain=styled.div`
 `;
 
 const WritingBottom=styled.div`
-    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,6 +32,11 @@ const WritingCardsMain1=styled.div`
         flex-direction: column;
         align-items: center;
         padding: 10% 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
 `;
 
@@ -131,19 +135,29 @@ export default class Writing extends Component {
 
                     <WritingCardsMain1>
                         <WritingCardsCard
-                            img={FamilyTabs}
+                            img={AbsoluteBeginners}
                         />
-
+                       
                         <WritingCardBio> 
-                            <h3>Medium Article</h3>
-                            <p>
-                                This is filler. A happy-time Medium article to follow soon!
-                            </p>
+                            <a href="https://medium.com/@michaelboegner/debugging-for-absolute-beginners-87bc0fbb0151" target="_blank" rel="noopener noreferrer">
+                                <h3>Debugging for Absolute Beginners</h3>
+
+                                <p>
+                                Learning to be a good developer is a lot like learning to whistle. A lot of people can do it, but very few seem to be able to teach it. 
+                                Most will offer something tantamount to, “Just stick your tongue on the roof of your mouth and blow.” But think about it. There’s so much more. 
+                                You actually have touch the outer parts of your middle tongue and leave a small window for air to pass through, and then you blow gently. 
+                                If you followed the former for instruction, you would only frustrate yourself as you blew spit all over the place, while smashing your tongue against the roof of your mouth. 
+                                Then you’d just be some sort of weird whistle-spitter, and nobody wants that.
+                                </p>
+
+                                <p>
+                                Debugging is a critical component skill for coding that seems to get overlooked more often than people realize. With that in mind, here are the 5 basic steps you should take anytime you find yourself with a broken piece of code. Follow them, and avoid becoming just another one of those weird whistle-spitters.
+                                </p>
+                            </a>
                         </WritingCardBio>
                     </WritingCardsMain1>
-
                 </WritingBottom>
-                
+
                 <Footer/>
             </WritingMain>
             
