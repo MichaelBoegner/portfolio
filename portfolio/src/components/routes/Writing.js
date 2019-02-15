@@ -144,7 +144,10 @@ export default class Writing extends Component {
 
                                 <p>
                                 Learning to be a good developer is a lot like learning to whistle. A lot of people can do it, but very few seem to be able to teach it. 
-                                Most will offer something tantamount to, “Just stick your tongue on the roof of your mouth and blow.” But think about it. There’s so much more. 
+                                Most will offer something tantamount to, “Just stick your tongue on the roof of your mouth and blow.” But think about it. There’s so much more.
+                                </p>
+                                
+                                <p> 
                                 You actually have touch the outer parts of your middle tongue and leave a small window for air to pass through, and then you blow gently. 
                                 If you followed the former for instruction, you would only frustrate yourself as you blew spit all over the place, while smashing your tongue against the roof of your mouth. 
                                 Then you’d just be some sort of weird whistle-spitter, and nobody wants that.
