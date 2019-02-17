@@ -17,11 +17,11 @@ const WritingCardsImg=styled.img`
     height: 100%;
 `;
 
-const WritingCardsGit=styled.div`
+const WritingCardsGit=styled.a`
 
 `;
 
-const WritingCardsSite=styled.div`
+const WritingCardsSite=styled.a`
 
 `;
 
@@ -29,8 +29,8 @@ export default function WritingCards (props) {
     return (
         <WritingCardsMain>
             <WritingCardsImg src={props.img} alt="image of a blog entry"></WritingCardsImg>
-            <WritingCardsGit><a href={props.git}/></WritingCardsGit>
-            <WritingCardsSite><a href={props.site}/></WritingCardsSite>
+            <WritingCardsGit href={props.git}></WritingCardsGit>
+            <WritingCardsSite href={props.site}></WritingCardsSite>
         </WritingCardsMain>
     )
 }

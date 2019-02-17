@@ -121,10 +121,6 @@ const WritingCardBio=styled.div`
 
 
 export default class Writing extends Component { 
-    constructor(){
-        super();
-    }
-
     render() {
         return (
             <WritingMain>

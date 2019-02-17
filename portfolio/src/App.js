@@ -53,6 +53,11 @@ componentDidMount() {
             console.log(err);
           })
 
+          // ================ G E T  L O C A L  T I M E =================//
+          let currentTime = new Date(); 
+          let hour = currentTime.getHours(); 
+          console.log(hour);
+
         },
      
        function error(error_message) {

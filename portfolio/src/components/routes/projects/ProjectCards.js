@@ -17,11 +17,11 @@ const ProjectCardsImg=styled.img`
     height: 100%;
 `;
 
-const ProjectCardsGit=styled.div`
+const ProjectCardsGit=styled.a`
 
 `;
 
-const ProjectCardsSite=styled.div`
+const ProjectCardsSite=styled.a`
 
 `;
 
@@ -29,8 +29,8 @@ export default function ProjectCards (props) {
     return (
         <ProjectCardsMain>
             <ProjectCardsImg src={props.img} alt="image of a project"></ProjectCardsImg>
-            <ProjectCardsGit><a href={props.git}/></ProjectCardsGit>
-            <ProjectCardsSite><a href={props.site}/></ProjectCardsSite>
+            <ProjectCardsGit href={props.git}></ProjectCardsGit>
+            <ProjectCardsSite href={props.site}></ProjectCardsSite>
         </ProjectCardsMain>
     )
 }

@@ -161,10 +161,6 @@ const ProjectCardBio=styled.div`
 
 
 export default class Projects extends Component { 
-    constructor(){
-        super();
-    }
-
     render() {
         return (
             <ProjectsMain>
