@@ -48,6 +48,7 @@ componentDidMount() {
           .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${APIKEY}`)
           .then(resp => { 
             console.log(resp);
+
           })
           .catch(err => {
             console.log(err);
@@ -57,6 +58,7 @@ componentDidMount() {
           let currentTime = new Date(); 
           let hour = currentTime.getHours(); 
           console.log(hour);
+
 
         },
      
