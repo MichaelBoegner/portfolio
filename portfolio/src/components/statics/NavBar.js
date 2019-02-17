@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Switch from "react-switch";
 import styled from "styled-components";
 
 const NavBarMain=styled.div`
@@ -21,6 +22,20 @@ const NavBarMain=styled.div`
 
 const NavBarLeft=styled.div`
     min-height: 100%;
+`;
+
+const NavBarCenter=styled.div`
+    padding: 0 0 0 5%;
+    color: white;
+    
+    label {
+        display: flex;
+        align-items: center;
+    }
+
+    span {
+        padding: 5%;
+    }
 `;
 
 const NavBarRight=styled.div`
@@ -102,13 +117,68 @@ const NavBarTitle=styled(Link)`
 
 
 
+
+
 export default class NavBar extends Component { 
+    constructor() {
+        super();
+        this.state = { checked: false };
+        this.handleChange = this.handleChange.bind(this);
+    }
+    
+    
+    handleChange(checked) {
+        this.setState({ checked });
+    }
+    
     render() {
+        // return (
+        //     <NavBarMain>
+        //         <NavBarLeft>
+        //             <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
+        //         </NavBarLeft>
+
+        //         <NavBarRight>
+        //             <NavBarLinks to="/projects">
+        //                 PROJECTS
+        //             </NavBarLinks>
+                    
+        //             <NavBarLinks to="/writing">
+        //                 WRITING
+        //             </NavBarLinks>
+                    
+        //             <NavBarLinks to="/contact">
+        //                 CONTACT
+        //             </NavBarLinks>
+        //         </NavBarRight>
+        //     </NavBarMain>
+        // )
+
+
+        console.log("THIS.STATE",this.state)
         return (
             <NavBarMain>
                 <NavBarLeft>
                     <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
                 </NavBarLeft>
+
+                <NavBarCenter>
+                <label htmlFor="normal-switch">
+                    <span>Serious</span>
+                   
+                    <Switch
+                    onChange={this.handleChange}
+                    checked={this.state.checked}
+                    id="normal-switch"
+                    uncheckedIcon={false}
+                    checkedIcon={false}
+                    height={18}
+                    width={28}
+                    />
+
+                    <span>Zany</span>
+                </label>
+                </NavBarCenter>
 
                 <NavBarRight>
                     <NavBarLinks to="/projects">

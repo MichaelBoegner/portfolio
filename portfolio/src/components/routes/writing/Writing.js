@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ProjectCards from './projects/ProjectCards';
-import Footer from '../statics/Footer';
+import WritingCards from './WritingCards';
+import Footer from '../../statics/Footer';
 import styled from 'styled-components';
-import AbsoluteBeginners from '../../images/AbsoluteBeginners.JPG';
+import AbsoluteBeginners from '../../../images/AbsoluteBeginners.JPG';
 
 
 const WritingMain=styled.div`
@@ -37,12 +37,9 @@ const WritingCardsMain1=styled.div`
         align-items: center;
         padding: 10% 0;
     }
-
-
 `;
 
-const WritingCardsCard=styled(ProjectCards)`
-
+const WritingCardsCard=styled(WritingCards)`
 `;
 
 const WritingCardBio=styled.div`
@@ -123,7 +120,6 @@ const WritingCardBio=styled.div`
 `;
 
 
-
 export default class Writing extends Component { 
     constructor(){
         super();
@@ -132,21 +128,21 @@ export default class Writing extends Component {
     render() {
         return (
             <WritingMain>
-            <a href="https://medium.com/@michaelboegner/debugging-for-absolute-beginners-87bc0fbb0151" target="_blank" rel="noopener noreferrer">
                 <WritingBottom>
 
                     <WritingCardsMain1>
-                        <WritingCardsCard
-                            img={AbsoluteBeginners}
-                        />
-                       
+
+                            <WritingCardsCard
+                                img={AbsoluteBeginners}
+                            />
+
                         <WritingCardBio> 
                             <a href="https://medium.com/@michaelboegner/debugging-for-absolute-beginners-87bc0fbb0151" target="_blank" rel="noopener noreferrer">
                                 <h3>Debugging for Absolute Beginners</h3>
 
                                 <p>
                                 Learning to be a good developer is a lot like learning to whistle. A lot of people can do it, but very few seem to be able to teach it. 
-                                Most will offer something tantamount to, “Just stick your tongue on the roof of your mouth and blow.” But think about it. There’s so much more.
+                                Most will offer something tantamount to, “Just stick your tongue on the roof of your mouth and blow.” But think about it. There’s so much more to it.
                                 </p>
 
                                 <p> 
@@ -156,14 +152,12 @@ export default class Writing extends Component {
                                 </p>
 
                                 <p>
-                                Debugging is a critical component skill for coding that seems to get overlooked more often than people realize. With that in mind, here are the 5 basic steps you should take anytime you find yourself with a broken piece of code. Follow them, and avoid becoming just another one of those weird whistle-spitters.
+                                Debugging is a critical component skill for coding that seems to get overlooked. With that in mind, here are the 5 basic steps you should take anytime you find yourself with a broken piece of code. Follow them, and avoid becoming just another one of those weird whistle-spitters.
                                 </p>
                             </a>
                         </WritingCardBio>
                     </WritingCardsMain1>
                 </WritingBottom>
-                
-                </a>
 
                 <Footer/>
             </WritingMain>

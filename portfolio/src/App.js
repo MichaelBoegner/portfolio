@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import Header from './components/statics/Header';
 import Landing from './components/routes/Landing';
 import Projects from './components/routes/projects/Projects';
-import Writing from './components/routes/Writing';
+import Writing from './components/routes/writing/Writing';
 import NavBar from './components/statics/NavBar';
 import Contact from './components/routes/Contact';
 import styled from 'styled-components';
