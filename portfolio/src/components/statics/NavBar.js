@@ -121,65 +121,13 @@ const NavBarTitle=styled(Link)`
 
 
 export default class NavBar extends Component { 
-    constructor() {
-        super();
-        this.state = { checked: false };
-        this.handleChange = this.handleChange.bind(this);
-    }
-    
-    
-    handleChange(checked) {
-        this.setState({ checked });
-    }
-    
+
     render() {
-        return (
-            <NavBarMain>
-                <NavBarLeft>
-                    <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
-                </NavBarLeft>
-
-                <NavBarRight>
-                    <NavBarLinks to="/projects">
-                        PROJECTS
-                    </NavBarLinks>
-                    
-                    <NavBarLinks to="/writing">
-                        WRITING
-                    </NavBarLinks>
-                    
-                    <NavBarLinks to="/contact">
-                        CONTACT
-                    </NavBarLinks>
-                </NavBarRight>
-            </NavBarMain>
-        )
-
-
-        // console.log("THIS.STATE",this.state)
         // return (
         //     <NavBarMain>
         //         <NavBarLeft>
         //             <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
         //         </NavBarLeft>
-
-        //         <NavBarCenter>
-        //         <label htmlFor="normal-switch">
-        //             <span>SERIOUS</span>
-                   
-        //             <Switch
-        //             onChange={this.handleChange}
-        //             checked={this.state.checked}
-        //             id="normal-switch"
-        //             uncheckedIcon={false}
-        //             checkedIcon={false}
-        //             height={18}
-        //             width={28}
-        //             />
-
-        //             <span>ZANY</span>
-        //         </label>
-        //         </NavBarCenter>
 
         //         <NavBarRight>
         //             <NavBarLinks to="/projects">
@@ -196,6 +144,47 @@ export default class NavBar extends Component {
         //         </NavBarRight>
         //     </NavBarMain>
         // )
+
+
+        return (
+            <NavBarMain>
+                <NavBarLeft>
+                    <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
+                </NavBarLeft>
+
+                <NavBarCenter>
+                    <label htmlFor="normal-switch">
+                        <span>SERIOUS</span>
+                    
+                        <Switch
+                        onChange={this.props.handleChange}
+                        checked={this.props.checked}
+                        id="normal-switch"
+                        uncheckedIcon={false}
+                        checkedIcon={false}
+                        height={18}
+                        width={28}
+                        />
+
+                        <span>FUN</span>
+                    </label>
+                </NavBarCenter>
+
+                <NavBarRight>
+                    <NavBarLinks to="/projects">
+                        PROJECTS
+                    </NavBarLinks>
+                    
+                    <NavBarLinks to="/writing">
+                        WRITING
+                    </NavBarLinks>
+                    
+                    <NavBarLinks to="/contact">
+                        CONTACT
+                    </NavBarLinks>
+                </NavBarRight>
+            </NavBarMain>
+        )
     }
 
 }

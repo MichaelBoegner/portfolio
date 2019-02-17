@@ -12,10 +12,11 @@ const AppMain=styled.div`
 `;
 
 class App extends Component {
-  constructor() {
-    super(); 
+  constructor(props) {
+    super(props); 
     this.state = {
         opacityCheck: null, 
+        checked: false,
     }
   }
 
@@ -23,11 +24,20 @@ componentDidMount() {
     this.setState({opacityCheck: "opacity"});
 }
 
+handleChange = (checked) => {
+  this.setState({ checked });
+}
+
   render() {
+    console.log("NAV BAR STATE", this.state)
     return (
       <AppMain>
-        <div className="app-navbar">
-              <NavBar/>
+        <div>
+              <NavBar 
+                handleChange={this.handleChange}
+                checked={this.state.checked}
+              />
+              
               <Header opacity={this.state.opacityCheck}/>
         </div>
         
