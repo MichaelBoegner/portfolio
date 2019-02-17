@@ -7,6 +7,8 @@ import Writing from './components/routes/writing/Writing';
 import NavBar from './components/statics/NavBar';
 import Contact from './components/routes/Contact';
 import styled from 'styled-components';
+import axios from 'axios';
+
 
 const AppMain=styled.div`
 `;
@@ -22,17 +24,35 @@ class App extends Component {
 
 componentDidMount() {
     this.setState({opacityCheck: "opacity"});
+   
 
     // ================ G E O L O C A T I O N =================//
 
     if ("geolocation" in navigator) {
       // check if geolocation is supported/enabled on current browser
       navigator.geolocation.getCurrentPosition(
-     
+        
         function success(position) {
-         // for when getting location is a success
-         console.log('latitude', position.coords.latitude, 
+          // for when getting location is a success
+        
+          console.log('latitude', position.coords.latitude, 
                      'longitude', position.coords.longitude);
+
+          let latitude = position.coords.latitude; 
+          let longitude = position.coords.longitude;
+          let APIKEY = "51053550d5d7606aabbc6a9f2768f7ec";
+
+          // ================ W E A T H E R  A P I  C A L L =================//
+
+          axios
+          .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${APIKEY}`)
+          .then(resp => { 
+            console.log(resp);
+          })
+          .catch(err => {
+            console.log(err);
+          })
+
         },
      
        function error(error_message) {
@@ -46,9 +66,7 @@ componentDidMount() {
     }
 
 
-    // ================ W E A T H E R  A P I  C A L L =================//
-    
-    
+
     
 }
 
