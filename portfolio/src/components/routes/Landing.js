@@ -194,18 +194,18 @@ export default class Landing extends Component {
                         <LandingBottomContentRightBottom>
                             <Link to="/contact">
                                 <Icon>
-                                    <i class="fas fa-envelope-square"></i><p>Email</p>
+                                    <i className="fas fa-envelope-square"></i><p>Email</p>
                                 </Icon>
                             </Link>
                             <a href="https://www.linkedin.com/in/c-michael-boegner-855a9741/" target="_blank" rel="noopener noreferrer">
                                 <Icon>
-                                    <i class="fab fa-linkedin"></i><p>LinkedIn</p>
+                                    <i className="fab fa-linkedin"></i><p>LinkedIn</p>
                                 </Icon>
                             </a> 
 
                             <a href="https://github.com/MichaelBoegner" target="_blank" rel="noopener noreferrer">
                                 <Icon>
-                                    <i class="fab fa-github-square"></i><p>GitHub</p>
+                                    <i className="fab fa-github-square"></i><p>GitHub</p>
                                 </Icon>
                             </a>
                         </LandingBottomContentRightBottom>
