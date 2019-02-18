@@ -32,78 +32,78 @@ componentDidMount() {
    let location, 
        APIKEY = "51053550d5d7606aabbc6a9f2768f7ec";
 
-  // ================ G E O L O C A T I O N =================//
+  // // ================ G E O L O C A T I O N =================//
 
-    let options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-    };
+  //   let options = {
+  //     enableHighAccuracy: true,
+  //     timeout: 5000,
+  //     maximumAge: 0
+  //   };
     
-    function success(pos) {
-      let crd = pos.coords;
-      location = {
-        latitude: crd.latitude,
-        longitude: crd.longitude,
-      }
+  //   function success(pos) {
+  //     let crd = pos.coords;
+  //     location = {
+  //       latitude: crd.latitude,
+  //       longitude: crd.longitude,
+  //     }
       
-      getLocation(location);
-    }  
+  //     getLocation(location);
+  //   }  
     
-    function error(err) {
-      console.warn(`ERROR(${err.code}): ${err.message}`);
-    }
+  //   function error(err) {
+  //     console.warn(`ERROR(${err.code}): ${err.message}`);
+  //   }
 
-    navigator.geolocation.getCurrentPosition(success, error, options);
+  //   navigator.geolocation.getCurrentPosition(success, error, options);
     
 
 
-    const getLocation = (location) => {
-      let latitude = location.latitude,
-          longitude = location.longitude;
+  //   const getLocation = (location) => {
+  //     let latitude = location.latitude,
+  //         longitude = location.longitude;
 
-    // ================ W E A T H E R  A P I  C A L L =================//
+  //   // ================ W E A T H E R  A P I  C A L L =================//
 
-      axios
-      .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${APIKEY}`)
-      .then(resp => { 
-        console.log(resp);
+  //     axios
+  //     .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${APIKEY}`)
+  //     .then(resp => { 
+  //       console.log(resp);
   
-        let unixSunrise = resp.data.sys.sunrise, 
-            unixSunset = resp.data.sys.sunset,
-            sunrise,
-            sunset;
+  //       let unixSunrise = resp.data.sys.sunrise, 
+  //           unixSunset = resp.data.sys.sunset,
+  //           sunrise,
+  //           sunset;
         
-        const timeConverter = (unixTime) => {
-          var unixTimeConverted = new Date(unixTime * 1000);
-          let time = unixTimeConverted.getTime();
+  //       const timeConverter = (unixTime) => {
+  //         var unixTimeConverted = new Date(unixTime * 1000);
+  //         let time = unixTimeConverted.getTime();
   
-          return time;
-         }
+  //         return time;
+  //        }
   
-         sunrise = timeConverter(unixSunrise);
-         sunset = timeConverter(unixSunset);
+  //        sunrise = timeConverter(unixSunrise);
+  //        sunset = timeConverter(unixSunset);
   
-         this.setState({sunrise, sunset}); 
-      })
-      .catch(err => {
-        console.log(err);
-      })
-    }
+  //        this.setState({sunrise, sunset}); 
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     })
+  //   }
   
-    // ================ G E T  L O C A L  T I M E =================//
+  //   // ================ G E T  L O C A L  T I M E =================//
 
-    let currentTime = new Date(),
-        localTime = currentTime.getTime();
+  //   let currentTime = new Date(),
+  //       localTime = currentTime.getTime();
 
 
-    this.setState({localTime: localTime})
+  //   this.setState({localTime: localTime})
     
-    if(localTime > this.state.sunset) {
-      this.setState({dayNight: "Night"})
-    } else (
-      this.setState({dayNight: "Day"})
-    )
+  //   if(localTime > this.state.sunset) {
+  //     this.setState({dayNight: "Night"})
+  //   } else (
+  //     this.setState({dayNight: "Day"})
+  //   )
 }
 
 
