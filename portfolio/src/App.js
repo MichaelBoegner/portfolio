@@ -21,6 +21,8 @@ class App extends Component {
         checked: false,
         sunrise: "",
         sunset: "",
+        localTime: "",
+        dayNight: "",
     }
   }
 
@@ -50,13 +52,14 @@ componentDidMount() {
     function error(err) {
       console.warn(`ERROR(${err.code}): ${err.message}`);
     }
-    
+
     navigator.geolocation.getCurrentPosition(success, error, options);
     
+
+
     const getLocation = (location) => {
       let latitude = location.latitude,
           longitude = location.longitude;
-
 
     // ================ W E A T H E R  A P I  C A L L =================//
 
@@ -72,9 +75,7 @@ componentDidMount() {
         
         const timeConverter = (unixTime) => {
           var unixTimeConverted = new Date(unixTime * 1000);
-          let hours = unixTimeConverted.getHours(); 
-          let minutes = unixTimeConverted.getMinutes();
-          let time = `${hours}:${minutes}`;
+          let time = unixTimeConverted.getTime();
   
           return time;
          }
@@ -87,15 +88,24 @@ componentDidMount() {
       .catch(err => {
         console.log(err);
       })
-  
     }
   
     // ================ G E T  L O C A L  T I M E =================//
-    let currentTime = new Date(); 
-    let hour = currentTime.getHours(); 
 
+    let currentTime = new Date(),
+        localTime = currentTime.getTime();
+
+
+    this.setState({localTime: localTime})
     
+    if(localTime > this.state.sunset) {
+      this.setState({dayNight: "Night"})
+    } else (
+      this.setState({dayNight: "Day"})
+    )
 }
+
+
 
 handleChange = (checked) => {
   this.setState({ checked });
