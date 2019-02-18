@@ -56,6 +56,15 @@ const HeaderTopContent=styled.div`
         justify-content: center;
     }
 
+    h4 {
+        font-size: .85rem;
+        padding-top: 5px;
+        font-family: Robato, sans-serif;
+        font-weight: 100;
+        color: #AAA2A2;
+        justify-content: center;
+    }
+
     @media (max-width: 768px) {
         h1 {
             font-size: 2.2rem;
@@ -63,6 +72,10 @@ const HeaderTopContent=styled.div`
 
         h2 {
             font-size: 1.25rem;
+        }
+
+        h4 {
+            font-stretch: condensed;
         }
     }
 `;
@@ -90,6 +103,7 @@ export default class Header extends Component {
                         <HeaderTopContent>
                             <h1>C. Michael Boegner</h1>
                             <h2>Software Engineer & Problem Solver</h2>
+                            <h4>React | JavaScript | Python | C | MySQL | Node | HTML | CSS</h4>
                         </HeaderTopContent>
                     </NavBarLinks>
                 </HeaderTop>
