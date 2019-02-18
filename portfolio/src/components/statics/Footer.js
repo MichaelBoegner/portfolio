@@ -86,18 +86,18 @@ export default class NavBar extends Component {
             <FooterMain>
                 <Link to="/contact">
                     <Icon>
-                        <i class="fas fa-envelope-square"></i>
+                        <i className="fas fa-envelope-square"></i>
                     </Icon>
                 </Link>
                 <a href="https://www.linkedin.com/in/c-michael-boegner-855a9741/" target="_blank" rel="noopener noreferrer">
                     <Icon>
-                        <i class="fab fa-linkedin"></i>
+                        <i className="fab fa-linkedin"></i>
                     </Icon>
                 </a> 
 
                 <a href="https://github.com/MichaelBoegner" target="_blank" rel="noopener noreferrer">
                     <Icon>
-                        <i class="fab fa-github-square"></i>
+                        <i className="fab fa-github-square"></i>
                     </Icon>
                 </a>
             </FooterMain>

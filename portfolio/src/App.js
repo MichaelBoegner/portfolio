@@ -19,60 +19,80 @@ class App extends Component {
     this.state = {
         opacityCheck: null, 
         checked: false,
+        sunrise: "",
+        sunset: "",
     }
   }
 
 componentDidMount() {
-    this.setState({opacityCheck: "opacity"});
-   
+   this.setState({opacityCheck: "opacity"});
+   let location, 
+       APIKEY = "51053550d5d7606aabbc6a9f2768f7ec";
 
-    // ================ G E O L O C A T I O N =================//
+  // ================ G E O L O C A T I O N =================//
 
-    if ("geolocation" in navigator) {
-      // check if geolocation is supported/enabled on current browser
-      navigator.geolocation.getCurrentPosition(
-        
-        function success(position) {
-          // for when getting location is a success
-        
-          console.log('latitude', position.coords.latitude, 
-                     'longitude', position.coords.longitude);
-
-          let latitude = position.coords.latitude; 
-          let longitude = position.coords.longitude;
-          let APIKEY = "51053550d5d7606aabbc6a9f2768f7ec";
-
-          // ================ W E A T H E R  A P I  C A L L =================//
-
-          axios
-          .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${APIKEY}`)
-          .then(resp => { 
-            console.log(resp);
-
-          })
-          .catch(err => {
-            console.log(err);
-          })
-
-          // ================ G E T  L O C A L  T I M E =================//
-          let currentTime = new Date(); 
-          let hour = currentTime.getHours(); 
-          console.log(hour);
-
-
-        },
-     
-       function error(error_message) {
-        // for when getting location results in an error
-        console.error('An error has occured while retrieving location', error_message)
-      })
-    } else {
-      // geolocation is not supported
-      // get your location some other way
-      console.log('geolocation is not enabled on this browser')
+    let options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+    
+    function success(pos) {
+      let crd = pos.coords;
+      location = {
+        latitude: crd.latitude,
+        longitude: crd.longitude,
+      }
+      
+      getLocation(location);
     }
+    
+    function error(err) {
+      console.warn(`ERROR(${err.code}): ${err.message}`);
+    }
+    
+    navigator.geolocation.getCurrentPosition(success, error, options);
+    
+    const getLocation = (location) => {
+      let latitude = location.latitude,
+          longitude = location.longitude;
 
 
+    // ================ W E A T H E R  A P I  C A L L =================//
+
+      axios
+      .get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&APPID=${APIKEY}`)
+      .then(resp => { 
+        console.log(resp);
+  
+        let unixSunrise = resp.data.sys.sunrise, 
+            unixSunset = resp.data.sys.sunset,
+            sunrise,
+            sunset;
+        
+        const timeConverter = (unixTime) => {
+          var unixTimeConverted = new Date(unixTime * 1000);
+          let hours = unixTimeConverted.getHours(); 
+          let minutes = unixTimeConverted.getMinutes();
+          let time = `${hours}:${minutes}`;
+  
+          return time;
+         }
+  
+         sunrise = timeConverter(unixSunrise);
+         sunset = timeConverter(unixSunset);
+  
+         this.setState({sunrise, sunset}); 
+      })
+      .catch(err => {
+        console.log(err);
+      })
+  
+    }
+  
+    // ================ G E T  L O C A L  T I M E =================//
+    let currentTime = new Date(); 
+    let hour = currentTime.getHours(); 
 
     
 }
@@ -81,8 +101,10 @@ handleChange = (checked) => {
   this.setState({ checked });
 }
 
+
+
   render() {
-    console.log("NAV BAR STATE", this.state)
+    console.log("APP STATE", this.state)
     return (
       <AppMain>
         <div>
