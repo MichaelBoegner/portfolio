@@ -57,7 +57,6 @@ const NavBarLinks=styled(Link)`
     letter-spacing: 0.25rem;
     padding: 15px 25px;
 
-
     :hover {
         background-color: lightgray;
         cursor: pointer;
@@ -118,73 +117,79 @@ const NavBarTitle=styled(Link)`
 
 
 
-
-
 export default class NavBar extends Component { 
-
+    constructor(props){
+        super(props);
+    }
     render() {
-        return (
-            <NavBarMain>
-                <NavBarLeft>
-                    <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
-                </NavBarLeft>
+        if(this.props.display === false) {
+            return (
+                <NavBarMain>
+                    <NavBarLeft>
+                        <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
+                    </NavBarLeft>
+    
+                    <NavBarRight>
+                        <NavBarLinks to="/projects">
+                            PROJECTS
+                        </NavBarLinks>
+                        
+                        <NavBarLinks to="/writing">
+                            WRITING
+                        </NavBarLinks>
+                        
+                        <NavBarLinks to="/contact">
+                            CONTACT
+                        </NavBarLinks>
+                    </NavBarRight>
+                </NavBarMain>
+            )
 
-                <NavBarRight>
-                    <NavBarLinks to="/projects">
-                        PROJECTS
-                    </NavBarLinks>
-                    
-                    <NavBarLinks to="/writing">
-                        WRITING
-                    </NavBarLinks>
-                    
-                    <NavBarLinks to="/contact">
-                        CONTACT
-                    </NavBarLinks>
-                </NavBarRight>
-            </NavBarMain>
-        )
+        } else {
+            return (
+                <NavBarMain>
+                    <NavBarLeft>
+                        <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
+                    </NavBarLeft>
+    
+                    <NavBarCenter>
+                        <label htmlFor="normal-switch">
+                            <span>SERIOUS</span>
+                        
+                            <Switch
+                            onChange={this.props.handleChange}
+                            checked={this.props.checked}
+                            id="normal-switch"
+                            uncheckedIcon={false}
+                            checkedIcon={false}
+                            height={18}
+                            width={28}
+                            />
+    
+                            <span>FUN</span>
+                        </label>
+                    </NavBarCenter>
+    
+                    <NavBarRight>
+                        <NavBarLinks to="/projects">
+                            PROJECTS
+                        </NavBarLinks>
+                        
+                        <NavBarLinks to="/writing">
+                            WRITING
+                        </NavBarLinks>
+                        
+                        <NavBarLinks to="/contact">
+                            CONTACT
+                        </NavBarLinks>
+                    </NavBarRight>
+                </NavBarMain>
+            )
+
+        }
+            
 
 
-        // return (
-        //     <NavBarMain>
-        //         <NavBarLeft>
-        //             <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
-        //         </NavBarLeft>
-
-        //         <NavBarCenter>
-        //             <label htmlFor="normal-switch">
-        //                 <span>SERIOUS</span>
-                    
-        //                 <Switch
-        //                 onChange={this.props.handleChange}
-        //                 checked={this.props.checked}
-        //                 id="normal-switch"
-        //                 uncheckedIcon={false}
-        //                 checkedIcon={false}
-        //                 height={18}
-        //                 width={28}
-        //                 />
-
-        //                 <span>FUN</span>
-        //             </label>
-        //         </NavBarCenter>
-
-        //         <NavBarRight>
-        //             <NavBarLinks to="/projects">
-        //                 PROJECTS
-        //             </NavBarLinks>
-                    
-        //             <NavBarLinks to="/writing">
-        //                 WRITING
-        //             </NavBarLinks>
-                    
-        //             <NavBarLinks to="/contact">
-        //                 CONTACT
-        //             </NavBarLinks>
-        //         </NavBarRight>
-        //     </NavBarMain>
-        // )
     }
 
 }

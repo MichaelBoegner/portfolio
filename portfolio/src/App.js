@@ -23,6 +23,7 @@ class App extends Component {
         sunset: "",
         localTime: "",
         dayNight: "",
+        display: false,
     }
   }
 
@@ -47,7 +48,7 @@ componentDidMount() {
       }
       
       getLocation(location);
-    }
+    }  
     
     function error(err) {
       console.warn(`ERROR(${err.code}): ${err.message}`);
@@ -121,6 +122,7 @@ handleChange = (checked) => {
               <NavBar 
                 handleChange={this.handleChange}
                 checked={this.state.checked}
+                display={this.state.display}
               />
               
               <Header opacity={this.state.opacityCheck}/>
