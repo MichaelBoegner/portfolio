@@ -17,13 +17,13 @@ class App extends Component {
   constructor(props) {
     super(props); 
     this.state = {
-        opacityCheck: null, 
-        checked: false,
+        opacityCheck: null, // True after user's arrival to keep header from fading in repeatedly.
+        checked: false, // True if fun switch is thrown.
         sunrise: "",
         sunset: "",
         localTime: "",
         dayNight: "",
-        display: false,
+        display: false, // Display state hides the fun switch when false to allow for deploy until stage two is completed.
     }
   }
 
