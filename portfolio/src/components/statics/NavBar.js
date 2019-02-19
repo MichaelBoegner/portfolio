@@ -118,9 +118,6 @@ const NavBarTitle=styled(Link)`
 
 
 export default class NavBar extends Component { 
-    constructor(props){
-        super(props);
-    }
     render() {
         if(this.props.display === false) {
             return (

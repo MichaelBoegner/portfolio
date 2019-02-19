@@ -125,7 +125,9 @@ handleChange = (checked) => {
                 display={this.state.display}
               />
               
-              <Header opacity={this.state.opacityCheck}/>
+              <Header 
+              {...this.state}
+              opacity={this.state.opacityCheck}/>
         </div>
         
         <Route 
