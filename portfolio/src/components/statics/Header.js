@@ -12,7 +12,7 @@ const HeaderTop=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4% 0;
+    padding: 4% 0 2% 0;
 
     animation-name: projectsFadeIn;
     animation-duration: 1.5s;
@@ -24,7 +24,7 @@ const HeaderTop=styled.div`
 
 
     @media (max-width: 1024px) {
-        padding: 8% 0;
+        padding: 8% 0 4% 0;
     }
     
     @media (max-width: 768px) {
