@@ -13,6 +13,7 @@ const NavBarMain=styled.div`
     background-color: #353B3E; 
     align-items: center;
 
+
     @media (max-width: 768px) {
         display: flex;
         flex-direction: column;

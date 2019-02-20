@@ -13,6 +13,17 @@ import axios from 'axios';
 const AppMain=styled.div`
 `;
 
+const AppTop=styled.div`
+  z-index: 3;
+  position: fixed;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    z-index: 0;
+    position: relative;
+  }
+`;
+
 class App extends Component {
   constructor(props) {
     super(props); 
@@ -118,17 +129,19 @@ handleChange = (checked) => {
     console.log("APP STATE", this.state)
     return (
       <AppMain>
-        <div>
+        <AppTop>
               <NavBar 
                 handleChange={this.handleChange}
                 checked={this.state.checked}
                 display={this.state.display}
               />
-              
+        </AppTop>
+        
+        <div>
               <Header 
               {...this.state}
               opacity={this.state.opacityCheck}/>
-        </div>
+
         
         <Route 
           exact path="/"
@@ -169,7 +182,7 @@ handleChange = (checked) => {
             />
           )}
         />
-
+        </div>
       </AppMain>
     );
   }

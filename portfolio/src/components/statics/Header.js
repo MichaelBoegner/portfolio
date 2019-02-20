@@ -12,7 +12,7 @@ const HeaderTop=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2% 0;
+    padding: 4% 0;
 
     animation-name: projectsFadeIn;
     animation-duration: 1.5s;
@@ -22,9 +22,14 @@ const HeaderTop=styled.div`
         to {opacity: 1;} 
     }
 
+
+    @media (max-width: 1024px) {
+        padding: 8% 0;
+    }
+    
     @media (max-width: 768px) {
        width: 100vw;
-       padding: 10% 0;
+       padding: 4% 0;
     }
 `;
 
@@ -97,8 +102,7 @@ const ProfileImg=styled.img`
         50%  {left:0; top:50%;}
         75%  {left:0px; top:200px;}
         100% {left:0px; top:0px;}
-    
-  
+    }
 `;
 
 const NavBarLinks=styled(Link)`
