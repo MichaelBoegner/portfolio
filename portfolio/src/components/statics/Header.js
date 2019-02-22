@@ -8,7 +8,8 @@ const HeaderMain=styled.div`
 
 const HeaderTop=styled.div`
     border-bottom: 1px solid lightgrey;
-    background-color: ${props => props.checked ? "skyblue" : "#F4F7F9"};
+    background-color: #F4F7F9;
+    /* background-color: ${props => props.checked ? "skyblue" : "#F4F7F9"}; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +38,7 @@ const HeaderTopContent=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    /* padding: 5px; */
     justify-content: center;
 
 
@@ -87,11 +88,12 @@ const HeaderTopContent=styled.div`
 `;
 
 const ProfileImg=styled.img`
-    border:  ${props => props.checked ? "5px solid yellow" : "5px solid lightgrey"};
+    border: 5px solid lightgrey;
+    /* border:  ${props => props.checked ? "5px solid yellow" : "5px solid lightgrey"}; */
     width: 150px;
     border-radius: 100%;
 
-    animation-name: ${props => props.checked ? "sunMoon" : null};
+    /* animation-name: ${props => props.checked ? "sunMoon" : null};
     animation-duration: 5s;
     animation-play-state: ${props => props.checked ? "running" : "paused"};
     position: relative;
@@ -102,7 +104,7 @@ const ProfileImg=styled.img`
         50%  {left:0; top:50%;}
         75%  {left:0px; top:200px;}
         100% {left:0px; top:0px;}
-    }
+    } */
 `;
 
 const NavBarLinks=styled(Link)`

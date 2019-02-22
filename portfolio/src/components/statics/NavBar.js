@@ -26,7 +26,7 @@ const NavBarLeft=styled.div`
 `;
 
 const NavBarCenter=styled.div`
-    padding: 0 0 0 5%;
+    margin-left: 4%;
     color: white;
     
     label {
@@ -34,11 +34,16 @@ const NavBarCenter=styled.div`
         align-items: center;
     }
     span {
-        padding: 5%;
+        margin: 5% 8%;
         font-size: .75rem;
         letter-spacing: 0.20rem;
     }
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
 `;
+
 
 const NavBarRight=styled.div`
     display: flex; 
@@ -152,7 +157,7 @@ export default class NavBar extends Component {
     
                     <NavBarCenter>
                         <label htmlFor="normal-switch">
-                            <span>SERIOUS</span>
+                            <span>FOCUS</span>
                         
                             <Switch
                             onChange={this.props.handleChange}
