@@ -89,13 +89,17 @@ const HeaderTopContent=styled.div`
 
 const ProfileImg=styled.img`
     border: 5px solid lightgrey;
-    /* border:  ${props => props.checked ? "5px solid yellow" : "5px solid lightgrey"}; */
     width: 150px;
     border-radius: 100%;
+`;
+
+const ProfileImgAnimate=styled.div`
+    border-radius: 100%;
+
+
 
     /* animation-name: ${props => props.checked ? "sunMoon" : null};
     animation-duration: 5s;
-    animation-play-state: ${props => props.checked ? "running" : "paused"};
     position: relative;
 
     @keyframes sunMoon {
@@ -105,6 +109,63 @@ const ProfileImg=styled.img`
         75%  {left:0px; top:200px;}
         100% {left:0px; top:0px;}
     } */
+
+    /* animation-name: ${props => props.checked ? "sunGlower" : null};  */
+    animation-duration: 3s;
+    animation-iteration-count:infinite;
+    animation-direction: alternate-reverse;
+    
+
+    @keyframes sunGlower {
+        0%   {
+            border: 7px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+        14%  {
+            border: 9px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+        28%  {
+            border: 11px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+        42%  {
+            border: 13px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+        56% {
+            border: 11px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+        70% {
+            border: 9px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+        84% {
+            border: 7px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+        100% {
+            border: 9px solid yellow;
+            background-color: yellow;
+            margin: 25px;
+        }
+    } 
+`;
+
+const SunWrapper=styled.div`
+    /* border: 5px solid black;
+    padding: 25px;
+    position: fixed;
+    margin: 150px; */
+
 `;
 
 const NavBarLinks=styled(Link)`
@@ -122,11 +183,17 @@ export default class Header extends Component {
                     >
                     <NavBarLinks to="/">
                         <HeaderTopContent>
-                            <ProfileImg 
-                                src={portfoliopic} 
-                                alt="portfolio pic of Michael Boegner" 
+                            <SunWrapper>
+                            <ProfileImgAnimate 
                                 checked={this.props.checked}
-                            />
+                            >
+                                <ProfileImg 
+                                    src={portfoliopic} 
+                                    alt="portfolio pic of Michael Boegner" 
+                                    checked={this.props.checked}
+                                />
+                            </ProfileImgAnimate>
+                            </SunWrapper>
                         </HeaderTopContent>
                         <HeaderTopContent>
                             <h1>C. Michael Boegner</h1>
