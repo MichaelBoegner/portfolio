@@ -9,6 +9,7 @@ import Contact from './components/routes/Contact';
 import styled from 'styled-components';
 import axios from 'axios';
 import Monty from './images/Monty.mp4';
+import Game from './components/Game';
 
 
 const AppMain=styled.div`
@@ -132,7 +133,7 @@ handleChange = () => {
 }
 
 endedHandler = () => {
-  this.setState({checked: false});
+  this.setState({ended: true});
 }
 
   render() {
@@ -140,70 +141,93 @@ endedHandler = () => {
 
     if(this.state.checked === true && this.state.ended === false) {
       return(
-        <IntroVideo 
-            autoPlay
-            src={Monty}
-            type="video/mp4"
-            onEnded={this.endedHandler}
-        />
-      )
-    } else {
-    return (
-      <AppMain>
-        <AppTop>
-              <NavBar 
-                handleChange={this.handleChange}
-                checked={this.state.checked}
-                display={this.state.display}
-              />
-        </AppTop>
-        
         <div>
-              <Header 
-              {...this.state}
-              opacity={this.state.opacityCheck}/>
+          <AppTop>
+                <NavBar 
+                  handleChange={this.handleChange}
+                  checked={this.state.checked}
+                  display={this.state.display}
+                />
+          </AppTop>
 
-        
-        <Route 
-          exact path="/"
-          render={props => (
-            
-            <Landing
-              {...props}
-            />
-          )}
-        />
-
-        <Route 
-          exact path="/projects"
-          render={props => (
-            
-            <Projects
-              {...props}
-            />
-          )}
-        />
-
-        <Route 
-          exact path="/writing"
-          render={props => (
-            
-            <Writing
-              {...props}
-            />
-          )}
-        />
-
-        <Route 
-          exact path="/contact"
-          render={props => (
-            
-            <Contact
-              {...props}
-            />
-          )}
-        />
+          <IntroVideo 
+              autoPlay
+              src={Monty}
+              type="video/mp4"
+              onEnded={this.endedHandler}
+          />
         </div>
+      )
+    } else if(this.state.ended === true) {
+      return(
+        <div>
+          <AppTop>
+            <NavBar 
+                    handleChange={this.handleChange}
+                    checked={this.state.checked}
+                    display={this.state.display}
+                  />
+            </AppTop>
+            <Game/>
+        </div>
+      )
+    } else if(this.state.checked === false){
+        return (
+          <AppMain>
+            <AppTop>
+                  <NavBar 
+                    handleChange={this.handleChange}
+                    checked={this.state.checked}
+                    display={this.state.display}
+                  />
+            </AppTop>
+            
+            <div>
+                  <Header 
+                  {...this.state}
+                  opacity={this.state.opacityCheck}/>
+
+            
+            <Route 
+              exact path="/"
+              render={props => (
+                
+                <Landing
+                  {...props}
+                />
+              )}
+            />
+
+            <Route 
+              exact path="/projects"
+              render={props => (
+                
+                <Projects
+                  {...props}
+                />
+              )}
+            />
+
+            <Route 
+              exact path="/writing"
+              render={props => (
+                
+                <Writing
+                  {...props}
+                />
+              )}
+            />
+
+            <Route 
+              exact path="/contact"
+              render={props => (
+                
+                <Contact
+                  {...props}
+                />
+              )}
+            />
+            </div>
       </AppMain>
     );
           }

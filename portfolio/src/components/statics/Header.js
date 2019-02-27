@@ -9,7 +9,6 @@ const HeaderMain=styled.div`
 const HeaderTop=styled.div`
     border-bottom: 1px solid lightgrey;
     background-color: #F4F7F9;
-    /* background-color: ${props => props.checked ? "skyblue" : "#F4F7F9"}; */
     display: flex;
     flex-direction: column;
     align-items: center;
