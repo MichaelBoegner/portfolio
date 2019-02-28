@@ -30,7 +30,7 @@ export default class Game extends Component {
         };
         
 
-        let game = new Phaser.Game(config);
+        this.game = new Phaser.Game(config);
 
         function preload ()
         {
@@ -65,12 +65,10 @@ export default class Game extends Component {
             this.ship.setCollideWorldBounds(true)
 
             this.player = this.physics.add.sprite(100, 340, 'dude').setScale(.5)
-
             this.player.setBounce(0.15);
             this.player.setCollideWorldBounds(true)
-            
 
-            
+
             this.anims.create({
                 key: 'left',
                 frames: this.anims.generateFrameNumbers('dude', { start: 0, end: 3 }),
@@ -112,7 +110,6 @@ export default class Game extends Component {
             this.cursors = this.input.keyboard.createCursorKeys();
 
             this.cameras.main.setBounds(0, 0);
-            // make the camera follow the player
             this.cameras.main.startFollow(this.player);
     }
         
@@ -144,9 +141,6 @@ export default class Game extends Component {
             }
 
             if(this.player.isCropped === true) {
-
-
-
                 if (this.cursors.left.isDown) {
                     this.ship.setVelocityX(-280)
                     this.ship.setRotation(-1.5708);
@@ -162,13 +156,12 @@ export default class Game extends Component {
 
                     this.player.setVelocityX(280);
                     this.player.setVelocityY(0);
-
-                }
+                 }
                 
+
                 if (this.cursors.up.isDown) {
                     this.ship.setVelocityY(-280);
                     this.player.setVelocityY(-280);
-
 
                 } else if (this.cursors.down.isDown) {
                     this.ship.setVelocityY(280);
@@ -180,12 +173,10 @@ export default class Game extends Component {
                 if(!this.cursors.left.isDown && !this.cursors.right.isDown && !this.cursors.up.isDown && !this.cursors.down.isDown) {
                     this.ship.setVelocityX(0)
                     this.ship.setVelocityY(0)
-
                     this.ship.setRotation(0)
 
                     this.player.setVelocityX(0);
                     this.player.setVelocityY(0);
-
                  }
             }
 
@@ -193,9 +184,19 @@ export default class Game extends Component {
                 this.player.isCropped = false;
             }
         }
+
+
     }
 
+
     render() {
+        if(this.props.checked === false && this.props.ended === true) {
+            // this.game.renderer.destroy();
+            // this.game.loop.stop();
+            // this.game.canvas.remove();
+        
+            window.location.reload()
+        }
         return (
             <div></div>
         )

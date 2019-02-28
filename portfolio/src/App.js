@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import Header from './components/statics/Header';
 import Landing from './components/routes/Landing';
 import Projects from './components/routes/projects/Projects';
@@ -42,14 +42,13 @@ class App extends Component {
         sunset: "",
         localTime: "",
         dayNight: "",
-        display: true, // Display state hides the fun switch when false to allow for deploy until stage two is completed.
-        ended: false,
+        ended: false,// True after intro fun video finishes.
     }
   }
 
 componentDidMount() {
    this.setState({opacityCheck: "opacity"});
-  //  let location, 
+  //  let locationCheck, 
   //      APIKEY = "51053550d5d7606aabbc6a9f2768f7ec";
 
   // // ================ G E O L O C A T I O N =================//
@@ -62,12 +61,12 @@ componentDidMount() {
     
   //   function success(pos) {
   //     let crd = pos.coords;
-  //     location = {
+  //     locationCheck = {
   //       latitude: crd.latitude,
   //       longitude: crd.longitude,
   //     }
       
-  //     getLocation(location);
+  //     getLocation(locationCheck);
   //   }  
     
   //   function error(err) {
@@ -78,9 +77,9 @@ componentDidMount() {
     
 
 
-  //   const getLocation = (location) => {
-  //     let latitude = location.latitude,
-  //         longitude = location.longitude;
+  //   const getLocation = (locationCheck) => {
+  //     let latitude = locationCheck.latitude,
+  //         longitude = locationCheck.longitude;
 
   //   // ================ W E A T H E R  A P I  C A L L =================//
 
@@ -124,8 +123,10 @@ componentDidMount() {
   //   } else (
   //     this.setState({dayNight: "Day"})
   //   )
-}
 
+
+
+}
 
 
 handleChange = () => {
@@ -136,102 +137,87 @@ endedHandler = () => {
   this.setState({ended: true});
 }
 
+
   render() {
     console.log("APP STATE", this.state)
-
-    if(this.state.checked === true && this.state.ended === false) {
-      return(
-        <div>
-          <AppTop>
-                <NavBar 
-                  handleChange={this.handleChange}
-                  checked={this.state.checked}
-                  display={this.state.display}
-                />
-          </AppTop>
-
+    return (
+      <div>
+        <AppTop>
+              <NavBar 
+                handleChange={this.handleChange}
+                checked={this.state.checked}
+              />
+        </AppTop>
+     
+     {(this.state.checked === true && this.state.ended === false) ?
           <IntroVideo 
               autoPlay
               src={Monty}
               type="video/mp4"
               onEnded={this.endedHandler}
           />
-        </div>
-      )
-    } else if(this.state.ended === true) {
-      return(
+      
+    : (this.state.ended === true) ?
         <div>
-          <AppTop>
-            <NavBar 
-                    handleChange={this.handleChange}
-                    checked={this.state.checked}
-                    display={this.state.display}
-                  />
-            </AppTop>
-            <Game/>
+          <Game {...this.state}/>
         </div>
-      )
-    } else if(this.state.checked === false){
-        return (
+    : 
+    
           <AppMain>
-            <AppTop>
-                  <NavBar 
-                    handleChange={this.handleChange}
-                    checked={this.state.checked}
-                    display={this.state.display}
-                  />
-            </AppTop>
-            
+
             <div>
-                  <Header 
-                  {...this.state}
-                  opacity={this.state.opacityCheck}/>
-
-            
-            <Route 
-              exact path="/"
-              render={props => (
+              <Header 
+                {...this.state}
+                opacity={this.state.opacityCheck}
                 
-                <Landing
-                  {...props}
-                />
-              )}
-            />
+              />
+              
+              <Route 
+                exact path="/"
+                render={props => (
+                  
+                  <Landing
+                    {...props}
+                  />
+                )}
+              />
 
-            <Route 
-              exact path="/projects"
-              render={props => (
-                
-                <Projects
-                  {...props}
-                />
-              )}
-            />
+              <Route 
+                exact path="/projects"
+                render={props => (
+                  
+                  <Projects
+                    {...props}
+                  />
+                )}
+              />
 
-            <Route 
-              exact path="/writing"
-              render={props => (
-                
-                <Writing
-                  {...props}
-                />
-              )}
-            />
+              <Route 
+                exact path="/writing"
+                render={props => (
+                  
+                  <Writing
+                    {...props}
+                  />
+                )}
+              />
 
-            <Route 
-              exact path="/contact"
-              render={props => (
-                
-                <Contact
-                  {...props}
-                />
-              )}
-            />
+              <Route 
+                exact path="/contact"
+                render={props => (
+                  
+                  <Contact
+                    {...props}
+                  />
+                )}
+              />
             </div>
       </AppMain>
-    );
-          }
+      }
+      
+      </div>
+      )
   }
 }
 
-export default App;
+export default withRouter(App);

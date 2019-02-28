@@ -125,41 +125,17 @@ const NavBarTitle=styled(Link)`
 
 export default class NavBar extends Component { 
     render() {
-        if(this.props.display === false) {
-            return (
-                <NavBarMain>
-                    <NavBarLeft>
-                        <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
-                    </NavBarLeft>
-    
-                    <NavBarRight>
-                        <NavBarLinks to="/projects">
-                            PROJECTS
-                        </NavBarLinks>
-                        
-                        <NavBarLinks to="/writing">
-                            WRITING
-                        </NavBarLinks>
-                        
-                        <NavBarLinks to="/contact">
-                            CONTACT
-                        </NavBarLinks>
-                    </NavBarRight>
-                </NavBarMain>
-            )
+      return (
+            <NavBarMain>
+                <NavBarLeft>
+                    <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
+                </NavBarLeft>
 
-        } else {
-            return (
-                <NavBarMain>
-                    <NavBarLeft>
-                        <NavBarTitle to="/">C. MICHAEL BOEGNER</NavBarTitle>
-                    </NavBarLeft>
-    
-                    <NavBarCenter>
-                        <label htmlFor="normal-switch">
-                            <span>FOCUS</span>
-                        
-                            <Switch
+                <NavBarCenter>
+                    <label htmlFor="normal-switch">
+                        <span>FOCUS</span>
+                    
+                        <Switch
                             onChange={this.props.handleChange}
                             checked={this.props.checked}
                             id="normal-switch"
@@ -167,32 +143,28 @@ export default class NavBar extends Component {
                             checkedIcon={false}
                             height={18}
                             width={28}
-                            />
-    
-                            <span>FUN</span>
-                        </label>
-                    </NavBarCenter>
-    
-                    <NavBarRight>
-                        <NavBarLinks to="/projects">
-                            PROJECTS
-                        </NavBarLinks>
-                        
-                        <NavBarLinks to="/writing">
-                            WRITING
-                        </NavBarLinks>
-                        
-                        <NavBarLinks to="/contact">
-                            CONTACT
-                        </NavBarLinks>
-                    </NavBarRight>
-                </NavBarMain>
-            )
+                            gameHandler={this.gameHandler}
+                        />
 
-        }
-            
+                        <span>FUN</span>
+                    </label>
+                </NavBarCenter>
 
-
+                <NavBarRight>
+                    <NavBarLinks to="/projects">
+                        PROJECTS
+                    </NavBarLinks>
+                    
+                    <NavBarLinks to="/writing">
+                        WRITING
+                    </NavBarLinks>
+                    
+                    <NavBarLinks to="/contact">
+                        CONTACT
+                    </NavBarLinks>
+                </NavBarRight>
+            </NavBarMain>
+        )
     }
 
 }

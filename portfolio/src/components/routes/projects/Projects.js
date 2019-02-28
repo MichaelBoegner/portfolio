@@ -161,7 +161,7 @@ const ProjectCardBio=styled.div`
 
 
 export default class Projects extends Component { 
-    render() {
+    render() { console.log("FIRING PROJECTS")
         return (
             <ProjectsMain>
                 <ProjectsBottom>
