@@ -49,10 +49,10 @@ export default class Game extends Component {
             this.add.image(0, 0, 'portfolio').setOrigin(0, 0)
             // =============== PLATFORMS ===============//
 
-            let platforms = this.physics.add.staticGroup();
+            this.platforms = this.physics.add.staticGroup();
 
-            platforms.create(450, 397, 'ground').setScale(7.47, 1).refreshBody();
-            platforms.create(960, 265, 'paragraphGround');
+            this.platforms.create(450, 397, 'ground').setScale(7.47, 1).refreshBody();
+            this.platforms.create(960, 265, 'paragraphGround');
 
             // =============== SPRITES ===============//
             this.marquee = this.physics.add.sprite(1500, 175, 'marquee');
