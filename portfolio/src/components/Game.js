@@ -7,6 +7,8 @@ import ParagraphGround from '../assets/paragraphGround.JPG';
 import Ship from '../assets/ship.PNG';
 import Marquee from '../assets/marquee.PNG';
 import MarqueeInstructions from '../assets/marqueeInstructions.PNG';
+import ShipTheme from '../assets/AMFM2019-02-22-S1-T07-blow it.MP3';
+import DudeTheme from '../assets/pgroove2002-11-20d1t02.MP3';
 
 export default class Game extends Component {
 
@@ -41,12 +43,17 @@ export default class Game extends Component {
             this.load.spritesheet('dude', DudeSpriter,  { frameWidth: 113, frameHeight: 110, });
             this.load.spritesheet('marquee', Marquee,  { frameWidth: 602, frameHeight: 280, });
             this.load.spritesheet('marqueeInstructions', MarqueeInstructions,  { frameWidth: 662, frameHeight: 360, });
+            this.load.audio('shipTheme',  ShipTheme);
+            this.load.audio('dudeTheme', DudeTheme);
         }
         
         
         function create ()
         {
             this.add.image(0, 0, 'portfolio').setOrigin(0, 0)
+            this.shipTheme = this.sound.add('shipTheme', {volume: 0.15});
+            this.dudeTheme = this.sound.add('dudeTheme', {volume: 0.15});
+
             // =============== PLATFORMS ===============//
 
             this.platforms = this.physics.add.staticGroup();
@@ -67,6 +74,8 @@ export default class Game extends Component {
             this.player = this.physics.add.sprite(100, 340, 'dude').setScale(.5)
             this.player.setBounce(0.15);
             this.player.setCollideWorldBounds(true)
+
+
 
 
             this.anims.create({
@@ -119,6 +128,10 @@ export default class Game extends Component {
             this.marquee.anims.play('marqueeAnimate', true);
             this.marqueeInstructions.anims.play('marqueeInstructionsAnimate', true);
 
+            if (this.dudeTheme.isPlaying === false) {
+                this.dudeTheme.play(); 
+            }
+
             if (this.cursors.left.isDown && this.player.isCropped === false) {
                 this.player.setVelocityX(-140);
                 this.player.anims.play('left', true);
@@ -143,6 +156,14 @@ export default class Game extends Component {
             if(this.player.isCropped === true) {
                 this.playerCollision.overlapOnly = true; 
                 this.shipCollision.overlapOnly = true; 
+
+                if (this.dudeTheme.isPlaying === true) {
+                    this.dudeTheme.pause(); 
+                }
+
+                if (this.shipTheme.isPlaying === false) {
+                    this.shipTheme.play(); 
+                }
 
                 if (this.cursors.left.isDown) {
                     this.ship.setVelocityX(-280)
@@ -187,6 +208,10 @@ export default class Game extends Component {
                 this.player.isCropped = false;
                 this.playerCollision.overlapOnly = false; 
                 this.shipCollision.overlapOnly = false; 
+
+                if (this.shipTheme.isPlaying === true) {
+                    this.shipTheme.pause(); 
+                }
             }
         }
 
