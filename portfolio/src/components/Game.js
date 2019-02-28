@@ -104,8 +104,8 @@ export default class Game extends Component {
             });
 
 
-            this.physics.add.collider(this.player, platforms);
-            this.physics.add.collider(this.ship, platforms);
+            this.playerCollision = this.physics.add.collider(this.player, this.platforms);
+            this.shipCollision = this.physics.add.collider(this.ship, this.platforms);
 
             this.cursors = this.input.keyboard.createCursorKeys();
 
@@ -141,6 +141,9 @@ export default class Game extends Component {
             }
 
             if(this.player.isCropped === true) {
+                this.playerCollision.overlapOnly = true; 
+                this.shipCollision.overlapOnly = true; 
+
                 if (this.cursors.left.isDown) {
                     this.ship.setVelocityX(-280)
                     this.ship.setRotation(-1.5708);
@@ -182,6 +185,8 @@ export default class Game extends Component {
 
             if(this.cursors.shift.isDown && this.player.isCropped === true) {
                 this.player.isCropped = false;
+                this.playerCollision.overlapOnly = false; 
+                this.shipCollision.overlapOnly = false; 
             }
         }
 
@@ -191,10 +196,6 @@ export default class Game extends Component {
 
     render() {
         if(this.props.checked === false && this.props.ended === true) {
-            // this.game.renderer.destroy();
-            // this.game.loop.stop();
-            // this.game.canvas.remove();
-        
             window.location.reload()
         }
         return (
