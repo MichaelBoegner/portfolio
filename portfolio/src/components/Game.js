@@ -7,8 +7,8 @@ import ParagraphGround from '../assets/paragraphGround.JPG';
 import Ship from '../assets/ship.PNG';
 import Marquee from '../assets/marquee.PNG';
 import MarqueeInstructions from '../assets/marqueeInstructions.PNG';
-import ShipTheme from '../assets/AMFM2019-02-22-S1-T07-blow it.MP3';
-import DudeTheme from '../assets/pgroove2002-11-20d1t02.MP3';
+import ShipTheme from '../assets/AMFM2019-02-22-S1-T07-blow it.OGG';
+import DudeTheme from '../assets/pgroove2002-11-20d1t02.OGG';
 
 export default class Game extends Component {
 
@@ -28,6 +28,9 @@ export default class Game extends Component {
                 preload: preload,
                 create: create,
                 update: update
+            },
+            audio: {
+                disableWebAudio: true
             }
         };
         
