@@ -3,6 +3,7 @@ import WritingCards from './WritingCards';
 import Footer from '../../statics/Footer';
 import styled from 'styled-components';
 import AbsoluteBeginners from '../../../images/AbsoluteBeginners.JPG';
+import LearningTimeLine from  '../../../assets/NewLanguageTimeLine.PNG';
 
 
 const WritingMain=styled.div`
@@ -28,6 +29,20 @@ const WritingBottom=styled.div`
 
 const WritingCardsMain1=styled.div`
     display: flex;
+    align-items: top;
+    padding: 3% 20%;
+    border-bottom: 1px solid lightgrey;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
+`;
+
+const WritingCardsMain2=styled.div`
+    display: flex;
+    flex-direction: row-reverse;
     align-items: top;
     padding: 3% 20%;
     border-bottom: 1px solid lightgrey;
@@ -141,6 +156,22 @@ export default class Writing extends Component {
                             </a>
                         </WritingCardBio>
                     </WritingCardsMain1>
+
+                    <WritingCardsMain2>
+
+                            <WritingCardsCard
+                                img={LearningTimeLine}
+                            />
+
+                        <WritingCardBio> 
+                            <a href="https://medium.com/@michaelboegner/how-to-learn-a-new-framework-language-quickly-785ec28c7747" target="_blank" rel="noopener noreferrer">
+                                <h3>How to Learn a New Framework/Language Quickly</h3>
+                                <p>
+                                The more you learn new frameworks/languages, the more you will understand this to be a predictable part of your experience, and the more you will consequently be able to relax into the process, which will increase the slope of your learning rate. In short, chill out, and you’ll learn more, faster.
+                                </p>
+                            </a>
+                        </WritingCardBio>
+                    </WritingCardsMain2>
                 </WritingBottom>
 
                 <Footer/>
