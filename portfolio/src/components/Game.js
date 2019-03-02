@@ -134,6 +134,7 @@ export default class Game extends Component {
 
 
        if(this.player.isCropped === false) {
+            this.player.setBounce(0.15);
 
         //===============MUSIC=============//
 
@@ -192,6 +193,8 @@ export default class Game extends Component {
 
             this.ship.body.setAllowGravity(false);
             this.player.body.setAllowGravity(false);
+
+            this.player.setBounce(0);
 
             //===============MUSIC=============//
             if(this.shipTheme.isPaused === true) {
