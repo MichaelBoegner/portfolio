@@ -126,97 +126,148 @@ export default class Game extends Component {
     }
         
         
-        function update ()
-        {   
-            this.marquee.anims.play('marqueeAnimate', true);
-            this.marqueeInstructions.anims.play('marqueeInstructionsAnimate', true);
+    function update ()
+    {   
+        this.marquee.anims.play('marqueeAnimate', true);
+        this.marqueeInstructions.anims.play('marqueeInstructionsAnimate', true);
 
-            if (this.dudeTheme.isPlaying === false) {
-                this.dudeTheme.play(); 
+
+
+       if(this.player.isCropped === false) {
+
+        //===============MUSIC=============//
+
+        if (this.dudeTheme.isPaused === true) {
+            this.dudeTheme.resume();
+            this.shipTheme.pause(); 
+       } else if (this.dudeTheme.isPlaying === false) {
+            this.dudeTheme.play();  
+         }
+
+
+        //===============CONTROLS=============//
+         console.log("SHIP VELOCITY AND ACCEL", this.ship.body.velocity, this.ship.body.acceleration)
+         console.log("PLAYER VELOCITY AND ACCEL", this.player.body.velocity, this.player.body.acceleration)
+
+         if(this.ship.body.velocity.x > 10 && this.player.body.velocity.x > 10) {
+            this.ship.body.acceleration.x = -1 * this.ship.body.velocity.x;
+            this.player.body.acceleration.x = -1 * this.player.body.velocity.x;                
+        } else if(this.ship.body.velocity.x < -10 && this.player.body.velocity.x < -10) {
+            this.ship.body.acceleration.x = -1 * this.ship.body.velocity.x;
+            this.player.body.acceleration.x = -1 * this.player.body.velocity.x;                
+        } else {
+            this.ship.body.acceleration.x = 0;
+            this.player.body.acceleration.x = 0;
+            this.ship.body.velocity.x = 0;
+            this.player.body.velocity.x = 0;
+        }
+
+
+
+          if (this.cursors.left.isDown) {
+               this.player.setVelocityX(-140);
+               this.player.anims.play('left', true);
+           
+           } else if (this.cursors.right.isDown) {
+               this.player.setVelocityX(140);
+               this.player.anims.play('right', true);
+
+           } else {
+               this.player.anims.play('turn');
+           }
+   
+           if (this.cursors.up.isDown && this.player.body.touching.down) {
+               this.player.setVelocityY(-400);
+           }
+
+           if(this.cursors.space.isDown && (this.ship.x - this.player.x) > -50 && (this.ship.x - this.player.x) < 50 ) {
+               this.player.isCropped = true;
+               this.player.setVelocityX(this.ship.body.velocity.x);
+               this.player.setVelocityY(this.ship.body.velocity.y);
+           }
+
+       } else if(this.player.isCropped === true) {
+            this.playerCollision.overlapOnly = true; 
+            this.shipCollision.overlapOnly = true;
+
+            this.ship.body.setAllowGravity(false);
+            this.player.body.setAllowGravity(false);
+
+            //===============MUSIC=============//
+            if(this.shipTheme.isPaused === true) {
+                this.shipTheme.resume()
+                this.dudeTheme.pause()
+            } else if(this.shipTheme.isPlaying === false) {
+                this.shipTheme.play()
+                this.dudeTheme.pause()
+            } 
+
+            //===============CONTROLS=============//
+            if (this.cursors.left.isDown) {
+                this.ship.body.acceleration.x = -350;
+                this.player.body.acceleration.x = -350;
+                this.ship.body.acceleration.y = 0;
+                this.player.body.acceleration.y = 0;
+
+                this.ship.setRotation(-1.5708);
+            } else if (this.cursors.right.isDown) {
+                this.ship.body.acceleration.x = 350;
+                this.player.body.acceleration.x = 350;
+                this.ship.body.acceleration.y = 0;
+                this.player.body.acceleration.y = 0;
+
+                this.ship.setRotation(1.5708);
             }
-
-            if (this.cursors.left.isDown && this.player.isCropped === false) {
-                this.player.setVelocityX(-140);
-                this.player.anims.play('left', true);
             
-            } else if (this.cursors.right.isDown && this.player.isCropped === false) {
-                this.player.setVelocityX(140);
-                this.player.anims.play('right', true);
+            if (this.cursors.up.isDown) {
+                this.ship.body.acceleration.y = -350;
+                this.player.body.acceleration.y = -350;
+                this.ship.body.acceleration.x = 0;
+                this.player.body.acceleration.x = 0;
 
-            } else if (this.player.isCropped === false) {
-                this.player.setVelocityX(0);
-                this.player.anims.play('turn');
-            }
-    
-            if (this.cursors.up.isDown && this.player.body.touching.down && this.player.isCropped === false) {
-                this.player.setVelocityY(-400);
-            }
+                this.ship.setRotation(0);
 
-            if(this.cursors.space.isDown && (this.ship.x - this.player.x) > -50 && (this.ship.x - this.player.x) < 50 ) {
-                this.player.isCropped = true;
-            }
+            } else  if (this.cursors.down.isDown) {
+                this.ship.body.acceleration.y = 350;
+                this.player.body.acceleration.y = 350;
+                this.ship.body.acceleration.x = 0;
+                this.player.body.acceleration.x = 0;
 
-            if(this.player.isCropped === true) {
-                this.playerCollision.overlapOnly = true; 
-                this.shipCollision.overlapOnly = true; 
+                this.ship.setRotation(3.14159);
+            }  
 
-                if (this.dudeTheme.isPlaying === true) {
-                    this.dudeTheme.pause(); 
+            
+            if(!this.cursors.left.isDown && !this.cursors.right.isDown && !this.cursors.up.isDown && !this.cursors.down.isDown) {
+                
+                if(this.ship.body.velocity.x > 0 && this.player.body.velocity.x > 0) {
+                    this.ship.body.acceleration.x = -50;
+                    this.player.body.acceleration.x = -50;                
+                } else if(this.ship.body.velocity.x < 0 && this.player.body.velocity.x < 0) {
+                    this.ship.body.acceleration.x = 50;
+                    this.player.body.acceleration.x = 50;                
                 }
 
-                if (this.shipTheme.isPlaying === false) {
-                    this.shipTheme.play(); 
+                if(this.ship.body.velocity.y > 0 && this.player.body.velocity.y > 0) {
+                    this.ship.body.acceleration.y = -50;
+                    this.player.body.acceleration.y = -50;                
+                } else if(this.ship.body.velocity.y < 0 && this.player.body.velocity.y < 0) {
+                    this.ship.body.acceleration.y = 50;
+                    this.player.body.acceleration.y = 50;                
                 }
 
-                if (this.cursors.left.isDown) {
-                    this.ship.setVelocityX(-280)
-                    this.ship.setRotation(-1.5708);
-                    this.ship.setVelocityY(0);
+             }
 
-                    this.player.setVelocityX(-280)
-                    this.player.setVelocityY(0);
-                    
-                } else if (this.cursors.right.isDown) {
-                    this.ship.setVelocityX(280);
-                    this.ship.setRotation(1.5708);
-                    this.ship.setVelocityY(0);
-
-                    this.player.setVelocityX(280);
-                    this.player.setVelocityY(0);
-                 }
-                
-
-                if (this.cursors.up.isDown) {
-                    this.ship.setVelocityY(-280);
-                    this.player.setVelocityY(-280);
-
-                } else if (this.cursors.down.isDown) {
-                    this.ship.setVelocityY(280);
-                    this.ship.setRotation(3.14159);
-
-                    this.player.setVelocityY(280);
-                } 
-                
-                if(!this.cursors.left.isDown && !this.cursors.right.isDown && !this.cursors.up.isDown && !this.cursors.down.isDown) {
-                    this.ship.setVelocityX(0)
-                    this.ship.setVelocityY(0)
-                    this.ship.setRotation(0)
-
-                    this.player.setVelocityX(0);
-                    this.player.setVelocityY(0);
-                 }
-            }
-
-            if(this.cursors.shift.isDown && this.player.isCropped === true) {
+             if(this.cursors.shift.isDown) {
                 this.player.isCropped = false;
                 this.playerCollision.overlapOnly = false; 
                 this.shipCollision.overlapOnly = false; 
-
-                if (this.shipTheme.isPlaying === true) {
-                    this.shipTheme.pause(); 
-                }
+                this.ship.body.setAllowGravity(true);
+                this.player.body.setAllowGravity(true);
+                this.ship.setRotation(0);
             }
+
         }
+    }
 
 
     }
