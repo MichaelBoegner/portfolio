@@ -19,17 +19,16 @@ const HeaderTop=styled.div`
 
     @keyframes projectsFadeIn {
         from {opacity: ${props => props.opacity ? "0" : "1"};}
-        to {opacity: 1;} 
+        to {opacity: 1;}
     }
-
 
     @media (max-width: 1024px) {
         padding: 8% 0 4% 0;
     }
     
     @media (max-width: 768px) {
-       width: 100vw;
-       padding: 4% 0;
+        width: 100vw;
+        padding: 4% 0;
     }
 `;
 
@@ -37,9 +36,8 @@ const HeaderTopContent=styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* padding: 5px; */
+    padding: 5px;
     justify-content: center;
-
 
     :hover {
         cursor: pointer;
@@ -92,88 +90,13 @@ const ProfileImg=styled.img`
     border-radius: 100%;
 `;
 
-const ProfileImgAnimate=styled.div`
-    border-radius: 100%;
-
-
-
-    /* animation-name: ${props => props.checked ? "sunMoon" : null};
-    animation-duration: 5s;
-    position: relative;
-
-    @keyframes sunMoon {
-        0%   {left:0%; top:0px;}
-        25%  {left:-50%; top: 150px;}
-        50%  {left:0; top:50%;}
-        75%  {left:0px; top:200px;}
-        100% {left:0px; top:0px;}
-    } */
-
-    /* animation-name: ${props => props.checked ? "sunGlower" : null};  */
-    animation-duration: 3s;
-    animation-iteration-count:infinite;
-    animation-direction: alternate-reverse;
-    
-
-    @keyframes sunGlower {
-        0%   {
-            border: 7px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-        14%  {
-            border: 9px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-        28%  {
-            border: 11px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-        42%  {
-            border: 13px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-        56% {
-            border: 11px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-        70% {
-            border: 9px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-        84% {
-            border: 7px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-        100% {
-            border: 9px solid yellow;
-            background-color: yellow;
-            margin: 25px;
-        }
-    } 
-`;
-
-const SunWrapper=styled.div`
-    /* border: 5px solid black;
-    padding: 25px;
-    position: fixed;
-    margin: 150px; */
-
-`;
-
 const NavBarLinks=styled(Link)`
     text-decoration: none;
 `;
 
 
 export default class Header extends Component { 
-    render() { console.log("THIS.PROPS", this.props)
+    render() { 
         return (
             <HeaderMain>
                 <HeaderTop 
@@ -182,17 +105,11 @@ export default class Header extends Component {
                     >
                     <NavBarLinks to="/">
                         <HeaderTopContent>
-                            <SunWrapper>
-                            <ProfileImgAnimate 
-                                checked={this.props.checked}
-                            >
                                 <ProfileImg 
                                     src={portfoliopic} 
                                     alt="portfolio pic of Michael Boegner" 
                                     checked={this.props.checked}
                                 />
-                            </ProfileImgAnimate>
-                            </SunWrapper>
                         </HeaderTopContent>
                         <HeaderTopContent>
                             <h1>C. Michael Boegner</h1>

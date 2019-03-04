@@ -6,6 +6,7 @@ import FamilyTabs from '../../../images/FamilyTabs.JPG'
 import GameLife from '../../../images/GameLife.JPG';
 import Seinfeld from '../../../images/Seinfeld.JPG';
 import Portfolio from '../../../images/Portfolio.JPG';
+import PortfolioGame from '../../../images/PortfolioTheGame.JPG';
 
 const ProjectsMain=styled.div`
 `;
@@ -66,7 +67,6 @@ const ProjectCardsMain3=styled.div`
 
 const ProjectCardsMain4=styled.div`
     display: flex;
-    flex-direction: row-reverse;
     align-items: top;
     padding: 3% 20%;
 
@@ -212,8 +212,31 @@ export default class Projects extends Component {
                             </a>
                         </ProjectCardBio>
                     </ProjectCardsMain2>
-                    
+
                     <ProjectCardsMain3>
+                        <ProjectCardsCard
+                            img={PortfolioGame}
+                        />
+
+                        <ProjectCardBio>
+                            <h3>Portfolio:The game - Beta</h3>
+                            <p>
+                            Built using React and Phaser3, Portfolio is an action adventure, RPG, space battle to save the universe! Well, currently, the only thing you can battle is yourself on my portfolio.
+                            BUT, future releases will include a story line in which you might battle your way from one corporate planet to the next until you reach
+                            Planet C-Suite, where you will have to defeat the evel Regor to save the Universe!   
+                            </p>
+
+                            <a href="https://michaelboegner.github.io/Conways-Life/" target="_blank" rel="noopener noreferrer">
+                                <h2>WEBSITE</h2>
+                            </a>
+
+                            <a href="https://github.com/MichaelBoegner/Conways-Life/" target="_blank" rel="noopener noreferrer">
+                                <h2>GITHUB</h2>
+                            </a>
+                        </ProjectCardBio>
+                    </ProjectCardsMain3>
+                    
+                    <ProjectCardsMain2>
                         <ProjectCardsCard
                             img={GameLife}
                         />
@@ -237,7 +260,7 @@ export default class Projects extends Component {
                                 <h2>GITHUB</h2>
                             </a>
                         </ProjectCardBio>
-                    </ProjectCardsMain3>
+                    </ProjectCardsMain2>
 
                     <ProjectCardsMain4>
                         <ProjectCardsCard
@@ -262,6 +285,9 @@ export default class Projects extends Component {
                             </a>
                         </ProjectCardBio>
                     </ProjectCardsMain4>
+
+
+
                 </ProjectsBottom>
 
                 <Footer/>
