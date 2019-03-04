@@ -223,7 +223,7 @@ export default class Projects extends Component {
                             <p>
                             Built using React and Phaser3, Portfolio is an action adventure, RPG, space battle to save the universe! Well, currently, the only thing you can battle is yourself on my portfolio.
                             BUT, future releases will include a story line in which you might battle your way from one corporate planet to the next until you reach
-                            Planet C-Suite, where you will have to defeat the evel Regor to save the Universe!   
+                            Planet C-Suite, where you will have to defeat the evel Regor to save the universe!   
                             </p>
 
                             <a href="https://michaelboegner.github.io/Conways-Life/" target="_blank" rel="noopener noreferrer">
