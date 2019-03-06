@@ -25,7 +25,6 @@ const AppTop=styled.div`
   z-index: 3;
   position: fixed;
   width: 100%;
-
   @media (max-width: 768px) {
     z-index: 0;
     position: relative;

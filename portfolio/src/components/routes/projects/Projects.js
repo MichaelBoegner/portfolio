@@ -7,6 +7,7 @@ import GameLife from '../../../images/GameLife.JPG';
 import Seinfeld from '../../../images/Seinfeld.JPG';
 import Portfolio from '../../../images/Portfolio.JPG';
 import PortfolioGame from '../../../images/PortfolioTheGame.JPG';
+import DryForLoop from '../../../images/npmdryForLoop.JPG'
 
 const ProjectsMain=styled.div`
 `;
@@ -67,6 +68,7 @@ const ProjectCardsMain3=styled.div`
 
 const ProjectCardsMain4=styled.div`
     display: flex;
+    flex-direction: row-reverse;
     align-items: top;
     padding: 3% 20%;
 
@@ -226,11 +228,11 @@ export default class Projects extends Component {
                             Planet C-Suite, where you will have to defeat the evel Regor to save the universe!   
                             </p>
 
-                            <a href="https://michaelboegner.github.io/Conways-Life/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.cmboegner.com/" target="_blank" rel="noopener noreferrer">
                                 <h2>WEBSITE</h2>
                             </a>
 
-                            <a href="https://github.com/MichaelBoegner/Conways-Life/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/MichaelBoegner/portfolio" target="_blank" rel="noopener noreferrer">
                                 <h2>GITHUB</h2>
                             </a>
                         </ProjectCardBio>
@@ -261,6 +263,30 @@ export default class Projects extends Component {
                             </a>
                         </ProjectCardBio>
                     </ProjectCardsMain2>
+
+                    <ProjectCardsMain3>
+                        <ProjectCardsCard
+                            img={DryForLoop}
+                        />
+
+                        <ProjectCardBio>
+                            <h3>NPM - dry-forloop</h3>
+                            <p>
+                            A drier version of Javascript's existing forLoop. Like forEach, but with parameters for start, operator, length, and iterator!
+                            </p>
+                            <p>
+                            This is an open-source project. We are accepting PRs.
+                            </p>
+
+                            <a href="https://www.npmjs.com/package/dry-forloop" target="_blank" rel="noopener noreferrer">
+                                <h2>NPM</h2>
+                            </a>
+
+                            <a href="https://github.com/MichaelBoegner/dry-forloop/" target="_blank" rel="noopener noreferrer">
+                                <h2>GITHUB</h2>
+                            </a>
+                        </ProjectCardBio>
+                    </ProjectCardsMain3>
 
                     <ProjectCardsMain4>
                         <ProjectCardsCard
