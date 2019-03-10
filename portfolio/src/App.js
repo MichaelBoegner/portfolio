@@ -47,8 +47,20 @@ class App extends Component {
 
 componentDidMount() {
    this.setState({opacityCheck: "opacity"});
+
+  const reqBody = {
+
+  }
+   axios.get('https://github.com/users/MichaelBoegner/contributions?to=2019-03-09', reqBody) 
+    .then(resp => {
+      console.log(resp); 
+    })
+    .catch(error => {
+      console.log(error);
+    })
+
   //  let locationCheck, 
-  //      APIKEY = "51053550d5d7606aabbc6a9f2768f7ec";
+  //      APIKEY = "";
 
   // // ================ G E O L O C A T I O N =================//
 

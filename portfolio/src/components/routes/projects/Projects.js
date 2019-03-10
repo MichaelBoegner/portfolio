@@ -272,8 +272,8 @@ export default class Projects extends Component {
                         <ProjectCardBio>
                             <h3>NPM | dry-forloop</h3>
                             <p>
-                            A drier version of Javascript's existing forLoop. Like forEach, but with parameters for start, operator, length, and iterator!
-                            This is an open-source project. We are accepting PRs.
+                            A drier version of Javascript's existing forLoop. Like forEach, but with parameters for start, operator, length, 
+                            and iterator! This is an open-source project. We are accepting PRs.
                             </p>
 
                             <a href="https://www.npmjs.com/package/dry-forloop" target="_blank" rel="noopener noreferrer">

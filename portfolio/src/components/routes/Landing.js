@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-
+import styled from 'styled-components'; 
 
 const LandingMain=styled.div`
     padding: 2% 35%;
@@ -170,12 +169,11 @@ const Icon=styled.div`
 
 export default class Landing extends Component { 
     render() {
-        console.log("THIS.STATE", this.state)
         return (
             <LandingMain>
                 <LandingBottom>
                     <LandingBottomContentLeft>
-                        <h3>About me</h3>
+                        <h3 >About me</h3>
                         
                         <p> Michael loves algorithms, comedy, guitar, and walking until all of his problems are solved (aka hiking). 
                             As a recent graduate of Lambda School's Full-Stack Web Development program, he strives to make fun, useful things. Check out his previous projects
