@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'; 
+import PopupLanding from './PopupLanding';
 
 const LandingMain=styled.div`
     padding: 2% 35%;
@@ -167,10 +168,27 @@ const Icon=styled.div`
 
 
 
-export default class Landing extends Component { 
-    render() {
+export default class Landing extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+            formToggled: null, 
+        }
+    }
+    
+
+toggleForm = () => {
+    this.setState({formToggled: 'toggled'});
+}
+
+
+    render() { console.log("state", this.state)
         return (
             <LandingMain>
+                <PopupLanding
+                    toggleForm={this.toggleForm}
+                    formToggled={this.state.formToggled}
+                />
                 <LandingBottom>
                     <LandingBottomContentLeft>
                         <h3 >About me</h3>
