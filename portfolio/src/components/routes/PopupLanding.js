@@ -16,12 +16,27 @@ const StyledAlertWrapper = styled.div`
   overflow: scroll;
   display: ${props => props.formToggled ? 'none' : null};
 
+
   .alert {
     width: 500px;
-    background: #68659e;
-    display: flex;
+    display: flex; 
     flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-weight: 600;
+    border-bottom: 2px solid lightgrey;
+    border-top: 2px solid lightgrey;
+    background-color: #353B3E; 
+    align-items: center;
     overflow: auto;
+    padding: 25px;
+    
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 100vw; 
+    }
+
     h2 {
       font-family: "Merriweather", sans-serif;
       font-size: 22px;
@@ -56,13 +71,7 @@ const StyledAlertWrapper = styled.div`
           cursor: pointer;
         }
       }
-      button {
-        margin: 10px 0px 20px 10px;
-        color: white;
-        background: #68659e;
-        border: 2px solid #ffffff;
-        min-width: 100px;
-        height: 25px;
+     
 
         :hover {
           border-color: #3985ac;
@@ -74,6 +83,29 @@ const StyledAlertWrapper = styled.div`
   }
 `;
 
+const Button=styled.div `
+    text-decoration: none;
+    color: white;
+    font-size: .8rem;
+    letter-spacing: 0.25rem;
+    padding: 15px 25px;
+
+    :hover {
+        background-color: lightgray;
+        cursor: pointer;
+
+        animation-name: rainbowHover;
+        animation-duration: 1.25s; 
+        animation-iteration-count:infinite;
+        animation-direction: alternate-reverse;
+
+        @keyframes rainbowHover {
+            0% {color: lightgrey;}
+            100% {color: #353B3E;}
+    }
+`;
+  
+
 export default class PopupLanding extends Component {
     
     render() {console.log("popup state", this.props.formToggled)
@@ -82,13 +114,18 @@ export default class PopupLanding extends Component {
             formToggled={this.props.formToggled}
         >
           <div className='alert'>
-            <h2>Are you having fun yet today!? Make sure to hit the switch above before you leave!</h2>
+            <h2>
+              Have some fun on the house!
+            </h2>
+            <h2>  
+              Hit the switch above!
+            </h2>
             <div className='button-box'>
-                <button 
+                <Button 
                     onClick={this.props.toggleForm}
                     >
                     Got It!
-                </button>
+                </Button>
             </div>
             </div>
         </StyledAlertWrapper>
