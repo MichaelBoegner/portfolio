@@ -185,10 +185,10 @@ toggleForm = () => {
     render() { console.log("state", this.state)
         return (
             <LandingMain>
-                <PopupLanding
+                {/* <PopupLanding
                     toggleForm={this.toggleForm}
                     formToggled={this.state.formToggled}
-                />
+                /> */}
                 <LandingBottom>
                     <LandingBottomContentLeft>
                         <h3 >About me</h3>
