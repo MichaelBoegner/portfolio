@@ -17,7 +17,6 @@ const StyledAlertWrapper = styled.div`
   display: none;
   /* display: ${props => props.formToggled ? 'none' : null}; */
 
-
   .alert {
     width: 500px;
     display: flex; 
@@ -81,7 +80,6 @@ const StyledAlertWrapper = styled.div`
         }
       }
     }
-  }
 `;
 
 const Button=styled.div `
@@ -103,6 +101,7 @@ const Button=styled.div `
         @keyframes rainbowHover {
             0% {color: lightgrey;}
             100% {color: #353B3E;}
+        }
     }
 `;
   
