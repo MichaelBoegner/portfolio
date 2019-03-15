@@ -47,7 +47,7 @@ const StyledAlertWrapper = styled.div`
       line-height:1.5;
       text-align:left;
     }
-    .button-box {
+    .div {
       width: 20%;
       display: flex;
       border: 1px solid lightgray;
@@ -57,31 +57,21 @@ const StyledAlertWrapper = styled.div`
       a {
         margin: 10px 0px 20px 10px;
         color: white;
-        background: #68659e;
+        background: #353B3E;
         text-decoration: none;
- 
-        :hover {
-          border-color: #3985ac;
-          color: #3985ac;
-          cursor: pointer;
-        }
-      }
-     
-        :hover {
-          border-color: #3985ac;
-          color: #3985ac;
-          cursor: pointer;
-        }
       }
     }
+  }
 `;
 
 const Button=styled.div `
     text-decoration: none;
     color: white;
-    font-size: .8rem;
+    font-size: 1rem;
     letter-spacing: 0.25rem;
-    padding: 15px 25px;
+    padding: 10px 20px;
+    margin: 15px 0 0 0;
+    border: 1px solid lightgrey;
 
     :hover {
         background-color: lightgray;
