@@ -13,6 +13,7 @@ import Game from './components/Game';
 
 
 const AppMain=styled.div`
+
 `;
 
 const IntroVideo=styled.video`
@@ -43,22 +44,15 @@ class App extends Component {
         dayNight: "",
         ended: false,// True after intro fun video finishes.
         formToggled: null, 
+        mobile: false,
+        width: window.innerWidth,
     }
   }
 
+
 componentDidMount() {
-   this.setState({userArrived: true});
-
-  const reqBody = {
-
-  }
-   axios.get('https://github.com/users/MichaelBoegner/contributions?to=2019-03-09', reqBody) 
-    .then(resp => {
-      console.log(resp); 
-    })
-    .catch(error => {
-      console.log(error);
-    })
+  this.setState({userArrived: true});
+  this.handleWindowSizeChange();
 
   //  let locationCheck, 
   //      APIKEY = "";
@@ -146,11 +140,25 @@ handleChange = () => {
 }
 
 endedHandler = () => {
-  this.setState({ended: true});
+  this.setState({ ended: true });
 }
 
 toggleForm = () => {
-  this.setState({formToggled: 'toggled'});
+  this.setState({ formToggled: 'toggled' });
+}
+
+handleWindowSizeChange = () => {
+  this.setState({ width: window.innerWidth });
+  this.handleWindowSizeCheck()
+};
+
+handleWindowSizeCheck = () => {
+  const { width } = this.state;
+  const isMobile = width <= 768;
+
+  if(isMobile) {
+    this.setState({ mobile: true });
+  }
 }
 
 
@@ -179,7 +187,10 @@ toggleForm = () => {
         </div>
     : 
     
-          <AppMain>
+          <AppMain
+            {...this.state}
+            mobile={this.state.mobile}
+          >
 
             <div>
               <Header 

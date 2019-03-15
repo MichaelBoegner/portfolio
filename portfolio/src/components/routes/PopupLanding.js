@@ -14,7 +14,7 @@ const StyledAlertWrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: scroll;
-  display: ${props => !props.formToggled && props.userArrived ? null : 'none'};
+  display: ${props => !props.formToggled && props.userArrived && !props.mobile ? null : 'none'};
 
   .alert {
     width: 500px;
@@ -22,8 +22,7 @@ const StyledAlertWrapper = styled.div`
     flex-direction: column;
     font-family: Lato, sans-serif;
     font-weight: 600;
-    border-bottom: 2px solid lightgrey;
-    border-top: 2px solid lightgrey;
+    border: 2px solid lightgrey;
     background-color: #353B3E; 
     align-items: center;
     overflow: auto;
@@ -37,7 +36,7 @@ const StyledAlertWrapper = styled.div`
     }
 
     h2 {
-      font-family: "Merriweather", sans-serif;
+      font-family: Lato, sans-serif;
       font-size: 22px;
       color: white;
       line-height:1.5;
@@ -49,19 +48,18 @@ const StyledAlertWrapper = styled.div`
       text-align:left;
     }
     .button-box {
-      width: 400px;
-      margin: 0 auto;
+      width: 20%;
       display: flex;
-      justify-content:${ props=> props.spaceBetween ?'space-between':'center'};
+      border: 1px solid lightgray;
+      justify-content: center;
+      margin: 25px 0 0 0;
 
       a {
         margin: 10px 0px 20px 10px;
         color: white;
         background: #68659e;
-        border: 2px solid #ffffff;
-       padding: 0 10px;
-        height: 25px;
         text-decoration: none;
+ 
         :hover {
           border-color: #3985ac;
           color: #3985ac;
@@ -69,7 +67,6 @@ const StyledAlertWrapper = styled.div`
         }
       }
      
-
         :hover {
           border-color: #3985ac;
           color: #3985ac;
@@ -110,19 +107,20 @@ export default class PopupLanding extends Component {
         <StyledAlertWrapper
             formToggled={this.props.formToggled}
             userArrived={this.props.userArrived}
+            mobile={this.props.mobile}
         >
           <div className='alert'>
             <h2>
-              Did you see that fun switch up there?
+              Hey, look at that fun switch up there!
             </h2>
             <h2>  
-              I wonder what happens if you switch it?
+              I wonder what it does. . . 
             </h2>
             <div className='button-box'>
                 <Button 
                     onClick={this.props.toggleForm}
                     >
-                    Close
+                    ^_^
                 </Button>
             </div>
             </div>
