@@ -14,7 +14,7 @@ const StyledAlertWrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: scroll;
-  display: ${props => !props.formToggled && props.userArrived && !props.mobile ? null : 'none'};
+  display: ${props => !props.formToggled && props.userArrived && !props.mobile && !window.sessionStorage.alerted ? null : 'none'};
 
   .alert {
     width: 500px;

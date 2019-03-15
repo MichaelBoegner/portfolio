@@ -145,6 +145,7 @@ endedHandler = () => {
 
 toggleForm = () => {
   this.setState({ formToggled: 'toggled' });
+  window.sessionStorage.alerted = true; 
 }
 
 handleWindowSizeChange = () => {
