@@ -27,13 +27,6 @@ const StyledAlertWrapper = styled.div`
     align-items: center;
     overflow: auto;
     padding: 25px;
-    
-
-    @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
-        width: 100vw; 
-    }
 
     h2 {
       font-family: Lato, sans-serif;
@@ -41,12 +34,14 @@ const StyledAlertWrapper = styled.div`
       color: white;
       line-height:1.5;
     }
+
     p{
       font-size:18px;
       color:white;
       line-height:1.5;
       text-align:left;
     }
+
     .div {
       width: 20%;
       display: flex;
