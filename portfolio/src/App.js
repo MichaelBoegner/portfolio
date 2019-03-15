@@ -137,6 +137,7 @@ componentDidMount() {
 
 handleChange = () => {
   this.setState({ checked: !this.state.checked });
+    window.sessionStorage.alerted = true; 
 }
 
 endedHandler = () => {
@@ -145,7 +146,6 @@ endedHandler = () => {
 
 toggleForm = () => {
   this.setState({ formToggled: 'toggled' });
-  window.sessionStorage.alerted = true; 
 }
 
 handleWindowSizeChange = () => {
