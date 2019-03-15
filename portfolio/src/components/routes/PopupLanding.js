@@ -14,8 +14,7 @@ const StyledAlertWrapper = styled.div`
   justify-content: center;
   align-items: center;
   overflow: scroll;
-  display: none;
-  /* display: ${props => props.formToggled ? 'none' : null}; */
+  display: ${props => !props.formToggled && props.userArrived ? null : 'none'};
 
   .alert {
     width: 500px;
@@ -41,13 +40,11 @@ const StyledAlertWrapper = styled.div`
       font-family: "Merriweather", sans-serif;
       font-size: 22px;
       color: white;
-      margin: 30px 0 10px;
       line-height:1.5;
     }
     p{
       font-size:18px;
       color:white;
-      margin:15px 25px;;
       line-height:1.5;
       text-align:left;
     }
@@ -108,23 +105,24 @@ const Button=styled.div `
 
 export default class PopupLanding extends Component {
     
-    render() {console.log("popup state", this.props.formToggled)
+    render() {console.log("popup state", this.props)
         return (
         <StyledAlertWrapper
             formToggled={this.props.formToggled}
+            userArrived={this.props.userArrived}
         >
           <div className='alert'>
             <h2>
-              Have some fun on the house!
+              Did you see that fun switch up there?
             </h2>
             <h2>  
-              Hit the switch above!
+              I wonder what happens if you switch it?
             </h2>
             <div className='button-box'>
                 <Button 
                     onClick={this.props.toggleForm}
                     >
-                    Got It!
+                    Close
                 </Button>
             </div>
             </div>

@@ -35,18 +35,19 @@ class App extends Component {
   constructor(props) {
     super(props); 
     this.state = {
-        opacityCheck: null, // True after user's arrival to keep header from fading in repeatedly.
+        userArrived: false, // True after user's arrival to keep header from fading in repeatedly.
         checked: false, // True if fun switch is thrown.
         sunrise: "",
         sunset: "",
         localTime: "",
         dayNight: "",
         ended: false,// True after intro fun video finishes.
+        formToggled: null, 
     }
   }
 
 componentDidMount() {
-   this.setState({opacityCheck: "opacity"});
+   this.setState({userArrived: true});
 
   const reqBody = {
 
@@ -148,6 +149,10 @@ endedHandler = () => {
   this.setState({ended: true});
 }
 
+toggleForm = () => {
+  this.setState({formToggled: 'toggled'});
+}
+
 
   render() {
     console.log("APP STATE", this.state)
@@ -179,7 +184,7 @@ endedHandler = () => {
             <div>
               <Header 
                 {...this.state}
-                opacity={this.state.opacityCheck}
+                opacity={this.state.userArrived}
                 
               />
               
@@ -188,7 +193,9 @@ endedHandler = () => {
                 render={props => (
                   
                   <Landing
+                    {...this.state}
                     {...props}
+                    toggleForm={this.toggleForm}
                   />
                 )}
               />

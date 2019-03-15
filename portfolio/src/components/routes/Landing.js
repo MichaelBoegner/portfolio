@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'; 
+// import PopupLanding from './PopupLanding';
 
 
 const LandingMain=styled.div`
@@ -171,23 +172,15 @@ const Icon=styled.div`
 export default class Landing extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            formToggled: null, 
-        }
     }
-    
 
-toggleForm = () => {
-    this.setState({formToggled: 'toggled'});
-}
-
-
-    render() { console.log("state", this.state)
+    render() { console.log("state", this.props)
         return (
             <LandingMain>
                 {/* <PopupLanding
-                    toggleForm={this.toggleForm}
-                    formToggled={this.state.formToggled}
+                    toggleForm={this.props.toggleForm}
+                    formToggled={this.props.formToggled}
+                    userArrived={this.props.userArrived}
                 /> */}
                 <LandingBottom>
                     <LandingBottomContentLeft>
