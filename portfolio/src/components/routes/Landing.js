@@ -174,9 +174,15 @@ export default class Landing extends Component {
         super(props);
     }
 
+    componentDidMount() {
+        console.log("WINDOW", window)
+    }
+
     render() { console.log("state", this.props)
+    
         return (
             <LandingMain>
+                
                 <PopupLanding
                     toggleForm={this.props.toggleForm}
                     formToggled={this.props.formToggled}

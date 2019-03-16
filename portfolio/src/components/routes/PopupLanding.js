@@ -17,7 +17,7 @@ const StyledAlertWrapper = styled.div`
   display: ${props => !props.formToggled && props.userArrived && !props.mobile && !window.sessionStorage.alerted ? null : 'none'};
 
   .alert {
-    width: 500px;
+    width: 475px;
     display: flex; 
     flex-direction: column;
     font-family: Lato, sans-serif;
@@ -33,6 +33,7 @@ const StyledAlertWrapper = styled.div`
       font-size: 22px;
       color: white;
       line-height:1.5;
+      letter-spacing: 0.075rem;
     }
 
     p{
@@ -85,7 +86,11 @@ const Button=styled.div `
 `;
   
 
+
 export default class PopupLanding extends Component {
+    constructor(props){
+      super(props);
+    }
     
     render() {console.log("popup state", this.props)
         return (
