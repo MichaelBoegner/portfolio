@@ -18,9 +18,10 @@ const StyledAlertWrapper = styled.div`
   animation-name: fadeInPopUp;
   animation-duration: 1.5s;
 
+
     @keyframes fadeInPopUp {
-        from {opacity: 0;}
-        to {opacity: 1;}
+        0% {opacity: 0;}
+        100% {opacity: 1;}
     }
 
 
