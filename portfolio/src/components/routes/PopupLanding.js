@@ -15,6 +15,14 @@ const StyledAlertWrapper = styled.div`
   align-items: center;
   overflow: scroll;
   display: ${props => !props.formToggled && props.userArrived && !props.mobile && !window.sessionStorage.alerted ? null : 'none'};
+  animation-name: fadeInPopUp;
+  animation-duration: 1.5s;
+
+    @keyframes fadeInPopUp {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
 
   .alert {
     width: 475px;
