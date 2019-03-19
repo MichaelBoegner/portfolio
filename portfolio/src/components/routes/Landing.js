@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'; 
-import PopupLanding from './PopupLanding';
+// import PopupLanding from './PopupLanding';
 
 
 const LandingMain=styled.div`
@@ -183,12 +183,12 @@ export default class Landing extends Component {
         return (
             <LandingMain>
                 
-                <PopupLanding
+                {/* <PopupLanding
                     toggleForm={this.props.toggleForm}
                     formToggled={this.props.formToggled}
                     userArrived={this.props.userArrived}
                     mobile={this.props.mobile}
-                />
+                /> */}
                 <LandingBottom>
                     <LandingBottomContentLeft>
                         <h3 >About me</h3>
