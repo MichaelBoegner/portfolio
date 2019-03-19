@@ -18,12 +18,10 @@ const StyledAlertWrapper = styled.div`
   animation-name: fadeInPopUp;
   animation-duration: 1.5s;
 
-
     @keyframes fadeInPopUp {
         0% {opacity: 0;}
         100% {opacity: 1;}
     }
-
 
   .alert {
     width: 475px;
@@ -45,26 +43,10 @@ const StyledAlertWrapper = styled.div`
       letter-spacing: 0.075rem;
     }
 
-    p{
-      font-size:18px;
-      color:white;
-      line-height:1.5;
-      text-align:left;
-    }
-
     .div {
       width: 20%;
-      display: flex;
       border: 1px solid lightgray;
-      justify-content: center;
       margin: 25px 0 0 0;
-
-      a {
-        margin: 10px 0px 20px 10px;
-        color: white;
-        background: #353B3E;
-        text-decoration: none;
-      }
     }
   }
 `;
@@ -76,7 +58,7 @@ const Button=styled.div `
     letter-spacing: 0.25rem;
     padding: 10px 20px;
     margin: 15px 0 0 0;
-    border: 1px solid lightgrey;
+    border: 2px solid lightgrey;
 
     :hover {
         background-color: lightgray;
@@ -113,13 +95,12 @@ export default class PopupLanding extends Component {
               Hey, look at that fun switch up there!
             </h2>
             <h2>  
-              I wonder what it does. . . 
+              I wonder what it does . . . 
             </h2>
             <div className='button-box'>
                 <Button 
                     onClick={this.props.toggleForm}
-                    >
-                    ^_^
+                    >^_^
                 </Button>
             </div>
             </div>
