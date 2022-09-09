@@ -207,7 +207,6 @@ export default class Landing extends Component {
                             like to use this newfound skill to help to deliver mindfulness classes to the corporate world, and eventually use my experience from that to finish my book 
                             on leadership and bring leaders to the table to discuss how we can provide a more morally sensitive approach to profit in the business world, having 
                             experienced the inhumane downsides myself that can occur without a careful and mindful approach.                             
-                        </p>
                               
                             <Link to="/projects" > here</Link>. 
                         </p>
