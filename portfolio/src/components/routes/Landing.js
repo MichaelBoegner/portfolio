@@ -193,8 +193,21 @@ export default class Landing extends Component {
                     <LandingBottomContentLeft>
                         <h3 >About me</h3>
                         
-                        <p> Michael loves algorithms, comedy, guitar, and walking until all of his problems are solved (aka hiking). 
-                            As a recent graduate of Lambda School's Full-Stack Web Development program, he strives to make fun, useful things. Check out his previous projects
+                        <p> I have 13 years in the corporate space, with customer service, both externally and internally, taking the forefront of the majority of those years. 
+                            I compulsively deliver top performance and affability, no matter the obstacles that stand before me. I am known for being a reliable and consistent 
+                            source of assistance to my colleagues and customers, and since shifting into the world of software engineering, I have been able to gain a reputation 
+                            as a top troubleshooter and problem solver. 
+                        </p>
+                        <p> I would like to eventually transition from a purely customer facing role to a pure engineering role at some point and have been brushing up my 
+                            html, css, and javascript skills recently by implementing a heuristic solution I’ve had kicking around in my head for the Traveling Salesman Problem 
+                            for about five years now. Up until now, I did not have the technical or problem solving skills to attempt to implement the idea, but I feel that I am 
+                            up to the challenge now and have started trying to demonstrate my thesis. More can be found about this on my website in my portfolio. 
+                        </p>
+                        <p> Finally, I am recently certified to teach mindfulness by Tibet House and Dharma Moon’s 100 hour mindfulness meditation teacher training program. I would 
+                            like to use this newfound skill to help to deliver mindfulness classes to the corporate world, and eventually use my experience from that to finish my book 
+                            on leadership and bring leaders to the table to discuss how we can provide a more morally sensitive approach to profit in the business world, having 
+                            experienced the inhumane downsides myself that can occur without a careful and mindful approach.                             
+                        </p>
                               
                             <Link to="/projects" > here</Link>. 
                         </p>
