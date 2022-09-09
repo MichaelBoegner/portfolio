@@ -56,6 +56,9 @@ const LandingBottomContentLeft=styled.div`
         line-height: 1.75;
         font-weight: 100;
         letter-spacing: 0.025rem;
+        margin-bottom: 5%;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     a {
@@ -170,9 +173,6 @@ const Icon=styled.div`
 
 
 export default class Landing extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     componentDidMount() {
         console.log("WINDOW", window)
@@ -207,8 +207,8 @@ export default class Landing extends Component {
                             like to use this newfound skill to help to deliver mindfulness classes to the corporate world, and eventually use my experience from that to finish my book 
                             on leadership and bring leaders to the table to discuss how we can provide a more morally sensitive approach to profit in the business world, having 
                             experienced the inhumane downsides myself that can occur without a careful and mindful approach.                             
-                              
-                            <Link to="/projects" > here</Link>. 
+                        </p>      
+                        <p> You can see my projects in action <Link to="/projects" > here</Link>. 
                         </p>
                     </LandingBottomContentLeft>
                         

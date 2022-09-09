@@ -7,7 +7,6 @@ import Writing from './components/routes/writing/Writing';
 import NavBar from './components/statics/NavBar';
 import Contact from './components/routes/Contact';
 import styled from 'styled-components';
-import axios from 'axios';
 import Monty from './images/Monty.mp4';
 import Game from './components/Game';
 

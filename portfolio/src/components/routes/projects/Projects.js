@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import FamilyTabs from '../../../images/FamilyTabs.JPG'
 import GameLife from '../../../images/GameLife.JPG';
 import Seinfeld from '../../../images/Seinfeld.JPG';
+import salesman from '../../../images/salesman.jpeg';
 import Portfolio from '../../../images/Portfolio.JPG';
 import PortfolioGame from '../../../images/PortfolioTheGame.JPG';
 import DryForLoop from '../../../images/npmdryForLoop.JPG'
@@ -71,6 +72,19 @@ const ProjectCardsMain4=styled.div`
     flex-direction: row-reverse;
     align-items: top;
     padding: 3% 20%;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+    }
+`;
+
+const ProjectCardsMain5=styled.div`
+    display: flex;
+    align-items: top;
+    padding: 3% 20%;
+    border-bottom: 1px solid lightgrey;
 
     @media (max-width: 1024px) {
         flex-direction: column;
@@ -309,6 +323,26 @@ export default class Projects extends Component {
                             </a>
                         </ProjectCardBio>
                     </ProjectCardsMain4>
+
+                    <ProjectCardsMain5>
+                        <ProjectCardsCard
+                            img={salesman}
+                        />
+
+                        <ProjectCardBio> 
+                            <h3>Shrink Wrap the Traveling Salesman Problem</h3>
+                            <p>
+                            I have had a heuristic solution for the traveling salessman problem kicking around in my head for many years now.
+                            This is my attempt at implementing said solution using Javascript. I understand that Javascript is not the most 
+                            performant choice of language for mathematical projects, however, that's sort of the point. If my solution works,
+                            then I should be able to prove it out on something even as mathematically unperformant as Javscript.
+                            </p>
+
+                            <a href="https://github.com/MichaelBoegner/salesmanArc" target="_blank" rel="noopener noreferrer">
+                                <h2>GITHUB</h2>
+                            </a>
+                        </ProjectCardBio>
+                    </ProjectCardsMain5>
 
 
 
