@@ -335,7 +335,7 @@ export default class Projects extends Component {
                             I have had a heuristic solution for the traveling salessman problem kicking around in my head for many years now.
                             This is my attempt at implementing said solution using Javascript. I understand that Javascript is not the most 
                             performant choice of language for mathematical projects, however, that's sort of the point. If my solution works,
-                            then I should be able to prove it out on something even as mathematically unperformant as Javscript.
+                            then I should be able to prove it out on something even as unperformant as Javscript.
                             </p>
 
                             <a href="https://github.com/MichaelBoegner/salesmanArc" target="_blank" rel="noopener noreferrer">
