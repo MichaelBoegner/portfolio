@@ -154,6 +154,10 @@ export default class NavBar extends Component {
                     <NavBarLinks to="/projects">
                         PROJECTS
                     </NavBarLinks>
+
+                    <NavBarLinks to="/mindfulness">
+                        MINDFULNESS
+                    </NavBarLinks>
                     
                     <NavBarLinks to="/writing">
                         WRITING

@@ -3,6 +3,7 @@ import { Route, withRouter } from 'react-router-dom';
 import Header from './components/statics/Header';
 import Landing from './components/routes/Landing';
 import Projects from './components/routes/projects/Projects';
+import Mindfulness from './components/routes/Mindfulness';
 import Writing from './components/routes/writing/Writing';
 import NavBar from './components/statics/NavBar';
 import Contact from './components/routes/Contact';
@@ -11,9 +12,7 @@ import Monty from './images/Monty.mp4';
 import Game from './components/Game';
 
 
-const AppMain=styled.div`
-
-`;
+const AppMain=styled.div``;
 
 const IntroVideo=styled.video`
   width: 100vw; 
@@ -216,6 +215,16 @@ handleWindowSizeCheck = () => {
                 render={props => (
                   
                   <Projects
+                    {...props}
+                  />
+                )}
+              />
+
+            <Route 
+                exact path="/mindfulness"
+                render={props => (
+                  
+                  <Mindfulness
                     {...props}
                   />
                 )}
