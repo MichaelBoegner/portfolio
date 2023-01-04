@@ -8,7 +8,7 @@ const MindfulnessMain=styled.div`
     align-items: center;
 
     animation-name: backgroundBreathe;
-    animation: backgroundBreathe 20s ease infinite;
+    animation: backgroundBreathe 30s ease infinite;
 
     @keyframes backgroundBreathe {
         0% {background: white;}
@@ -62,7 +62,8 @@ const MindfulnessBottom=styled.div`
     }
 
     h4 {
-        margin: 5px 250px 5px 150px;
+        margin: 5% 10% 5% 10%:
+        padding: 10%;
         font-size: 1.25rem;
         font-family: Robato, sans-serif;
         font-weight: 300;
@@ -74,10 +75,8 @@ const MindfulnessBottom=styled.div`
     }
 
     h5 {
-        margin-top: 15px;
+        padding: 1% 0% 0% 5%;
         font-size: 1.15rem;
-        margin-left: 175px;
-        margin-bottom: 75px;
         font-family: Robato, sans-serif;
         font-weight: 300;
         color: #353B3E;
@@ -87,7 +86,7 @@ const MindfulnessBottom=styled.div`
     p {
         margin-left: 15px;
         margin-top: 9px;
-        margin: 15px 150px 15px 15px;
+        margin: 15px 15px 15px 15px;
         font-size: 1.25rem;
         margin-bottom: 15px;
         font-family: Robato, sans-serif;
@@ -110,6 +109,9 @@ const MindfulnessBottom=styled.div`
 `;
 
 const MindfulnessQuote=styled.form`
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 2%;
 `;
 
 const MindfulnessAbout=styled.form`
