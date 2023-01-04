@@ -2,28 +2,101 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Footer from '../statics/Footer';
 
-const ContactMain=styled.div`
+const MindfulnessMain=styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    animation-name: backgroundBreathe;
+    animation: backgroundBreathe 20s ease infinite;
+
+    @keyframes backgroundBreathe {
+        0% {background: white;}
+        50% {background: #89CFF0;}
+        100% {background: white;}
+    }
 `;
 
-const ContactBottom=styled.div`
+const MindfulnessBottom=styled.div`
+    width: 75%;
+    margin: 5%; 
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     animation-name: contactFadeIn;
-    animation-duration: 1.5s;
+
 
     @keyframes contactFadeIn {
         from {opacity: 0;}
         to {opacity: 1;}
     }
 
+    h1 {
+        font-size: 2.25rem;
+        padding-top: 25px;
+        font-family: Robato, sans-serif;
+        font-weight: 100;
+        color: #353B3E;
+        justify-content: center;
+    }
+
     h2 {
         margin: 15px;
         font-size: 1.50rem;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         font-family: Robato, sans-serif;
-        font-weight: 600;
+        font-weight: 400;
         color: #353B3E;
         justify-content: center;
+    }
+
+    h3 {
+        margin-top: 55px;
+        font-size: 1.25rem;
+        margin-bottom: 5px;
+        font-family: Robato, sans-serif;
+        font-weight: 300;
+        color: #353B3E;
+        justify-content: center;
+    }
+
+    h4 {
+        margin: 5px 250px 5px 150px;
+        font-size: 1.25rem;
+        font-family: Robato, sans-serif;
+        font-weight: 300;
+        color: #353B3E;
+        justify-content: center;
+
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    h5 {
+        margin-top: 15px;
+        font-size: 1.15rem;
+        margin-left: 175px;
+        margin-bottom: 75px;
+        font-family: Robato, sans-serif;
+        font-weight: 300;
+        color: #353B3E;
+        justify-content: center;
+    }
+
+    p {
+        margin-left: 15px;
+        margin-top: 9px;
+        margin: 15px 150px 15px 15px;
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+        font-family: Robato, sans-serif;
+        font-weight: 300;
+        color: #353B3E;
+        justify-content: center;
+
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     @keyframes fadeIn {
@@ -36,15 +109,23 @@ const ContactBottom=styled.div`
     }
 `;
 
-const ContactForm=styled.form`
-
+const MindfulnessQuote=styled.form`
 `;
 
-const ContactInput=styled.div`
+const MindfulnessAbout=styled.form`
+`;
+
+const MindfulnessForm=styled.form`
+    border-top: 5px solid lightgrey;
+    margin-top: 35px;
+    padding-top: 25px;
+`;
+
+const MindfulnessInput=styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: flex-start;
-    margin: 15px;
+    margin: 5px;
 
     input {
         height: 25px;
@@ -52,11 +133,11 @@ const ContactInput=styled.div`
     }
 `;
 
-const ContactTextArea=styled.div`
+const MindfulnessTextArea=styled.div`
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
-    margin: 15px;
+    margin: 5px;
 
     textarea {
         height: 250px;
@@ -71,10 +152,10 @@ const ContactTextArea=styled.div`
     }
 `;
 
-const ContactSend=styled.div`
+const MindfulnessSend=styled.div`
     display: flex;
     justify-content: center;
-    margin: 15px;
+    margin: 5px;
 
     input {
         height: 50px;
@@ -88,48 +169,125 @@ const ContactSend=styled.div`
 export default class Mindfulness extends Component { 
     render() {
         return (
-            <ContactMain>
-                <ContactBottom>
-                    <ContactForm
+            <MindfulnessMain>
+                <MindfulnessBottom>
+                    <MindfulnessQuote>
+                        <h4>"Being satisfied with what we already have is a magical golden key to being alive in a full,
+                            unrestricted, and inspired way. One of the major obstacles to what is traditionally called enlightenment is
+                            resentment, feeling cheated, holding a grudge about who you are, where you are, what you are. This is why we talk so much about making friends with 
+                            ourselves, because, for some reason or other, we don't feel that kind of satisfaction in a full and complete way. Meditation
+                            is a process of lightening up, of trusting the basic goodness of what we have and who we are, and of realizing that any wisdom
+                            that exists, exists in what we already have."
+                        </h4>
+                        <h5>- The Wisdom of No Escape, by Pema Ch&#246;dr&#246;n</h5>
+                    </MindfulnessQuote>
+                    <MindfulnessAbout>
+                        <h1>Welcome Friends!</h1>
+                        <p>Thank you so much for taking the time to learn more about Mindfulness Meditation and the program I have to offer you.</p>
+                        <p>The below should clarify most of the common questions. However, if it looks like too much information for you at this time or doesn't address your needs, feel free to skip it, scroll to the form below, and fill it out with your information. 
+                           I’ll be happy to contact you by phone or email to discuss further. Thanks!</p> 
+
+                        <h1>Background</h1>
+                        <p>I hold a Master’s in Public Health and am certified as a Mindfulness Meditation teacher from the Dharma Moon and Tibet House’s 100 hour Mindfulness Meditation Teacher Training program. 
+                            Additionally, I maintain a daily practice of sitting at least once a day and have been studying Buddhism for over a decade.</p> 
+
+                        <h1>Who Should Learn Mindfulness Meditation?</h1>
+                        <p>In short, everyone and anyone. Mindfulness Meditation will help you become more focused, clear, and equanimous as you go through your life on a day to day basis. Even if you feel you already have a good grasp on things in general, 
+                           there are always improvement to be made and benefits to be gained.</p> 
+
+                        <h1>Why Mindfulness Meditation?</h1>
+                        <p>Mindfulness Meditation is a well trodden, 2,000 year old practice/path that millions of people have already benefited from. That means you don’t need to worry about whether or not it’s going to work. If practiced as the lineage prescribes, 
+                           you will undoubtedly see improvements in your ability to maintain focus and awareness, increased creativity and serenity, as well as an overall stabilizing of your mindset and emotions.</p> 
+
+                        <h1>What Am I Offering?</h1>
+                        <p>I offer private and group/corporate classes that will give you the tools of Mindfulness and Awareness and show you how to use them to the best of your ability to build a daily Mindfulness Meditation practice. You can think of me as something 
+                           akin to a travel guide in a strange or foreign land. I’m here simply to show you the way around and make sure you get the best experience possible with the time you have.</p> 
+
+                        <h1>What Do You Need to Get Started?</h1>
+                        <p>One of the great things about Mindfulness Meditation is that you do not need much at all to get going. The sitting process requires common household items everyone has. So, really, you just need yourself, the desire to learn, and about 20 minutes a day for at least five days a week.</p>
+                        <p>This time commitment may sound daunting to some at first, but I can assure you that if you couple it with a daily routine you already perform, like taking a shower or brushing your teeth, you will find that you can seamlessly work it into your day AND you actually get back that 20 minutes and more, 
+                           as a result of your increased effectiveness of your thought processes and emotions. It's also worth pointing out that you don't think twice about taking 20 minutes a day or more for physical hygiene or exercise. 
+                           You can think of Mindfulness Meditation as your daily mental hygiene practice, something like brushing your teeth, except in this case, we're getting in the habit of brushing our minds daily. And what could be more important than keeping your mind in shape and clean?</p>
+                        
+
+                        <h1>How Much Does It Cost?</h1>
+                        <p>Mindfulness Meditation is a little bit like learning to play an instrument. You can’t expect to pick it up and be Mozart or Jimi Hendrix after your first practice session.</p> 
+                        <p>As a result, I recommend everyone starts with the 5 class package, which should be enough to teach you how to practice on your own without me for the rest of your life. Of course, I’m always happy to help you further down the road, as needed, but my ultimate goal here is to teach you how to fish on 
+                           your own and then leave you be, with a tummy full of fishes and the confidence to go get more fish whenever you want!</p>
+                        <p>Classes are an hour each and generally consist of a 5-10 minute intro, 20 minute mindfulness session, where we sit together and practice, and 30 minutes discussing the week’s assigned readings and answering any questions you have about the practice. If you’re thinking, “Homework!? Ugh!”, don’t worry! The readings I’ve picked out are short, fun, and very profound! I’m also happy to customize that portion of the class according to your current abilities and time availability.</p>
+                        <p>While I am able to offer in person classes, depending on your location, it may be easier to do things over video chat using Google Meets. I will, of course, help you get familiar with Google Meets as well if you have not used it in the past. It’s usually as easy as clicking a link though.</p>
+
+                        <h1>Menu of Offerings</h1>
+                        <p>Individual Single Class: $50 per class</p> 
+                        <p>Individual 5 Class Package: $225 | 10% Discount</p> 
+                        <p>Group/Corporate: Contact me to discuss!</p>
+                        
+                        <h1>Sign Up Now!</h1>
+                        <p>Kindly fill out the short form below, and I will contact you as soon as I can to arrange our first session. I look forward to helping you give yourself the greatest gift in the world - the ability to make friends with yourself and the world.</p>
+                        
+                        <h3>Warmly,</h3>
+                        <p>C. Michael Boegner ^_^</p>
+                    </MindfulnessAbout>
+                    <MindfulnessForm
                         action="https://formspree.io/cmikeb@gmail.com" 
                         method="POST"
                         >
                         
-                        <ContactInput>
-                            <h2>Your Name:</h2>
+                        <MindfulnessInput>
+                            <h2>First Name:</h2>
                             <input 
                                 type="text" 
-                                name="name"
+                                name="firstName"
+                                placeholder='John Jacob'
                             />
-                        </ContactInput>
+                        </MindfulnessInput>
 
-                        <ContactInput>
-                            <h2>Your Email:</h2>
+                        <MindfulnessInput>
+                            <h2>Last Name:</h2>
+                            <input 
+                                type="text" 
+                                name="LastName"
+                                placeholder='Jingleheimer Schmidt'
+                            />
+                        </MindfulnessInput>
+
+                        <MindfulnessInput>
+                            <h2>Email:</h2>
                             <input 
                                 type="email" 
                                 name="_replyto"
+                                placeholder='example@email.com'
                             />
-                        </ContactInput>
+                        </MindfulnessInput>
 
-                        <ContactTextArea>
-                            <h2>Let's Chat!</h2>
+                        <MindfulnessInput>
+                            <h2>Phone:</h2>
+                            <input 
+                                type="telephone" 
+                                name="telephone"
+                                placeholder="(555)555-5555"
+                            />
+                        </MindfulnessInput>
+
+                        <MindfulnessTextArea>
+                            <h2>Anything Else You Want Me To Know:</h2>
                             <textarea 
                                 type="text" 
                                 name="body"
                             />
-                        </ContactTextArea>
+                        </MindfulnessTextArea>
                         
-                        <ContactSend>
+                        <MindfulnessSend>
                             <input 
                                 type="submit" 
                                 value="Send"
                             />
-                        </ContactSend>
-                    </ContactForm>
-                </ContactBottom>
+                        </MindfulnessSend>
+                    </MindfulnessForm>
+                </MindfulnessBottom>
                 
                 <Footer/>
-            </ContactMain>
+            </MindfulnessMain>
             
         )
     }
