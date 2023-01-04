@@ -8,7 +8,7 @@ const MindfulnessMain=styled.div`
     align-items: center;
 
     animation-name: backgroundBreathe;
-    animation: backgroundBreathe 30s ease infinite;
+    animation: backgroundBreathe 60s ease infinite;
 
     @keyframes backgroundBreathe {
         0% {background: white;}
@@ -36,7 +36,7 @@ const MindfulnessBottom=styled.div`
         font-size: 2.25rem;
         padding-top: 25px;
         font-family: Robato, sans-serif;
-        font-weight: 100;
+        font-weight: 300;
         color: #353B3E;
         justify-content: center;
     }
@@ -90,7 +90,7 @@ const MindfulnessBottom=styled.div`
         font-size: 1.25rem;
         margin-bottom: 15px;
         font-family: Robato, sans-serif;
-        font-weight: 300;
+        font-weight: 325;
         color: #353B3E;
         justify-content: center;
 
