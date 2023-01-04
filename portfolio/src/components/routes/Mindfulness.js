@@ -8,11 +8,11 @@ const MindfulnessMain=styled.div`
     align-items: center;
 
     animation-name: backgroundBreathe;
-    animation: backgroundBreathe 60s ease infinite;
+    animation: backgroundBreathe 90s ease infinite;
 
     @keyframes backgroundBreathe {
         0% {background: white;}
-        50% {background: #89CFF0;}
+        50% {background: #B2B2FF;}
         100% {background: white;}
     }
 `;
