@@ -235,9 +235,9 @@ export default class Mindfulness extends Component {
                         <p>While I am able to offer in person classes, depending on your location, it may be easier to do things over video chat using Google Meets. I will, of course, help you get familiar with Google Meets as well if you have not used it in the past. It’s usually as easy as clicking a link though.</p>
 
                         <h1>Menu of Offerings</h1>
-                        <p>Individual Single Class: $50 per class</p> 
-                        <p>Individual 5 Class Package: $225 | 10% Discount</p> 
-                        <p>Group/Corporate: Contact me to discuss!</p>
+                        <p>One-On-One Single Class: $50 per class</p> 
+                        <p>One-On-One 5 Class Package: $225 | 10% Discount</p> 
+                        <p>Group or Corporate: Contact me to discuss!</p>
                         
                         <h1>Sign Up Now!</h1>
                         <p>Kindly fill out the short form below, and I will contact you as soon as I can to arrange our first session. I look forward to helping you give yourself the greatest gift - the ability to make friends with yourself and the world.</p>
