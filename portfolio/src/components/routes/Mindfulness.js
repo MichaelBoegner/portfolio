@@ -22,6 +22,7 @@ const MindfulnessBottom=styled.div`
     border: 1px solid darkgrey;
     width: 75%;
     margin: 5%; 
+    padding-bottom: 3%;
 
     display: flex;
     flex-direction: column;
