@@ -19,7 +19,7 @@ const MindfulnessMain=styled.div`
 `;
 
 const MindfulnessBottom=styled.div`
-    border: 1px solid lightgrey;
+    border: 1px solid darkgrey;
     width: 75%;
     margin: 5%; 
 
@@ -127,7 +127,7 @@ const MindfulnessAbout=styled.div`
 `;
 
 const MindfulnessForm=styled.form`
-    border-top: 1px solid lightgrey;
+    border-top: 1px solid darkgrey;
     margin-top: 35px;
     padding-top: 25px;
 `;
