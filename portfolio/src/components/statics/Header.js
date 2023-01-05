@@ -55,7 +55,7 @@ const HeaderTopContent=styled.div`
         font-size: 1.75rem;
         padding-top: 15px;
         font-family: Robato, sans-serif;
-        font-weight: 300;
+        font-weight: 400;
         color: #AAA2A2;
         justify-content: center;
     }
@@ -64,7 +64,7 @@ const HeaderTopContent=styled.div`
         font-size: .85rem;
         padding-top: 5px;
         font-family: Robato, sans-serif;
-        font-weight: 300;
+        font-weight: 400;
         color: #AAA2A2;
         justify-content: center;
     }
