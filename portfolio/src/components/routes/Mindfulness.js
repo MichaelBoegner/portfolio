@@ -196,7 +196,7 @@ export default class Mindfulness extends Component {
 
                         <h1>Who Should Learn Mindfulness Meditation?</h1>
                         <p>In short, everyone and anyone. Mindfulness Meditation will help you become more focused, clear, and equanimous as you go through your life on a day to day basis. Even if you feel you already have a good grasp on things in general, 
-                           there are always improvement to be made and benefits to be gained.</p> 
+                           there are always improvements to be made and benefits to be gained.</p> 
 
                         <h1>Why Mindfulness Meditation?</h1>
                         <p>Mindfulness Meditation is a well trodden, 2,000 year old practice/path that millions of people have already benefited from. That means you don’t need to worry about whether or not it’s going to work. If practiced as the lineage prescribes, 
