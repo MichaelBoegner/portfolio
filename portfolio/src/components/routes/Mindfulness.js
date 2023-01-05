@@ -115,6 +115,7 @@ const MindfulnessQuote=styled.form`
 `;
 
 const MindfulnessAbout=styled.form`
+    margin: 2%;
 `;
 
 const MindfulnessForm=styled.form`
