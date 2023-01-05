@@ -55,7 +55,7 @@ const HeaderTopContent=styled.div`
         font-size: 1.75rem;
         padding-top: 15px;
         font-family: Robato, sans-serif;
-        font-weight: 100;
+        font-weight: 300;
         color: #AAA2A2;
         justify-content: center;
     }
