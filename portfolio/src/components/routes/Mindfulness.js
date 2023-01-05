@@ -114,7 +114,7 @@ const MindfulnessBottom=styled.div`
 const MindfulnessLogo=styled.div`
     display: flex;
     justify-content: center;
-    margin: 3% 0% 5% 0%;
+    margin: 3% 2% 5% 2%;
 `;
 
 const MindfulnessQuote=styled.div`
