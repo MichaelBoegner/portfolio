@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Footer from '../statics/Footer';
-import companyLogo from '../../assets/DharmaSunDark.png'
+import companyLogo from '../../assets/DharmaSunShrunk.png'
 
 const MindfulnessMain=styled.div`
     display: flex;
