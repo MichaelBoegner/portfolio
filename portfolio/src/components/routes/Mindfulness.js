@@ -226,7 +226,7 @@ export default class Mindfulness extends Component {
                         <p>Group/Corporate: Contact me to discuss!</p>
                         
                         <h1>Sign Up Now!</h1>
-                        <p>Kindly fill out the short form below, and I will contact you as soon as I can to arrange our first session. I look forward to helping you give yourself the greatest gift in the world - the ability to make friends with yourself and the world.</p>
+                        <p>Kindly fill out the short form below, and I will contact you as soon as I can to arrange our first session. I look forward to helping you give yourself the greatest gift - the ability to make friends with yourself and the world.</p>
                         
                         <h3>Warmly,</h3>
                         <p>C. Michael Boegner ^_^</p>
