@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Footer from '../statics/Footer';
+import companyLogo from '../../assets/DharmaSunDark.png'
 
 const MindfulnessMain=styled.div`
     display: flex;
@@ -8,16 +9,17 @@ const MindfulnessMain=styled.div`
     align-items: center;
 
     animation-name: backgroundBreathe;
-    animation: backgroundBreathe 90s ease infinite;
+    animation: backgroundBreathe 240s ease infinite;
 
     @keyframes backgroundBreathe {
         0% {background: white;}
-        50% {background: #B2B2FF;}
+        50% {background: #87CEEB;}
         100% {background: white;}
     }
 `;
 
 const MindfulnessBottom=styled.div`
+    border: 1px solid lightgrey;
     width: 75%;
     margin: 5%; 
 
@@ -108,18 +110,24 @@ const MindfulnessBottom=styled.div`
     }
 `;
 
-const MindfulnessQuote=styled.form`
+const MindfulnessLogo=styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 3% 0% 5% 0%;
+`;
+
+const MindfulnessQuote=styled.div`
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 2%;
 `;
 
-const MindfulnessAbout=styled.form`
+const MindfulnessAbout=styled.div`
     margin: 2%;
 `;
 
 const MindfulnessForm=styled.form`
-    border-top: 5px solid lightgrey;
+    border-top: 1px solid lightgrey;
     margin-top: 35px;
     padding-top: 25px;
 `;
@@ -144,7 +152,7 @@ const MindfulnessTextArea=styled.div`
 
     textarea {
         height: 250px;
-        width: 100%;
+        width: 90%;
         margin-left: 15px;
     }
 
@@ -174,6 +182,9 @@ export default class Mindfulness extends Component {
         return (
             <MindfulnessMain>
                 <MindfulnessBottom>
+                    <MindfulnessLogo>
+                        <img src={companyLogo} alt='company logo'></img>
+                    </MindfulnessLogo>
                     <MindfulnessQuote>
                         <h4>"Being satisfied with what we already have is a magical golden key to being alive in a full,
                             unrestricted, and inspired way. One of the major obstacles to what is traditionally called enlightenment is
@@ -186,12 +197,12 @@ export default class Mindfulness extends Component {
                     </MindfulnessQuote>
                     <MindfulnessAbout>
                         <h1>Welcome Friends!</h1>
-                        <p>Thank you so much for taking the time to learn more about Mindfulness Meditation and the program I have to offer you.</p>
+                        <p>Thank you so much for taking the time to learn more about Mindfulness Meditation and the program I have to offer you here at Dharma Sun, a school for Mindfulness Meditation.</p>
                         <p>The below should clarify most of the common questions. However, if it looks like too much information for you at this time or doesn't address your needs, feel free to skip it, scroll to the form below, and fill it out with your information. 
                            I’ll be happy to contact you by phone or email to discuss further. Thanks!</p> 
 
                         <h1>Background</h1>
-                        <p>I hold a Master’s in Public Health and am certified as a Mindfulness Meditation teacher from the Dharma Moon and Tibet House’s 100 hour Mindfulness Meditation Teacher Training program. 
+                        <p>I am the founder of Dharma Sun, hold a Master’s in Public Health and am certified as a Mindfulness Meditation teacher from the Dharma Moon and Tibet House’s 100 hour Mindfulness Meditation Teacher Training program. 
                             Additionally, I maintain a daily practice of sitting at least once a day and have been studying Buddhism for over a decade.</p> 
 
                         <h1>Who Should Learn Mindfulness Meditation?</h1>
@@ -217,6 +228,8 @@ export default class Mindfulness extends Component {
                         <p>Mindfulness Meditation is a little bit like learning to play an instrument. You can’t expect to pick it up and be Mozart or Jimi Hendrix after your first practice session.</p> 
                         <p>As a result, I recommend everyone starts with the 5 class package, which should be enough to teach you how to practice on your own without me for the rest of your life. Of course, I’m always happy to help you further down the road, as needed, but my ultimate goal here is to teach you how to fish on 
                            your own and then leave you be, with a tummy full of fishes and the confidence to go get more fish whenever you want!</p>
+                        
+                        <h1>What Does a Typical Class Consist Of?</h1>
                         <p>Classes are an hour each and generally consist of a 5-10 minute intro, 20 minute mindfulness session, where we sit together and practice, and 30 minutes discussing the week’s assigned readings and answering any questions you have about the practice. If you’re thinking, “Homework!? Ugh!”, don’t worry! The readings I’ve picked out are short, fun, and very profound! I’m also happy to customize that portion of the class according to your current abilities and time availability.</p>
                         <p>While I am able to offer in person classes, depending on your location, it may be easier to do things over video chat using Google Meets. I will, of course, help you get familiar with Google Meets as well if you have not used it in the past. It’s usually as easy as clicking a link though.</p>
 
