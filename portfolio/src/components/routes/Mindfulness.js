@@ -39,7 +39,7 @@ const MindfulnessBottom=styled.div`
         font-size: 1.25rem;
         padding-top: 25px;
         font-family: Robato, sans-serif;
-        font-weight: 300;
+        font-weight: 450;
         color: #353B3E;
         justify-content: center;
     }
@@ -92,7 +92,7 @@ const MindfulnessBottom=styled.div`
         font-size: 1.05rem;
         margin-bottom: 15px;
         font-family: Robato, sans-serif;
-        font-weight: 325;
+        font-weight: 340;
         color: #353B3E;
         justify-content: center;
 
