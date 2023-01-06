@@ -36,7 +36,7 @@ const MindfulnessBottom=styled.div`
     }
 
     h1 {
-        font-size: 2.25rem;
+        font-size: 1.75rem;
         padding-top: 25px;
         font-family: Robato, sans-serif;
         font-weight: 300;
