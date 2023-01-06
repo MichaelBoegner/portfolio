@@ -36,7 +36,7 @@ const MindfulnessBottom=styled.div`
     }
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.50rem;
         padding-top: 25px;
         font-family: Robato, sans-serif;
         font-weight: 300;
@@ -67,7 +67,7 @@ const MindfulnessBottom=styled.div`
     h4 {
         margin: 5% 10% 5% 10%:
         padding: 10%;
-        font-size: 1.25rem;
+        font-size: 1.15rem;
         font-family: Robato, sans-serif;
         font-weight: 300;
         color: #353B3E;
@@ -88,8 +88,8 @@ const MindfulnessBottom=styled.div`
 
     p {
         margin-top: 9px;
-        margin: 15px 15px 15px 0px;
-        font-size: 1.25rem;
+        margin: 5px 15px 15px 0px;
+        font-size: 1.15rem;
         margin-bottom: 15px;
         font-family: Robato, sans-serif;
         font-weight: 325;
