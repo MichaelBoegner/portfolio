@@ -312,7 +312,6 @@ export default class Mindfulness extends Component {
                         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"But, there must be some sense of discipline, if we are to get beyond the frivolity of trying to replace boredom. 
                             That is why we work with the breath as our practice of meditation. Simply relating with the breath is very monotonous and unadventurous. 
                             We do not discover that the third eye is opening, or that chakras are unfolding. It is like a stone carved buddha sitting in the desert. Nothing, absolutely nothing happens.</h4> 
-                        <p></p>
                         <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As we realize that nothing is happening, strangely, we begin to realize that something dignified is happening. There is no room for frivolity, no room for speed. We just breathe and are there. 
                             There is something very satisfying and wholesome about it. It is as though we had eaten a good meal and were satisfied with it, in contrast to eating and trying to satisfy one’s self. 
                             It is a very simple minded approach to sanity."</h4>
