@@ -87,9 +87,8 @@ const MindfulnessBottom=styled.div`
     }
 
     p {
-        margin-left: 15px;
         margin-top: 9px;
-        margin: 15px 15px 15px 15px;
+        margin: 15px 15px 15px 0px;
         font-size: 1.25rem;
         margin-bottom: 15px;
         font-family: Robato, sans-serif;
@@ -99,6 +98,10 @@ const MindfulnessBottom=styled.div`
 
         text-align: justify;
         text-justify: inter-word;
+    }
+
+    img {
+        width: 97%;
     }
 
     @keyframes fadeIn {
