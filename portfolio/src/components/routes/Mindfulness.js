@@ -100,9 +100,11 @@ const MindfulnessBottom=styled.div`
         text-justify: inter-word;
     }
 
-    img {
-        width: 97%;
-    }
+    @media only screen and (max-width: 150px) {
+        img {
+            width: 97%;
+        }
+      }
 
     @keyframes fadeIn {
         from {color: white;}
