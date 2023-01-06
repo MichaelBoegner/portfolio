@@ -100,7 +100,7 @@ const MindfulnessBottom=styled.div`
         text-justify: inter-word;
     }
 
-    @media only screen and (max-width: 150px) {
+    @media only screen and (max-width: 360px) {
         img {
             width: 97%;
         }
