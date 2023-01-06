@@ -194,7 +194,7 @@ export default class Mindfulness extends Component {
                         <img src={companyLogo} alt='company logo'></img>
                     </MindfulnessLogo>
                     <MindfulnessQuote>
-                        <h4>"Being satisfied with what we already have is a magical golden key to being alive in a full,
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Being satisfied with what we already have is a magical golden key to being alive in a full,
                             unrestricted, and inspired way. One of the major obstacles to what is traditionally called enlightenment is
                             resentment, feeling cheated, holding a grudge about who you are, where you are, what you are. This is why we talk so much about making friends with 
                             ourselves, because, for some reason or other, we don't feel that kind of satisfaction in a full and complete way. Meditation
@@ -309,13 +309,13 @@ export default class Mindfulness extends Component {
                         </MindfulnessSend>
                     </MindfulnessForm>
                     <MindfulnessQuote>
-                        <h4>But, there must be some sense of discipline, if we are to get beyond the frivolity of trying to replace boredom. 
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"But, there must be some sense of discipline, if we are to get beyond the frivolity of trying to replace boredom. 
                             That is why we work with the breath as our practice of meditation. Simply relating with the breath is very monotonous and unadventurous. 
                             We do not discover that the third eye is opening, or that chakras are unfolding. It is like a stone carved buddha sitting in the desert. Nothing, absolutely nothing happens.</h4> 
-
-                        <h4>As we realize that nothing is happening, strangely, we begin to realize that something dignified is happening. There is no room for frivolity, no room for speed. We just breathe and are there. 
+                        <p></p>
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As we realize that nothing is happening, strangely, we begin to realize that something dignified is happening. There is no room for frivolity, no room for speed. We just breathe and are there. 
                             There is something very satisfying and wholesome about it. It is as though we had eaten a good meal and were satisfied with it, in contrast to eating and trying to satisfy one’s self. 
-                            It is a very simple minded approach to sanity.</h4>
+                            It is a very simple minded approach to sanity."</h4>
 
                         <h5>- The Myth of Freedom and the Way of Meditation, by Ch&#246;gyam Trungpa</h5>
                     </MindfulnessQuote>
