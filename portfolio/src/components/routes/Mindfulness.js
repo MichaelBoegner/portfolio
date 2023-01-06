@@ -100,7 +100,7 @@ const MindfulnessBottom=styled.div`
         text-justify: inter-word;
     }
 
-    @media only screen and (max-width: 360px) {
+    @media only screen and (max-width: 420px) {
         img {
             width: 97%;
         }
@@ -172,7 +172,9 @@ const MindfulnessTextArea=styled.div`
 const MindfulnessSend=styled.div`
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin: 2% 2% 5% 2%;
+    border-bottom: 1px solid darkgray;
+    padding-bottom: 2%;
 
     input {
         height: 50px;
@@ -306,6 +308,17 @@ export default class Mindfulness extends Component {
                             />
                         </MindfulnessSend>
                     </MindfulnessForm>
+                    <MindfulnessQuote>
+                        <h4>But, there must be some sense of discipline, if we are to get beyond the frivolity of trying to replace boredom. 
+                            That is why we work with the breath as our practice of meditation. Simply relating with the breath is very monotonous and unadventurous. 
+                            We do not discover that the third eye is opening, or that chakras are unfolding. It is like a stone carved buddha sitting in the desert. Nothing, absolutely nothing happens.</h4> 
+
+                        <h4>As we realize that nothing is happening, strangely, we begin to realize that something dignified is happening. There is no room for frivolity, no room for speed. We just breathe and are there. 
+                            There is something very satisfying and wholesome about it. It is as though we had eaten a good meal and were satisfied with it, in contrast to eating and trying to satisfy one’s self. 
+                            It is a very simple minded approach to sanity.</h4>
+
+                        <h5>- The Myth of Freedom and the Way of Meditation, by Ch&#246;gyam Trungpa</h5>
+                    </MindfulnessQuote>
                 </MindfulnessBottom>
                 
                 <Footer/>
