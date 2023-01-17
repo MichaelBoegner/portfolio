@@ -113,7 +113,7 @@ export default class Header extends Component {
                         </HeaderTopContent>
                         <HeaderTopContent>
                             <h1>C. Michael Boegner</h1>
-                            <h2>Software Engineer & Mindfulness Teacher</h2>
+                            <h2>Lead Technical Support Engineer | Mindfulness Meditation Teacher | Customer Service Expert</h2>
                             <h4>React | JavaScript | Python | C | MySQL | Node | HTML | CSS</h4>
                         </HeaderTopContent>
                     </NavBarLinks>
