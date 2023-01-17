@@ -199,7 +199,7 @@ export default class Landing extends Component {
                             as a top troubleshooter and problem solver. 
                         </p>
                         <p> Additionally, I recently founded Dharma Sun, a school for Mindfulness meditation. I am certified to teach mindfulness by Tibet House and Dharma Moon’s 
-                            100 hour mindfulness meditation teacher training program. I would like to use this newfound skill to help to deliver mindfulness classes to the corporate world and 
+                            100 hour mindfulness meditation teacher training program. I would like to help to deliver mindfulness classes to the corporate world and, ultimately, 
                             bring leaders to the table to discuss how we can provide a more morally sensitive approach to profit in the business world, having experienced the inhumane downsides 
                             myself that can occur without a careful and mindful approach. I also want to simply share the gift of having a daily Mindfulness meditation practice with as many people as I can.                        
                         </p>      
