@@ -198,15 +198,10 @@ export default class Landing extends Component {
                             source of assistance to my colleagues and customers, and since shifting into the world of software engineering, I have been able to gain a reputation 
                             as a top troubleshooter and problem solver. 
                         </p>
-                        <p> I would like to eventually transition from a purely customer facing role to a pure engineering role at some point and have been brushing up my 
-                            html, css, and javascript skills recently by implementing a heuristic solution I’ve had kicking around in my head for the Traveling Salesman Problem 
-                            for about five years now. Up until now, I did not have the technical or problem solving skills to attempt to implement the idea, but I feel that I am 
-                            up to the challenge now and have started trying to demonstrate my thesis. More can be found about this on my website in my portfolio. 
-                        </p>
-                        <p> Finally, I am recently certified to teach mindfulness by Tibet House and Dharma Moon’s 100 hour mindfulness meditation teacher training program. I would 
-                            like to use this newfound skill to help to deliver mindfulness classes to the corporate world, and eventually use my experience from that to finish my book 
-                            on leadership and bring leaders to the table to discuss how we can provide a more morally sensitive approach to profit in the business world, having 
-                            experienced the inhumane downsides myself that can occur without a careful and mindful approach.                             
+                        <p> Additionally, I recently founded Dharma Sun, a school for Mindfulness meditation. I am certified to teach mindfulness by Tibet House and Dharma Moon’s 
+                            100 hour mindfulness meditation teacher training program. I would like to use this newfound skill to help to deliver mindfulness classes to the corporate world and 
+                            bring leaders to the table to discuss how we can provide a more morally sensitive approach to profit in the business world, having experienced the inhumane downsides 
+                            myself that can occur without a careful and mindful approach. I also want to simply share the gift of having a daily Mindfulness meditation practice with as many people as I can.                        
                         </p>      
                         <p> You can see my projects in action <Link to="/projects" > here</Link>. 
                         </p>
