@@ -202,8 +202,6 @@ export default class Landing extends Component {
                             100 hour mindfulness meditation teacher training program. I would like to help to deliver mindfulness classes to the corporate world and, ultimately, 
                             bring leaders to the table to discuss how we can provide a more morally sensitive approach to profit in the business world, having experienced the inhumane downsides 
                             myself that can occur without a careful and mindful approach. I also want to simply share the gift of having a daily Mindfulness meditation practice with as many people as I can.                        
-                        </p>      
-                        <p> You can see my projects in action <Link to="/projects" > here</Link>. 
                         </p>
                     </LandingBottomContentLeft>
                         
