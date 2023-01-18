@@ -44,7 +44,7 @@ const MindfulnessBottom=styled.div`
     }
 
     h2 {
-        margin: 5px;
+        margin: 2px 15px 10px 15px;
         font-size: 1.50rem;
         font-family: Robato, sans-serif;
         font-weight: 400;
@@ -85,9 +85,8 @@ const MindfulnessBottom=styled.div`
     }
 
     p {
-        margin: 5px 15px 5px 0px;
+        margin: 2px 15px 10px 0px;
         font-size: 1.05rem;
-        margin-bottom: 15px;
         font-family: Robato, sans-serif;
         font-weight: 340;
         color: #353B3E;
@@ -139,7 +138,7 @@ const MindfulnessInput=styled.div`
     display: flex;
     justify-content: left;
     align-items: flex-start;
-    margin: 5px;
+    margin: 2px 15px 10px 15px;
 
     input {
         height: 25px;
@@ -151,7 +150,7 @@ const MindfulnessTextArea=styled.div`
     display: flex;
     flex-direction: column;
     justify-items: flex-start;
-    margin: 5px;
+    margin: 2px 15px 10px 15px;
 
     textarea {
         height: 250px;
@@ -245,9 +244,6 @@ export default class Mindfulness extends Component {
                         
                         <h1>Sign Up Now!</h1>
                         <p>Kindly fill out the short form below, and I will contact you as soon as I can to arrange our first session. I look forward to helping you give yourself the greatest gift - the ability to make friends with yourself and the world.</p>
-                        
-                        <h3>Warmly,</h3>
-                        <p>C. Michael Boegner ^_^</p>
                     </MindfulnessAbout>
                     <MindfulnessForm
                         action="https://formspree.io/cmikeb@gmail.com" 
