@@ -138,11 +138,10 @@ const MindfulnessInput=styled.div`
     display: flex;
     justify-content: left;
     align-items: flex-start;
-    margin: 2px 15px 10px 15px;
+    margin: 2px 15px 2px 15px;
 
     input {
         height: 25px;
-        margin-top: 15px;
     }
 `;
 
