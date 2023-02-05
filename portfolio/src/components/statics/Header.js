@@ -22,17 +22,27 @@ const HeaderTop=styled.div`
         to {opacity: 1;}
     }
 
-    @media (max-width: 1024px) {
-        padding: 8% 0 4% 0;
-    }
-    
-    @media (max-width: 768px) {
-        width: 100vw;
-        padding: 4% 0;
-    }
 `;
 
+const HeaderTopImg=styled.div`
+    // border: 2px solid blue; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    justify-content: center;
+
+    :hover {
+        cursor: pointer;
+    }
+`
+
 const HeaderTopContent=styled.div`
+    // border: 2px solid brown;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,6 +68,9 @@ const HeaderTopContent=styled.div`
         font-weight: 400;
         color: #AAA2A2;
         justify-content: center;
+        @media (max-width: 768px) {
+            visibility: hidden;
+         }
     }
 
     h4 {
@@ -67,22 +80,47 @@ const HeaderTopContent=styled.div`
         font-weight: 400;
         color: #AAA2A2;
         justify-content: center;
-    }
-
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 2.2rem;
-        }
-
-        h2 {
-            font-size: 1.25rem;
-        }
-
-        h4 {
-            font-stretch: condensed;
-        }
-    }
+    }   
 `;
+
+const HeaderMobileTitleContent=styled.div`
+    // border: 2px solid yellow;
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+
+    :hover {
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-family: Lato, sans-serif;
+        font-weight: 950;
+        color: #353B3E;
+        letter-spacing: 0.1rem;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        padding-top: 15px;
+        font-family: Robato, sans-serif;
+        font-weight: 400;
+        color: #AAA2A2;
+    }
+
+    h4 {
+        font-size: .85rem;
+        padding-top: 5px;
+        font-family: Robato, sans-serif;
+        font-weight: 400;
+        color: #AAA2A2;
+    }      
+`
 
 const ProfileImg=styled.img`
     border: 5px solid lightgrey;
@@ -104,18 +142,25 @@ export default class Header extends Component {
                     checked={this.props.checked}
                     >
                     <NavBarLinks to="/">
-                        <HeaderTopContent>
+                        <HeaderTopImg>
                                 <ProfileImg 
                                     src={portfoliopic} 
                                     alt="portfolio pic of Michael Boegner" 
                                     checked={this.props.checked}
                                 />
-                        </HeaderTopContent>
+                        </HeaderTopImg>
                         <HeaderTopContent>
                             <h1>C. Michael Boegner</h1>
                             <h2>Lead Technical Support Engineer | Mindfulness Meditation Teacher | Customer Service Expert</h2>
                             <h4>React | JavaScript | Python | C | MySQL | Node | HTML | CSS</h4>
                         </HeaderTopContent>
+                        <HeaderMobileTitleContent>    
+                            <h1>C. Michael Boegner</h1>
+                            <h4>React | JavaScript | Python | C | MySQL | Node | HTML | CSS</h4>
+                            <h2>Lead Technical Support Engineer</h2>
+                            <h2>Mindfulness Meditation Teacher</h2>
+                            <h2>Customer Service Expert</h2>
+                        </HeaderMobileTitleContent>
                     </NavBarLinks>
                 </HeaderTop>
             </HeaderMain>
