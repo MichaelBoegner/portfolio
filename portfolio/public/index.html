@@ -87,25 +87,23 @@
     </script>
 
     <script type="text/javascript">
+      let created_at_stamp = Date.now()/1000;
+      let user_anon_id = `Captain Anonymous ${created_at_stamp}`;
       _cio.identify({
         // Required attributes
-        id: 'user@domain.com',    // Use either cio_id, id, or email.
+        id: `${user_anon_id}`,    // Use either cio_id, id, or email.
 
         // Strongly recommended attributes
-        created_at: 1339438758,   // Timestamp in your system that represents when
+        created_at: created_at_stamp,   // Timestamp in your system that represents when
                                   // the user first signed up. You'll want to send it
                                   // as seconds since the epoch.
 
         // Example attributes (you can name attributes what you wish)
-        first_name: 'John',       // Add any attributes you'd like to use in the email subject or body.
-        last_name: 'Smith',       // First name and last name are shown on people pages.
-        plan_name: 'premium'      // To use the example segments, set this to 'free' or 'premium'.
+        first_name: 'Captain Anonymous',       // Add any attributes you'd like to use in the email subject or body.
+        last_name: `${created_at_stamp}`,       // First name and last name are shown on people pages.
+        plan_name: 'basic',      // To use the example segments, set this to 'free' or 'premium'.
+        added_by: "JS Script Snippet"
       });
-    </script>
-    
-    <script type="text/javascript">
-      _cio.track("watchedIntroVideo");
-      _cio.track("purchased", { price: "23.45" });
     </script>
   </body>
 </html>

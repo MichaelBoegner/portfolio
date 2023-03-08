@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Footer from '../statics/Footer';
 import companyLogo from '../../assets/DharmaSunShrunk.png'
 
+
 const MindfulnessMain=styled.div`
     display: flex;
     flex-direction: column;
@@ -181,6 +182,21 @@ const MindfulnessSend=styled.div`
 
 
 export default class Mindfulness extends Component { 
+    
+    componentDidMount() {
+        var t = document.createElement('script'),
+            s = document.getElementsByTagName('script')[0];
+        t.async = true;
+        t.id    = 'cio-forms-handler';
+        t.setAttribute('data-site-id', '095650239678787e70f2');
+        t.setAttribute('data-base-url', 'https://customerioforms.com');
+        t.setAttribute('added_by', 'form submission');
+
+        t.src = 'https://customerioforms.com/assets/forms.js';
+
+        s.parentNode.insertBefore(t, s);
+    }
+
     render() {
         return (
             <MindfulnessMain>
@@ -227,7 +243,7 @@ export default class Mindfulness extends Component {
                            You can think of Mindfulness Meditation as your daily mental hygiene practice, something like brushing your teeth, except in this case, we're getting in the habit of brushing our minds daily. And what could be more important than keeping your mind in shape and clean?</p>
                         
 
-                        <h1>How Much Does It Cost?</h1>
+                        <h1>How many classes should I take?</h1>
                         <p>Mindfulness Meditation is a little bit like learning to play an instrument. You can’t expect to pick it up and be Mozart or Jimi Hendrix after your first practice session.</p> 
                         <p>As a result, I recommend everyone starts with the 5 class package, which should be enough to teach you how to practice on your own without me for the rest of your life. Of course, I’m always happy to help you further down the road, as needed, but my ultimate goal here is to teach you how to fish on 
                            your own and then leave you be, with a tummy full of fishes and the confidence to go get more fish whenever you want!</p>
@@ -313,6 +329,8 @@ export default class Mindfulness extends Component {
                 </MindfulnessBottom>
                 
                 <Footer/>
+                
+                
             </MindfulnessMain>
             
         )
